@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "128045272026",
+    "firebase_url": "https://vitual-share-market.firebaseio.com",
+    "project_id": "vitual-share-market",
+    "storage_bucket": "vitual-share-market.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:128045272026:android:b58508a91e3dc1c7790ee3",
+        "android_client_info": {
+          "package_name": "recreate.india.vsm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "128045272026-9iu4l7im8a1e73unktb1ppmrc7v875ao.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPKx-HaRpyJwhCVNwvEgbRCEgrzabCzFY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "128045272026-9iu4l7im8a1e73unktb1ppmrc7v875ao.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -2,13 +2,28 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="recreate.india.vsm">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/vsm_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/vsm_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".AboutShare">
+
+        </activity>
+        <activity android:name=".IntroActivity"></activity>
+        <activity
+            android:name=".SplashScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/FullScreen"></activity>
+        <activity android:name=".RegisterActivity"></activity>
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/FullScreen"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,6 +31,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-8169027776894810~4215251726"/>
     </application>
 
 </manifest>

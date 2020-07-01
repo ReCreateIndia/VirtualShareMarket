@@ -1,1 +1,6 @@
-[]
+{
+  "version": 1,
+  "applicationId": "recreate.india.vsm",
+  "variantType": "BASE_APK",
+  "elements": []
+}
