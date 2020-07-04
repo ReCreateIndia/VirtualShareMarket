@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/round_backgroundred"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="right"
+            android:fontFamily="@font/abril_fatface"
+            android:text="$ 2.15"
+            android:layout_marginRight="5dp"
+            android:textColor="#ffd08a"
+            android:textSize="80sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_marginRight="5dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/abril_fatface"
+            android:text="Per Share"
+            android:textColor="#ffd08a"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#960101"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of Shares"
+        android:fontFamily="@font/abril_fatface"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"
+        android:textColor="#600000"/>
+    <EditText
+        android:layout_width="160dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="40dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/abril_fatface"
+        android:background="@drawable/border_sell"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Total amount: \t $35"
+        android:fontFamily="@font/abril_fatface"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"
+        android:textColor="#ffd08a"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sell"
+        android:textAllCaps="false"
+        android:fontFamily="@font/abril_fatface"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#0b4926"
+        android:textSize="25sp"
+        android:layout_marginBottom="10dp"
+        android:background="#ffd08a"/>
+
+
+
+</LinearLayout>
