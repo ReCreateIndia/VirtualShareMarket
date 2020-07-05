@@ -19,12 +19,15 @@ import android.widget.Toast;
 
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
@@ -36,7 +39,7 @@ import javax.annotation.Nullable;
 public class Home extends Fragment {
 
     private RecyclerView tech_recycler_view,funded_recycler_view,third_recycler_view;
-    private List<PostModal> tech_list,funded_list,third_list;
+    private List<sharemodel> tech_list,funded_list,third_list;
     private FirebaseFirestore ff;
     private BlogRecyclerAdapter blogRecyclerAdapter;
     private LinearLayout techll,fundll,thirdll;
@@ -111,42 +114,34 @@ public class Home extends Fragment {
         });
         ff=FirebaseFirestore.getInstance();
         tech_list=new ArrayList<>();
-        tech_list.add(new PostModal("Tech Private Ltd"));
-        tech_list.add(new PostModal("Tech Private Ltd"));
-        tech_list.add(new PostModal("Tech Private Ltd"));
-        tech_list.add(new PostModal("Tech Private Ltd"));
-        tech_list.add(new PostModal("Tech Private Ltd"));
-        tech_list.add(new PostModal("Tech Private Ltd"));
+        tech_list.add(new sharemodel("name"));
         blogRecyclerAdapter=new BlogRecyclerAdapter(tech_list,getContext());
         tech_recycler_view=view.findViewById(R.id.techrecyclerview);
         tech_recycler_view.setLayoutManager(new LinearLayoutManager(getActivity()));
         tech_recycler_view.setAdapter(blogRecyclerAdapter);
 
         funded_list=new ArrayList<>();
-        funded_list.add(new PostModal("Funded Private Ltd"));
+        funded_list.add(new sharemodel("name"));
         blogRecyclerAdapter=new BlogRecyclerAdapter(funded_list,getContext());
         funded_recycler_view=view.findViewById(R.id.fundedrecyclerview);
         funded_recycler_view.setLayoutManager(new LinearLayoutManager(getActivity()));
         funded_recycler_view.setAdapter(blogRecyclerAdapter);
 
         third_list=new ArrayList<>();
-        third_list.add(new PostModal("Third Private Ltd"));
+        third_list.add(new sharemodel("name"));
         blogRecyclerAdapter=new BlogRecyclerAdapter(third_list,getContext());
         third_recycler_view=view.findViewById(R.id.thirdrecyclerview);
         third_recycler_view.setLayoutManager(new LinearLayoutManager(getActivity()));
         third_recycler_view.setAdapter(blogRecyclerAdapter);
-        ff.collection("users").addSnapshotListener(new EventListener<QuerySnapshot>() {
+        ff.collection("Shares").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
-            public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
-                for(DocumentChange documentChange:queryDocumentSnapshots.getDocumentChanges()){
-                    PostModal postModal=documentChange.getDocument().toObject(PostModal.class);
-                    tech_list.add(postModal);
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                for(QueryDocumentSnapshot documentSnapshot:task.getResult()){
+                    tech_list.add(new sharemodel(documentSnapshot.getString("name")));
                     blogRecyclerAdapter.notifyDataSetChanged();
                 }
             }
         });
         return view;
     }
-
-    //V
 }

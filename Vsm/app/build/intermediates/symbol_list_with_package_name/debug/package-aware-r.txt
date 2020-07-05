@@ -39,6 +39,10 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array com_google_android_gms_fonts_certs
+array com_google_android_gms_fonts_certs_dev
+array com_google_android_gms_fonts_certs_prod
+array preloaded_fonts
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -1277,6 +1281,8 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable border
+drawable border_sell
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1315,6 +1321,7 @@ drawable googleg_standard_color_18
 drawable greentriangle
 drawable ic_audiotrack_dark
 drawable ic_audiotrack_light
+drawable ic_baseline_thumb_up_24
 drawable ic_checked_checkbox
 drawable ic_close_black_24dp
 drawable ic_dialog_close_dark
@@ -1550,6 +1557,8 @@ drawable ow
 drawable primary_btn_bg
 drawable redtriangle
 drawable righttriangle
+drawable round_backgroundred
+drawable roundbackground_green
 drawable text_background
 drawable text_input_bg
 drawable tictactoe
@@ -1557,6 +1566,7 @@ drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable top_background
 drawable vsm_logo
+font abril_fatface
 id ALT
 id AllShares
 id CTRL
@@ -2051,6 +2061,10 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout dialog_buy_shares
+layout dialog_buy_success
+layout dialog_sell_shares
+layout dialog_sell_success
 layout fragment_earn_money
 layout fragment_home
 layout fragment_my_share

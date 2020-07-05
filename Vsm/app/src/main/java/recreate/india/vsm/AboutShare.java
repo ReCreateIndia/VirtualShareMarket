@@ -30,7 +30,7 @@ public class AboutShare extends AppCompatActivity {
     private TextView textView;
     private  FirebaseFirestore ff;
     FirestoreRecyclerAdapter adapter;
-    private List<sharemodel> tech_list;
+    private List<PostModal> tech_list;
     private RecyclerView tech_recycler_view;
     private overallrecycleradapter blogRecyclerAdapter;
     @Override
@@ -43,9 +43,9 @@ public class AboutShare extends AppCompatActivity {
         textView.setText(message);
         ff = FirebaseFirestore.getInstance();
         tech_list=new ArrayList<>();
-        tech_list.add(new sharemodel("name",1));
-        tech_list.add(new sharemodel("name",2));
-        tech_list.add(new sharemodel("name",3));
+        tech_list.add(new PostModal("name",1));
+        tech_list.add(new PostModal("name",2));
+        tech_list.add(new PostModal("name",3));
         blogRecyclerAdapter=new overallrecycleradapter(tech_list,this);
         tech_recycler_view=findViewById(R.id.shareRecyclerView);
         tech_recycler_view.setLayoutManager(new LinearLayoutManager(this));

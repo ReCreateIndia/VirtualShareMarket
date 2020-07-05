@@ -22,9 +22,9 @@ import java.util.List;
 
 public class overallrecycleradapter extends RecyclerView.Adapter<overallrecycleradapter.ViewHolder> {
 
-    List<sharemodel> list;
+    List<PostModal> list;
     Context context;
-    public overallrecycleradapter(List<sharemodel> list,Context context){
+    public overallrecycleradapter(List<PostModal> list,Context context){
         this.list=list;
         this.context=context;
     }

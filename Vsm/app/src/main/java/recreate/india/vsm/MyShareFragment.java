@@ -22,11 +22,9 @@ public class MyShareFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view  = inflater.inflate(R.layout.fragment_my_share, container, false);
         myshares_recyclerview = view.findViewById(R.id.myshares_recyclerview);
-        List<PostModal> mylist = new ArrayList<>();
-        mylist.add(new PostModal("My First Share"));
-        mylist.add(new PostModal("My Second Share"));
-        mylist.add(new PostModal("My Third Share"));
-        mylist.add(new PostModal("My Fourth Share"));
+        List<sharemodel> mylist = new ArrayList<>();
+        mylist.add(new sharemodel("My First Share"));
+
         BlogRecyclerAdapter blogRecyclerAdapter = new BlogRecyclerAdapter(mylist,view.getContext());
         myshares_recyclerview.setAdapter(blogRecyclerAdapter);
         myshares_recyclerview.setLayoutManager(new LinearLayoutManager(view.getContext()));

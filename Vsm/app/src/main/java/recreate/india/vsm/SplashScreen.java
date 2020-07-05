@@ -5,12 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
-public class SplashScreen extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
+public class SplashScreen extends AppCompatActivity {
+    FirebaseAuth firebaseAuth;
+    FirebaseUser firebaseUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+        firebaseAuth=FirebaseAuth.getInstance();
+        firebaseUser=firebaseAuth.getCurrentUser();
         Thread t=new Thread(){
             public void run(){
                 try {
@@ -18,7 +24,9 @@ public class SplashScreen extends AppCompatActivity {
                 }catch (Exception e){
 
                 }finally {
+//                            if(firebaseUser==null)
                             startActivity(new Intent(SplashScreen.this,LoginActivity.class));
+//                            else startActivity(new Intent(SplashScreen.this,MainActivity.class));
                 }
             }
         };

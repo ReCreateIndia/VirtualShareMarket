@@ -20,9 +20,9 @@ import java.util.List;
 
 public class BlogRecyclerAdapter extends RecyclerView.Adapter<BlogRecyclerAdapter.ViewHolder> {
 
-    List<PostModal> list;
+    List<sharemodel> list;
     Context context;
-    public BlogRecyclerAdapter(List<PostModal> list,Context context){
+    public BlogRecyclerAdapter(List<sharemodel> list,Context context){
         this.list=list;
         this.context=context;
     }

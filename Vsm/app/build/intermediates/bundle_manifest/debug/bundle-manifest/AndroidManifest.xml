@@ -31,22 +31,26 @@
         <activity
             android:name="recreate.india.vsm.SplashScreen"
             android:configChanges="orientation|keyboardHidden"
-            android:theme="@style/FullScreen" />
-        <activity android:name="recreate.india.vsm.RegisterActivity" />
-        <activity
-            android:name="recreate.india.vsm.LoginActivity"
-            android:theme="@style/FullScreen" />
-        <activity android:name="recreate.india.vsm.MainActivity" >
+            android:theme="@style/FullScreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="recreate.india.vsm.RegisterActivity" />
+        <activity
+            android:name="recreate.india.vsm.LoginActivity"
+            android:theme="@style/FullScreen" />
+        <activity android:name="recreate.india.vsm.MainActivity" >
+        </activity>
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-8169027776894810~4215251726" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"

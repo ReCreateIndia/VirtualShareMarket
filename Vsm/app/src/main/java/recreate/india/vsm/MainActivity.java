@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new EarnMoneyFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Home()).commit();
         bottomNavigationView = findViewById(R.id.bottomnavview);
         NavigationView navigationView = (NavigationView) findViewById(R.id.n1);
         drawerLayout = findViewById(R.id.drawerlayout);

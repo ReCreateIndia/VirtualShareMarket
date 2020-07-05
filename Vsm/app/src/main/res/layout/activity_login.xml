@@ -76,7 +76,7 @@
         android:hint="Enter Username"
 
         android:inputType="textPersonName"
-
+        android:textColor="#000000"
         android:textColorHint="#330033"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -93,6 +93,7 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/text_background"
         android:ems="10"
+        android:textColor="#000000"
         android:gravity="center"
         android:hint="Enter Password"
         android:inputType="textPassword"
