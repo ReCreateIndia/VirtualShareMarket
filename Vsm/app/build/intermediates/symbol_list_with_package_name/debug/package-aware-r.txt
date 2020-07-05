@@ -1819,7 +1819,6 @@ id mtrl_internal_children_alpha_tag
 id multiply
 id myshares_recyclerview
 id n1
-id name
 id navigation_header_container
 id never
 id next
@@ -1875,6 +1874,7 @@ id selected
 id shareRecyclerView
 id sharebuy
 id shareid
+id sharename
 id shareredeem
 id sharesell
 id shortcut

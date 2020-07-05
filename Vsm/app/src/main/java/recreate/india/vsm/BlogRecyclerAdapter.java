@@ -56,7 +56,7 @@ public class BlogRecyclerAdapter extends RecyclerView.Adapter<BlogRecyclerAdapte
         Button gotoshare;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            list_name=itemView.findViewById(R.id.name);
+            list_name=itemView.findViewById(R.id.sharename);
             gotoshare=itemView.findViewById(R.id.gotoshare);
         }
     }
