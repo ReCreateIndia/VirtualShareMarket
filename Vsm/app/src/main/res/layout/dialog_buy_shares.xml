@@ -67,6 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Buy"
+        android:id="@+id/btn_buy"
         android:textAllCaps="false"
         android:fontFamily="@font/abril_fatface"
         android:layout_gravity="center_horizontal"

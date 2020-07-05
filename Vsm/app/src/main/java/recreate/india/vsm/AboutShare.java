@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -25,6 +26,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Nullable;
+
+import recreate.india.vsm.Dialog_Fragments.Dialog_buy;
+import recreate.india.vsm.Dialog_Fragments.Dialog_sell;
 
 public class AboutShare extends AppCompatActivity {
     private TextView textView;
@@ -50,6 +54,7 @@ public class AboutShare extends AppCompatActivity {
         tech_recycler_view=findViewById(R.id.shareRecyclerView);
         tech_recycler_view.setLayoutManager(new LinearLayoutManager(this));
         tech_recycler_view.setAdapter(blogRecyclerAdapter);
+
 //        ff.collection("OurWorkPost").addSnapshotListener(new EventListener<QuerySnapshot>() {
 //            @Override
 //            public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
@@ -61,5 +66,21 @@ public class AboutShare extends AppCompatActivity {
 //            }
 //        });
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId())
+        {
+            case R.id.sharebuy:
+                Dialog_buy dialog_buy = new Dialog_buy();
+                dialog_buy.show(getSupportFragmentManager(),"Dialog_Buy");
+                break;
+            case R.id.sharesell:
+                Dialog_sell dialog_sell = new Dialog_sell();
+                dialog_sell.show(getSupportFragmentManager(),"Dialog_Sell");
+                break;
+        }
+        return true;
     }
 }
