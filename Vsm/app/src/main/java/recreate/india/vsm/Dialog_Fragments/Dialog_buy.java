@@ -19,7 +19,6 @@ import recreate.india.vsm.R;
 public class Dialog_buy extends DialogFragment {
 
     private Button btn_buy;
-
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {

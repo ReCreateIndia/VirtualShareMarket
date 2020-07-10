@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
@@ -35,7 +36,7 @@ public class EarnMoneyFragment extends Fragment implements RewardedVideoAdListen
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_earn_money, container, false);
-        MobileAds.initialize(getContext(),"ca-app-pub-8169027776894810~4215251726");
+        MobileAds.initialize(getContext(),"ca-app-pub-8657920857471834~5603416632");
         startAdd=view.findViewById(R.id.startadd);
 
         score=view.findViewById(R.id.score);
@@ -55,7 +56,7 @@ public class EarnMoneyFragment extends Fragment implements RewardedVideoAdListen
     }
     private void loadRewardedVideoAdd(){
         if(!mad.isLoaded()){
-            mad.loadAd("ca-app-pub-8169027776894810/2071378075",new AdRequest.Builder().build());
+            mad.loadAd("ca-app-pub-8657920857471834/7276532909",new AdRequest.Builder().build());
         }
     }
 
@@ -91,7 +92,7 @@ public class EarnMoneyFragment extends Fragment implements RewardedVideoAdListen
 
     @Override
     public void onRewardedVideoAdFailedToLoad(int i) {
-
+        Toast.makeText(getContext(),"no",Toast.LENGTH_SHORT).show();
     }
 
     @Override

@@ -8,12 +8,12 @@
         "source": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\loginbuttonbg.xml"
     },
     {
-        "merged": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_redtriangle.png.flat",
         "source": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\redtriangle.png"
+    },
+    {
+        "merged": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_thumb_up_24.png.flat",
@@ -24,28 +24,28 @@
         "source": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\layout\\dialog_buy_success.xml"
     },
     {
-        "merged": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_header.xml.flat",
-        "source": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\layout\\header.xml"
-    },
-    {
         "merged": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",
         "source": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_header.xml.flat",
+        "source": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\layout\\header.xml"
     },
     {
         "merged": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_single_text_file.xml.flat",
         "source": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\layout\\single_text_file.xml"
     },
     {
-        "merged": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_primary_btn_bg.xml.flat",
-        "source": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\primary_btn_bg.xml"
+        "merged": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_roundbackground_green.xml.flat",
+        "source": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\roundbackground_green.xml"
     },
     {
         "merged": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_greentriangle.png.flat",
         "source": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\greentriangle.png"
     },
     {
-        "merged": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_roundbackground_green.xml.flat",
-        "source": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\roundbackground_green.xml"
+        "merged": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_primary_btn_bg.xml.flat",
+        "source": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\primary_btn_bg.xml"
     },
     {
         "merged": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_thumb_up_24.png.flat",

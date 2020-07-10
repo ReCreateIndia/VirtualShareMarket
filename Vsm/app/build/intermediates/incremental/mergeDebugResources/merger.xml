@@ -5171,7 +5171,7 @@
         </item>
     </string-array></file><file path="C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\res\values\preloaded_fonts.xml" qualifiers=""><array name="preloaded_fonts" translatable="false">
         <item>@font/abril_fatface</item>
-    </array></file><file path="C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">Vsm</string><string name="Open">open</string><string name="Close">close</string><string name="hello_blank_fragment">Hello blank fragment</string><string name="banner_ad_unit_id" translatable="false">ca-app-pub-8169027776894810/9393859548</string></file><file path="C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    </array></file><file path="C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">Vsm</string><string name="Open">open</string><string name="Close">close</string><string name="hello_blank_fragment">Hello blank fragment</string><string name="banner_ad_unit_id" translatable="false">ca-app-pub-8657920857471834/6724926610</string></file><file path="C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         
         <item name="colorPrimary">#330033</item>
         <item name="colorPrimaryDark">#330033</item>

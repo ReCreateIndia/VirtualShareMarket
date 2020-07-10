@@ -1,16 +1,10 @@
 package recreate.india.vsm;
 
 
-import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.SpinnerAdapter;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,7 +15,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.ramotion.circlemenu.CircleMenuView;
 
 public class MainActivity extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
@@ -43,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Home()).commit();
-        bottomNavigationView = findViewById(R.id.bottomnavview);
+        bottomNavigationView = findViewById(R.id.aboutsharebottomnavview);
         NavigationView navigationView = (NavigationView) findViewById(R.id.n1);
         drawerLayout = findViewById(R.id.drawerlayout);
         toggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.Open, R.string.Close);

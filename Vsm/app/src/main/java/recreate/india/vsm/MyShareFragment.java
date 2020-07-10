@@ -25,8 +25,6 @@ public class MyShareFragment extends Fragment {
         List<sharemodel> mylist = new ArrayList<>();
         mylist.add(new sharemodel("My First Share"));
 
-        BlogRecyclerAdapter blogRecyclerAdapter = new BlogRecyclerAdapter(mylist,view.getContext());
-        myshares_recyclerview.setAdapter(blogRecyclerAdapter);
         myshares_recyclerview.setLayoutManager(new LinearLayoutManager(view.getContext()));
         return view;
     }

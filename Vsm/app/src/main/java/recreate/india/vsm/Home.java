@@ -42,7 +42,7 @@ public class Home extends Fragment {
     private RecyclerView tech_recycler_view, funded_recycler_view, third_recycler_view;
     private List<sharemodel> tech_list, funded_list, third_list;
     private FirebaseFirestore ff;
-    private BlogRecyclerAdapter blogRecyclerAdapter;
+
     private LinearLayout techll, fundll, thirdll;
     private ImageView techl, techr, fundl, fundr, thirdl, thirdr;
     private Button gotoshare;
@@ -119,27 +119,13 @@ public class Home extends Fragment {
         ff = FirebaseFirestore.getInstance();
         tech_list = new ArrayList<>();
         tech_list.add(new sharemodel("name"));
-        blogRecyclerAdapter = new BlogRecyclerAdapter(tech_list, getContext());
         tech_recycler_view = view.findViewById(R.id.techrecyclerview);
-        tech_recycler_view.setLayoutManager(new LinearLayoutManager(getActivity()));
-        tech_recycler_view.setAdapter(blogRecyclerAdapter);
 
-        funded_list = new ArrayList<>();
-        funded_list.add(new sharemodel("name"));
-        blogRecyclerAdapter = new BlogRecyclerAdapter(funded_list, getContext());
-        funded_recycler_view = view.findViewById(R.id.fundedrecyclerview);
-        funded_recycler_view.setLayoutManager(new LinearLayoutManager(getActivity()));
-        funded_recycler_view.setAdapter(blogRecyclerAdapter);
 
-        third_list = new ArrayList<>();
-        third_list.add(new sharemodel("name"));
-        blogRecyclerAdapter = new BlogRecyclerAdapter(third_list, getContext());
-        third_recycler_view = view.findViewById(R.id.thirdrecyclerview);
-        third_recycler_view.setLayoutManager(new LinearLayoutManager(getActivity()));
-        third_recycler_view.setAdapter(blogRecyclerAdapter);
+
+
 
         Query query = ff.collection("Shares");
-        //RecyclerOptions
         FirestoreRecyclerOptions<sharemodel> options = new FirestoreRecyclerOptions.Builder<sharemodel>().setQuery(query, sharemodel.class).build();
         adapter = new FirestoreRecyclerAdapter<sharemodel, Home.PostViewHolder>(options) {
 
@@ -153,6 +139,12 @@ public class Home extends Fragment {
             @Override
             protected void onBindViewHolder(@NonNull Home.PostViewHolder postViewHolder, int i, @NonNull sharemodel sharemodel) {
                 postViewHolder.name.setText(sharemodel.getName());
+                postViewHolder.aboutshare.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        getContext().startActivity(new Intent(getContext(),AboutShare.class));
+                    }
+                });
             }
         };
         tech_recycler_view.setAdapter(adapter);
@@ -166,10 +158,12 @@ public class Home extends Fragment {
         private TextView name, desc;
         private ImageView postImage;
         private TextView date;
+        private Button aboutshare;
 
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);
             name=itemView.findViewById(R.id.sharename);
+            aboutshare=itemView.findViewById(R.id.gotoshare);
 
 
         }

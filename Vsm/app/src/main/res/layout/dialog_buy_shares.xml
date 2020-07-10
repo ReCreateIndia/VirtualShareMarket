@@ -47,13 +47,15 @@
         android:layout_gravity="center_horizontal"
         android:textSize="20sp"
         android:textColor="#0b4926"/>
+
     <EditText
+        android:id="@+id/noofshares"
         android:layout_width="160dp"
-        android:layout_gravity="center_horizontal"
         android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginBottom="20dp"
-        android:fontFamily="@font/abril_fatface"
-        android:background="@drawable/border"/>
+        android:background="@drawable/border"
+        android:fontFamily="@font/abril_fatface" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@+id/bottomnavview"
+            app:layout_constraintBottom_toTopOf="@+id/aboutsharebottomnavview"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -40,7 +40,7 @@
         </LinearLayout>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomnavview"
+            android:id="@+id/aboutsharebottomnavview"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="#330033"
