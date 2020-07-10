@@ -2,7 +2,9 @@ package recreate.india.vsm;
 
 
 import android.os.Bundle;
+import android.view.GestureDetector;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
     DrawerLayout drawerLayout;
+    GestureDetector gestureDetector;
     private NavigationView navigationView;
     private ActionBarDrawerToggle toggle;
     private BottomNavigationView bottomNavigationView;
@@ -32,10 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Home()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home()).commit();
         bottomNavigationView = findViewById(R.id.aboutsharebottomnavview);
         NavigationView navigationView = (NavigationView) findViewById(R.id.n1);
         drawerLayout = findViewById(R.id.drawerlayout);
@@ -50,17 +50,24 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(navListner);
 
     }
-    private BottomNavigationView.OnNavigationItemSelectedListener navListner=  new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+    private BottomNavigationView.OnNavigationItemSelectedListener navListner = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-            Fragment selectedFragment=null;
-            switch(menuItem.getItemId()){
-                case R.id.AllShares:selectedFragment=new Home();break;
-                case R.id.MyShares:selectedFragment=new MyShareFragment();break;
-                case R.id.EarnCredits:selectedFragment=new EarnMoneyFragment();break;
+            Fragment selectedFragment = null;
+            switch (menuItem.getItemId()) {
+                case R.id.AllShares:
+                    selectedFragment = new Home();
+                    break;
+                case R.id.MyShares:
+                    selectedFragment = new MyShareFragment();
+                    break;
+                case R.id.EarnCredits:
+                    selectedFragment = new EarnMoneyFragment();
+                    break;
 
             }
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
             return true;
         }
 
@@ -76,12 +83,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     @Override
     protected void onStart() {
         super.onStart();
 //        if(firebaseUser==null){
 //            startActivity(new Intent(MainActivity.this,LoginActivity.class));
- //       }
+        //       }
     }
+
 }

@@ -2,10 +2,10 @@ package recreate.india.vsm;
 
 public class PostModal {
     String name;
-    int type;
+    String type;
     public PostModal(){}
 
-    public PostModal(String name, int type) {
+    public PostModal(String name, String type) {
         this.name = name;
         this.type = type;
     }
@@ -18,11 +18,11 @@ public class PostModal {
         this.name = name;
     }
 
-    public int getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(int type) {
+    public void setType(String type) {
         this.type = type;
     }
 }

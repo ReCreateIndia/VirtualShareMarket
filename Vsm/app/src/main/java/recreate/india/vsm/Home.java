@@ -42,11 +42,10 @@ public class Home extends Fragment {
     private RecyclerView tech_recycler_view, funded_recycler_view, third_recycler_view;
     private List<sharemodel> tech_list, funded_list, third_list;
     private FirebaseFirestore ff;
-
     private LinearLayout techll, fundll, thirdll;
     private ImageView techl, techr, fundl, fundr, thirdl, thirdr;
     private Button gotoshare;
-    private FirestoreRecyclerAdapter adapter;
+    private FirestoreRecyclerAdapter adapter,adapter2;
 
     public Home() {
         // Required empty public constructor
@@ -68,6 +67,8 @@ public class Home extends Fragment {
         techll.setVisibility(View.VISIBLE);
         fundll.setVisibility(View.GONE);
         thirdll.setVisibility(View.GONE);
+        tech_recycler_view=view.findViewById(R.id.techrecyclerview);
+        funded_recycler_view=view.findViewById(R.id.fundedrecyclerview);
         techl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -117,15 +118,9 @@ public class Home extends Fragment {
             }
         });
         ff = FirebaseFirestore.getInstance();
-        tech_list = new ArrayList<>();
-        tech_list.add(new sharemodel("name"));
+        funded_recycler_view=view.findViewById(R.id.fundedrecyclerview);
         tech_recycler_view = view.findViewById(R.id.techrecyclerview);
-
-
-
-
-
-        Query query = ff.collection("Shares");
+        Query query = ff.collection("TechStartups");
         FirestoreRecyclerOptions<sharemodel> options = new FirestoreRecyclerOptions.Builder<sharemodel>().setQuery(query, sharemodel.class).build();
         adapter = new FirestoreRecyclerAdapter<sharemodel, Home.PostViewHolder>(options) {
 
@@ -142,11 +137,35 @@ public class Home extends Fragment {
                 postViewHolder.aboutshare.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        getContext().startActivity(new Intent(getContext(),AboutShare.class));
+                        getContext().startActivity(new Intent(getContext(),AboutShare.class).putExtra("shareid","yes"));
                     }
                 });
             }
         };
+        Query query2 = ff.collection("FundedStartups");
+        FirestoreRecyclerOptions<sharemodel> options2 = new FirestoreRecyclerOptions.Builder<sharemodel>().setQuery(query2, sharemodel.class).build();
+        adapter2 = new FirestoreRecyclerAdapter<sharemodel, Home.PostViewHolder>(options2) {
+
+            @NonNull
+            @Override
+            public Home.PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_single, parent, false);
+                return new Home.PostViewHolder(view);
+            }
+
+            @Override
+            protected void onBindViewHolder(@NonNull Home.PostViewHolder postViewHolder, int i, @NonNull sharemodel sharemodel) {
+                postViewHolder.name.setText(sharemodel.getName());
+                postViewHolder.aboutshare.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        getContext().startActivity(new Intent(getContext(),AboutShare.class).putExtra("shareid","tech"));
+                    }
+                });
+            }
+        };
+        funded_recycler_view.setAdapter(adapter2);
+        funded_recycler_view.setLayoutManager(new LinearLayoutManager(getContext()));
         tech_recycler_view.setAdapter(adapter);
         tech_recycler_view.setLayoutManager(new LinearLayoutManager(getContext()));
         return view;
@@ -173,11 +192,13 @@ public class Home extends Fragment {
     public void onStart() {
         super.onStart();
         adapter.startListening();
+        adapter2.startListening();
     }
 
     @Override
     public void onStop() {
         super.onStop();
         adapter.stopListening();
+        adapter2.stopListening();
     }
 }

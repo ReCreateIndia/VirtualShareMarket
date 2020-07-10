@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.icu.text.MessagePattern;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -41,12 +42,13 @@ public class AboutShare extends AppCompatActivity {
     private  FirebaseFirestore ff;
     FirestoreRecyclerAdapter adapter;
     private List<PostModal> tech_list;
-    private RecyclerView tech_recycler_view;
+    private RecyclerView shareRecyclerView;
     private BottomNavigationView bottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_share);
+        shareRecyclerView=findViewById(R.id.shareRecyclerView);
         Bundle bundle = getIntent().getExtras();
         String message = bundle.getString("shareid");
         bottomNavigationView=findViewById(R.id.aboutsharebottomnavview);
@@ -59,35 +61,40 @@ public class AboutShare extends AppCompatActivity {
 
             @Override
             protected void onBindViewHolder(@NonNull PostViewHolder postViewHolder, int i, @NonNull PostModal postModal) {
-
+                if(Integer.parseInt(postModal.getType())==1){
+                    postViewHolder.userposttext.setVisibility(View.VISIBLE);
+                }
+                if(Integer.parseInt(postModal.getType())==2){
+                    postViewHolder.userpostimage.setVisibility(View.VISIBLE);
+                }
+                postViewHolder.name.setText(postModal.getName());
             }
 
             @NonNull
             @Override
             public PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_single, parent, false);
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.oneforall, parent, false);
                 return new PostViewHolder(view);
             }
 
         };
-        tech_recycler_view.setAdapter(adapter);
-        tech_recycler_view.setLayoutManager(new LinearLayoutManager(AboutShare.this));
+        shareRecyclerView.setLayoutManager(new LinearLayoutManager(AboutShare.this));
+        shareRecyclerView.setAdapter(adapter);
     }
     //ViewHolder
 
 
     public class PostViewHolder extends RecyclerView.ViewHolder {
-        private TextView name, desc;
-        private ImageView postImage;
-        private TextView date;
-        private Button aboutshare;
+       String type;
+       TextView name;
+       TextView userposttext;
+       ImageView userpostimage;
 
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);
-            name=itemView.findViewById(R.id.sharename);
-            aboutshare=itemView.findViewById(R.id.gotoshare);
-
-
+            name=itemView.findViewById(R.id.CompanyName);
+            userpostimage=itemView.findViewById(R.id.userPostImage);
+            userposttext=itemView.findViewById(R.id.userPostText);
         }
     }
 
