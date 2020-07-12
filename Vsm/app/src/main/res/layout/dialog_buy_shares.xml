@@ -9,18 +9,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-    <TextView
-        android:layout_width="0dp"
-        android:layout_weight="3"
 
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:gravity="right"
-        android:fontFamily="@font/abril_fatface"
-        android:text="$ 2.15"
-        android:layout_marginRight="5dp"
-        android:textColor="#e1ff8a"
-        android:textSize="80sp" />
+        <TextView
+            android:id="@+id/shareprice"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="5dp"
+            android:layout_weight="3"
+            android:fontFamily="@font/abril_fatface"
+            android:gravity="right"
+            android:text="$ 2.15"
+            android:textColor="#e1ff8a"
+            android:textSize="80sp" />
         <TextView
             android:layout_width="0dp"
             android:layout_weight="2"
@@ -51,7 +53,8 @@
     <EditText
         android:id="@+id/noofshares"
         android:layout_width="160dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
+        android:textColor="#ffffff"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="20dp"
         android:background="@drawable/border"

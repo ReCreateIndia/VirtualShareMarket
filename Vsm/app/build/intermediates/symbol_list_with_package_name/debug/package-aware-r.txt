@@ -1876,6 +1876,7 @@ id selected
 id shareRecyclerView
 id sharebuy
 id sharename
+id shareprice
 id shareredeem
 id sharesell
 id shortcut
@@ -1902,6 +1903,7 @@ id status_bar_latest_event_content
 id stretch
 id submenuarrow
 id submit_area
+id successshares
 id tab
 id tabMode
 id tag_accessibility_actions

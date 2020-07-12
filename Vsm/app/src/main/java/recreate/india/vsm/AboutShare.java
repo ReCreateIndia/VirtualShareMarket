@@ -36,7 +36,7 @@ import javax.annotation.Nullable;
 import recreate.india.vsm.Dialog_Fragments.Dialog_buy;
 import recreate.india.vsm.Dialog_Fragments.Dialog_sell;
 
-public class AboutShare extends AppCompatActivity {
+public class AboutShare extends AppCompatActivity implements Dialog_buy.OnInputlistener {
     private TextView textView;
     private int a;
     private  FirebaseFirestore ff;
@@ -44,6 +44,7 @@ public class AboutShare extends AppCompatActivity {
     private List<PostModal> tech_list;
     private RecyclerView shareRecyclerView;
     private BottomNavigationView bottomNavigationView;
+    private String s="23";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,6 +82,11 @@ public class AboutShare extends AppCompatActivity {
         shareRecyclerView.setLayoutManager(new LinearLayoutManager(AboutShare.this));
         shareRecyclerView.setAdapter(adapter);
     }
+
+    @Override
+    public void input(String s) {
+        this.s=s;
+    }
     //ViewHolder
 
 
@@ -116,6 +122,10 @@ public class AboutShare extends AppCompatActivity {
             {
                 case R.id.sharebuy:
                     Dialog_buy dialog_buy = new Dialog_buy();
+                    Bundle bundle = new Bundle();
+                    dialog_buy.setArguments(bundle);
+                    bundle.putInt("price",Integer.parseInt(s));
+                    dialog_buy.setMy_oninputlistener(AboutShare.this);
                     dialog_buy.show(getSupportFragmentManager(),"Dialog_Buy");
                     break;
                 case R.id.sharesell:

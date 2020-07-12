@@ -24,7 +24,6 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/vsm_logo"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity android:name="recreate.india.vsm.AboutShare" >
         </activity>
