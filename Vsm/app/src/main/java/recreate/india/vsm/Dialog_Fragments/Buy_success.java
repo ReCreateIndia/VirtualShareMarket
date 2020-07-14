@@ -24,7 +24,7 @@ public class Buy_success extends DialogFragment {
         successshares=view.findViewById(R.id.successshares);
         builder.setView(view);
         Bundle bundle = getArguments();
-        successshares.setText("$ "+bundle.getInt("price")+"");
+        successshares.setText("$ "+bundle.getInt("shares")+"");
         return builder.create();
     }
 }

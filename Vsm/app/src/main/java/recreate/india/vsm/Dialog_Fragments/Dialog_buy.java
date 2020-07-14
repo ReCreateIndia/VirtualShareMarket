@@ -9,12 +9,20 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.ThrowOnExtraProperties;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import recreate.india.vsm.R;
 
@@ -29,6 +37,10 @@ public class Dialog_buy extends DialogFragment {
     }
     private Button btn_buy;
     private EditText noofshares;
+    double netCredits;
+    private FirebaseFirestore ff;
+    FirebaseAuth firebaseAuth;
+    FirebaseUser firebaseUser;
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
@@ -36,6 +48,9 @@ public class Dialog_buy extends DialogFragment {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.dialog_buy_shares,null,false);
         builder.setView(view);
+        ff=FirebaseFirestore.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
+        firebaseUser = firebaseAuth.getCurrentUser();
         final Bundle bundle = getArguments();
         noofshares=view.findViewById(R.id.noofshares);
         my_oninputlistener.input(noofshares.getText().toString());
@@ -51,11 +66,28 @@ public class Dialog_buy extends DialogFragment {
         btn_buy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Buy_success buy_success = new Buy_success();
-                Bundle bundle1=new Bundle();
-                buy_success.setArguments(bundle);
-                bundle.putInt("price",Integer.parseInt(noofshares.getText().toString()));
-                buy_success.show(getChildFragmentManager(),"Buy_Success");
+
+                int a = Integer.parseInt(noofshares.getText().toString());
+                if((double)(a*bundle.getInt("price"))>bundle.getDouble("credits")){
+                    Toast.makeText(getContext(),"sorry you dont have enough credits"+bundle.getDouble("credits"),Toast.LENGTH_LONG).show();
+
+
+                }
+                else{
+                    netCredits=bundle.getDouble("credits")-(double)(a*bundle.getInt("price"));
+                    if(netCredits==0){
+                        Toast.makeText(getContext(),"no", Toast.LENGTH_SHORT).show();
+                    }
+                    Map<String,Object>map=new HashMap<>();
+                    map.put("credits",netCredits);
+                    ff.collection("Users").document(firebaseUser.getUid()).collection("Credits").document("Credits").set(map);
+                    Buy_success buy_success = new Buy_success();
+                    Bundle bundle1=new Bundle();
+                    buy_success.setArguments(bundle);
+                    bundle.putInt("shares",a);
+                    buy_success.show(getChildFragmentManager(),"Buy_Success");
+                }
+
             }
         });
         return builder.create();

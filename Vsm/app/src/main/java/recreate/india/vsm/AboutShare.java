@@ -2,6 +2,7 @@ package recreate.india.vsm;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,11 +18,17 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentChange;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
@@ -40,15 +47,33 @@ public class AboutShare extends AppCompatActivity implements Dialog_buy.OnInputl
     private TextView textView;
     private int a;
     private  FirebaseFirestore ff;
+    FirebaseAuth firebaseAuth;
+    FirebaseUser firebaseUser;
     FirestoreRecyclerAdapter adapter;
     private List<PostModal> tech_list;
     private RecyclerView shareRecyclerView;
     private BottomNavigationView bottomNavigationView;
-    private String s="23";
+    private String s="2";
+    credits credits=new credits();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_share);
+        ff=FirebaseFirestore.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
+        firebaseUser = firebaseAuth.getCurrentUser();
+        ff.collection("Users").document(firebaseUser.getUid()).collection("Credits")
+                .document("Credits").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                DocumentSnapshot documentSnapshot=task.getResult();
+
+                credits.setCredits(documentSnapshot.getDouble("credits"));
+                if(credits.getCredits()==100){
+                    Toast.makeText(AboutShare.this,"yes",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
         shareRecyclerView=findViewById(R.id.shareRecyclerView);
         Bundle bundle = getIntent().getExtras();
         String message = bundle.getString("shareid");
@@ -125,6 +150,7 @@ public class AboutShare extends AppCompatActivity implements Dialog_buy.OnInputl
                     Bundle bundle = new Bundle();
                     dialog_buy.setArguments(bundle);
                     bundle.putInt("price",Integer.parseInt(s));
+                    bundle.putDouble("credits",credits.getCredits());
                     dialog_buy.setMy_oninputlistener(AboutShare.this);
                     dialog_buy.show(getSupportFragmentManager(),"Dialog_Buy");
                     break;

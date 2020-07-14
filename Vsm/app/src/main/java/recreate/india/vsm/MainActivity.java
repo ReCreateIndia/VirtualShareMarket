@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MenuItem;
 import android.view.MotionEvent;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -13,15 +14,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MainActivity extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
     DrawerLayout drawerLayout;
+    FirebaseFirestore ff;
     GestureDetector gestureDetector;
     private NavigationView navigationView;
     private ActionBarDrawerToggle toggle;
@@ -32,9 +38,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
+        ff=FirebaseFirestore.getInstance();
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home()).commit();
         bottomNavigationView = findViewById(R.id.aboutsharebottomnavview);
         NavigationView navigationView = (NavigationView) findViewById(R.id.n1);
@@ -46,7 +50,18 @@ public class MainActivity extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
-
+        ff.collection("Users").document(firebaseUser.getUid()).collection("Credits")
+                .document("Credits").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                DocumentSnapshot documentSnapshot=task.getResult();
+                credits credits=new credits();
+                credits.setCredits(documentSnapshot.getDouble("credits"));
+                if(credits.getCredits()==100){
+                    Toast.makeText(MainActivity.this,"yes",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
         bottomNavigationView.setOnNavigationItemSelectedListener(navListner);
 
     }
@@ -80,15 +95,6 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-//        if(firebaseUser==null){
-//            startActivity(new Intent(MainActivity.this,LoginActivity.class));
-        //       }
     }
 
 }
