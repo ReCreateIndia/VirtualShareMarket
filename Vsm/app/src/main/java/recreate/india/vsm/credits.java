@@ -1,18 +1,19 @@
 package recreate.india.vsm;
 
 public class credits {
-    double credits;
+    String credits;
 
-    public double getCredits() {
+    public String getCredits() {
         return credits;
     }
 
-    public void setCredits(double credits) {
+    public void setCredits(String credits) {
         this.credits = credits;
     }
 
-    public credits(double credits) {
+    public credits(String credits) {
         this.credits = credits;
     }
+
     public credits(){}
 }

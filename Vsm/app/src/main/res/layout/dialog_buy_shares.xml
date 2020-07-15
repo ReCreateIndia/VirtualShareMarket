@@ -12,8 +12,7 @@
 
         <TextView
             android:id="@+id/shareprice"
-            android:layout_width="0dp"
-
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginRight="5dp"
@@ -62,6 +61,7 @@
         android:background="@drawable/border"
         android:fontFamily="@font/abril_fatface" />
     <TextView
+        android:id="@+id/totalAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"

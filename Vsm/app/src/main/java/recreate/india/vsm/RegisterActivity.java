@@ -55,7 +55,7 @@ public class RegisterActivity extends AppCompatActivity {
                                         .collection("PersonalInformation")
                                         .document("personalInformation").set(map);
                                 Map<String,Object> credits=new HashMap<>();
-                                credits.put("credits",new Integer(100));
+                                credits.put("credits","100");
                                 ff.collection("Users").document(firebaseUser.getUid()).collection("Credits")
                                         .document("Credits").set(credits);
 

@@ -24,16 +24,18 @@ public class SplashScreen extends AppCompatActivity {
                 }catch (Exception e){
 
                 }
+                finally{
+                    if (firebaseUser != null) {
+                        startActivity(new Intent(SplashScreen.this,MainActivity.class));
+                        finish();
+                    }
+                    else{
+                        startActivity(new Intent(SplashScreen.this,LoginActivity.class));
+                        finish();
+                    }
+                }
             }
         };
         t.start();
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        if (firebaseUser != null) {
-                startActivity(new Intent(SplashScreen.this,MainActivity.class));
-        }
     }
 }

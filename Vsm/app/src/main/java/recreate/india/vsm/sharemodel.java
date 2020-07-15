@@ -2,11 +2,7 @@ package recreate.india.vsm;
 
 public class sharemodel {
     String name;
-    public sharemodel(){}
-
-    public sharemodel(String name) {
-        this.name = name;
-    }
+    String id;
 
     public String getName() {
         return name;
@@ -15,4 +11,18 @@ public class sharemodel {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public sharemodel(String name, String id) {
+        this.name = name;
+        this.id = id;
+    }
+    public sharemodel(){}
 }

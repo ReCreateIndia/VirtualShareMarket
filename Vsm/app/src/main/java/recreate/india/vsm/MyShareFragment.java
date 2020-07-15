@@ -23,7 +23,7 @@ public class MyShareFragment extends Fragment {
         View view  = inflater.inflate(R.layout.fragment_my_share, container, false);
         myshares_recyclerview = view.findViewById(R.id.myshares_recyclerview);
         List<sharemodel> mylist = new ArrayList<>();
-        mylist.add(new sharemodel("My First Share"));
+        mylist.add(new sharemodel("My First Share","12"));
 
         myshares_recyclerview.setLayoutManager(new LinearLayoutManager(view.getContext()));
         return view;

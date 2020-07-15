@@ -15,9 +15,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.ThrowOnExtraProperties;
 
@@ -25,22 +28,24 @@ import java.util.HashMap;
 import java.util.Map;
 
 import recreate.india.vsm.R;
+import recreate.india.vsm.credits;
+import recreate.india.vsm.sharedetails;
 
 public class Dialog_buy extends DialogFragment {
-    public interface OnInputlistener{
-        public void input(String s);
-    }
-    OnInputlistener my_oninputlistener;
-    public void setMy_oninputlistener(OnInputlistener my_oninputlistener)
-    {
-        this.my_oninputlistener = my_oninputlistener;
-    }
+
     private Button btn_buy;
     private EditText noofshares;
     double netCredits;
+    private TextView textView;
     private FirebaseFirestore ff;
-    FirebaseAuth firebaseAuth;
-    FirebaseUser firebaseUser;
+    private FirebaseAuth firebaseAuth;
+    private FirebaseUser firebaseUser;
+    private TextView shareprice;
+    sharedetails sharedetails=new sharedetails();
+    credits credits=new credits();
+    int priceofshare;
+
+    Bundle bundle = getArguments();
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
@@ -48,48 +53,86 @@ public class Dialog_buy extends DialogFragment {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.dialog_buy_shares,null,false);
         builder.setView(view);
-        ff=FirebaseFirestore.getInstance();
+
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
-        final Bundle bundle = getArguments();
+        ff=FirebaseFirestore.getInstance();
+
         noofshares=view.findViewById(R.id.noofshares);
-        my_oninputlistener.input(noofshares.getText().toString());
-        TextView shareprice=view.findViewById(R.id.shareprice);
-        if(!(bundle.getInt("price")==0)){
-            shareprice.setText("$ "+bundle.getInt("price")+"");
-        }
-        else{
-            shareprice.setText("0");
-        }
+
+        //getting current credits of current user
+        ff.collection("Users")
+                .document(firebaseUser.getUid()).collection("Credits")
+                .document("Credits").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+
+                DocumentSnapshot snapshot=task.getResult();
+                credits.setCredits(snapshot.getString("credits"));
+            }
+        });
+
+        textView=view.findViewById(R.id.totalAmount);
+      //  textView.setText("Total Amount:"+Integer.parseInt(sharedetails.getBuyingprice())*(Integer.parseInt(noofshares.getText().toString())));
+        Bundle bundle= getArguments();
+        String s= bundle.getString("shareid");
+        Toast.makeText(getContext(),s,Toast.LENGTH_LONG).show();
+        ff.collection("Shares").document("1509")
+                .collection("ShareDetails").document("price").get()
+                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                DocumentSnapshot snapshot=task.getResult();
+                sharedetails.setBuyingprice(snapshot.getString("buyingprice"));
+            }
+        });
+
+
+        shareprice=view.findViewById(R.id.shareprice);
+        shareprice.setText(sharedetails.getBuyingprice()); // this is not working
 
         btn_buy = view.findViewById(R.id.btn_buy);
         btn_buy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                int a = Integer.parseInt(noofshares.getText().toString());
-                if((double)(a*bundle.getInt("price"))>bundle.getDouble("credits")){
-                    Toast.makeText(getContext(),"sorry you dont have enough credits"+bundle.getDouble("credits"),Toast.LENGTH_LONG).show();
+                priceofshare = Integer.parseInt(sharedetails.getBuyingprice());
+                if (noofshares.getText().toString() == null) {
+                    Toast.makeText(getContext(), "error", Toast.LENGTH_LONG).show();
+                } else {
+                    int a = Integer.parseInt(noofshares.getText().toString());
+//
+//                    //user having current credits less then needed
+                    if ((double) (a * priceofshare) > Double.parseDouble(credits.getCredits())) {
+                        Toast.makeText(getContext(), "needed" + a * priceofshare + "you have " + credits.getCredits(), Toast.LENGTH_LONG).show();
+                    } else {
+
+                        netCredits = Double.parseDouble(credits.getCredits()) - (a * priceofshare);
+
+                        // putting new credts into map
+                        Map<String, Object> map = new HashMap<>();
+                        map.put("credits", String.valueOf(netCredits));
+
+                        //pushing new credits of current user in firebase
+                        ff.collection("Users")
+                                .document(firebaseUser.getUid())
+                                .collection("Credits")
+                                .document("Credits")
+                                .set(map);
 
 
-                }
-                else{
-                    netCredits=bundle.getDouble("credits")-(double)(a*bundle.getInt("price"));
-                    if(netCredits==0){
-                        Toast.makeText(getContext(),"no", Toast.LENGTH_SHORT).show();
+                        //success dailog with no of shares has been bought
+                        Buy_success buy_success = new Buy_success();
+                        Bundle bundle1 = new Bundle();
+                        buy_success.setArguments(bundle1);
+                        bundle1.putInt("shares", a);
+                        buy_success.show(getChildFragmentManager(), "Buy_Success");
+                        // }
                     }
-                    Map<String,Object>map=new HashMap<>();
-                    map.put("credits",netCredits);
-                    ff.collection("Users").document(firebaseUser.getUid()).collection("Credits").document("Credits").set(map);
-                    Buy_success buy_success = new Buy_success();
-                    Bundle bundle1=new Bundle();
-                    buy_success.setArguments(bundle);
-                    bundle.putInt("shares",a);
-                    buy_success.show(getChildFragmentManager(),"Buy_Success");
                 }
-
             }
         });
+
         return builder.create();
     }
 }

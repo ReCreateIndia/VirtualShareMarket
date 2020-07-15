@@ -50,18 +50,18 @@ public class MainActivity extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
-        ff.collection("Users").document(firebaseUser.getUid()).collection("Credits")
-                .document("Credits").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                DocumentSnapshot documentSnapshot=task.getResult();
-                credits credits=new credits();
-                credits.setCredits(documentSnapshot.getDouble("credits"));
-                if(credits.getCredits()==100){
-                    Toast.makeText(MainActivity.this,"yes",Toast.LENGTH_LONG).show();
-                }
-            }
-        });
+//        ff.collection("Users").document(firebaseUser.getUid()).collection("Credits")
+//                .document("Credits").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+//            @Override
+//            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+//                DocumentSnapshot documentSnapshot=task.getResult();
+//                credits credits=new credits();
+//                credits.setCredits(documentSnapshot.getDouble("credits"));
+//                if(credits.getCredits()==100){
+//                    Toast.makeText(MainActivity.this,"yes",Toast.LENGTH_LONG).show();
+//                }
+//            }
+//        });
         bottomNavigationView.setOnNavigationItemSelectedListener(navListner);
 
     }

@@ -43,7 +43,7 @@ import javax.annotation.Nullable;
 import recreate.india.vsm.Dialog_Fragments.Dialog_buy;
 import recreate.india.vsm.Dialog_Fragments.Dialog_sell;
 
-public class AboutShare extends AppCompatActivity implements Dialog_buy.OnInputlistener {
+public class AboutShare extends AppCompatActivity  {
     private TextView textView;
     private int a;
     private  FirebaseFirestore ff;
@@ -53,8 +53,8 @@ public class AboutShare extends AppCompatActivity implements Dialog_buy.OnInputl
     private List<PostModal> tech_list;
     private RecyclerView shareRecyclerView;
     private BottomNavigationView bottomNavigationView;
-    private String s="2";
     credits credits=new credits();
+    String shareid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,22 +66,20 @@ public class AboutShare extends AppCompatActivity implements Dialog_buy.OnInputl
                 .document("Credits").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                DocumentSnapshot documentSnapshot=task.getResult();
+                DocumentSnapshot documentSnapshot = task.getResult();
 
-                credits.setCredits(documentSnapshot.getDouble("credits"));
-                if(credits.getCredits()==100){
-                    Toast.makeText(AboutShare.this,"yes",Toast.LENGTH_LONG).show();
-                }
+                credits.setCredits(documentSnapshot.getString("credits"));
             }
         });
         shareRecyclerView=findViewById(R.id.shareRecyclerView);
         Bundle bundle = getIntent().getExtras();
-        String message = bundle.getString("shareid");
+        shareid = bundle.getString("shareid");
         bottomNavigationView=findViewById(R.id.aboutsharebottomnavview);
         bottomNavigationView.setOnNavigationItemSelectedListener(navlistner);
         ff = FirebaseFirestore.getInstance();
         tech_list=new ArrayList<>();
-        Query query = ff.collection("ShareDetails");
+
+        Query query = ff.collection("Shares").document(shareid).collection("Bloging");
         FirestoreRecyclerOptions<PostModal> options = new FirestoreRecyclerOptions.Builder<PostModal>().setQuery(query, PostModal.class).build();
         adapter = new FirestoreRecyclerAdapter<PostModal, PostViewHolder>(options) {
 
@@ -107,14 +105,6 @@ public class AboutShare extends AppCompatActivity implements Dialog_buy.OnInputl
         shareRecyclerView.setLayoutManager(new LinearLayoutManager(AboutShare.this));
         shareRecyclerView.setAdapter(adapter);
     }
-
-    @Override
-    public void input(String s) {
-        this.s=s;
-    }
-    //ViewHolder
-
-
     public class PostViewHolder extends RecyclerView.ViewHolder {
        String type;
        TextView name;
@@ -148,14 +138,14 @@ public class AboutShare extends AppCompatActivity implements Dialog_buy.OnInputl
                 case R.id.sharebuy:
                     Dialog_buy dialog_buy = new Dialog_buy();
                     Bundle bundle = new Bundle();
+                    bundle.putString("shareid",shareid);
                     dialog_buy.setArguments(bundle);
-                    bundle.putInt("price",Integer.parseInt(s));
-                    bundle.putDouble("credits",credits.getCredits());
-                    dialog_buy.setMy_oninputlistener(AboutShare.this);
                     dialog_buy.show(getSupportFragmentManager(),"Dialog_Buy");
                     break;
                 case R.id.sharesell:
                     Dialog_sell dialog_sell = new Dialog_sell();
+                    Bundle bundle1 = new Bundle();
+                    bundle1.putString("shareid",shareid);
                     dialog_sell.show(getSupportFragmentManager(),"Dialog_Sell");
                     break;
             }

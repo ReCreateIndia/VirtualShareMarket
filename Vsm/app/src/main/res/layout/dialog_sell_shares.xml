@@ -11,9 +11,9 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
+            android:id="@+id/price_of_shares"
             android:layout_width="0dp"
             android:layout_weight="3"
-
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:gravity="right"
@@ -49,13 +49,17 @@
         android:textSize="20sp"
         android:textColor="#600000"/>
     <EditText
+        android:id="@+id/noofshares"
         android:layout_width="160dp"
         android:layout_gravity="center_horizontal"
         android:layout_height="40dp"
+        android:gravity="center"
+        android:textColor="#ffffff"
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/abril_fatface"
         android:background="@drawable/border_sell"/>
     <TextView
+        android:id="@+id/totalAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"

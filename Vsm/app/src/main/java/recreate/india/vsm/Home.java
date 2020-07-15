@@ -132,12 +132,12 @@ public class Home extends Fragment {
             }
 
             @Override
-            protected void onBindViewHolder(@NonNull Home.PostViewHolder postViewHolder, int i, @NonNull sharemodel sharemodel) {
+            protected void onBindViewHolder(@NonNull Home.PostViewHolder postViewHolder, int i, @NonNull final sharemodel sharemodel) {
                 postViewHolder.name.setText(sharemodel.getName());
                 postViewHolder.aboutshare.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        getContext().startActivity(new Intent(getContext(),AboutShare.class).putExtra("shareid","yes"));
+                        getContext().startActivity(new Intent(getContext(),AboutShare.class).putExtra("shareid",sharemodel.getId()));
                     }
                 });
             }
@@ -154,12 +154,12 @@ public class Home extends Fragment {
             }
 
             @Override
-            protected void onBindViewHolder(@NonNull Home.PostViewHolder postViewHolder, int i, @NonNull sharemodel sharemodel) {
+            protected void onBindViewHolder(@NonNull Home.PostViewHolder postViewHolder, int i, @NonNull final sharemodel sharemodel) {
                 postViewHolder.name.setText(sharemodel.getName());
                 postViewHolder.aboutshare.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        getContext().startActivity(new Intent(getContext(),AboutShare.class).putExtra("shareid","tech"));
+                        getContext().startActivity(new Intent(getContext(),AboutShare.class).putExtra("shareid",sharemodel.getId()));
                     }
                 });
             }
