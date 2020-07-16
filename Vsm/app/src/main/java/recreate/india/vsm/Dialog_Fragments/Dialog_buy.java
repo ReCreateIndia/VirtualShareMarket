@@ -45,7 +45,7 @@ public class Dialog_buy extends DialogFragment {
     credits credits=new credits();
     int priceofshare;
 
-    Bundle bundle = getArguments();
+    //Bundle bundle = getArguments();
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
@@ -73,7 +73,7 @@ public class Dialog_buy extends DialogFragment {
         });
 
         textView=view.findViewById(R.id.totalAmount);
-      //  textView.setText("Total Amount:"+Integer.parseInt(sharedetails.getBuyingprice())*(Integer.parseInt(noofshares.getText().toString())));
+       textView.setText("Total Amount:"+Integer.parseInt(sharedetails.getBuyingprice())*(Integer.parseInt(noofshares.getText().toString())));
         Bundle bundle= getArguments();
         String s= bundle.getString("shareid");
         Toast.makeText(getContext(),s,Toast.LENGTH_LONG).show();
@@ -127,6 +127,7 @@ public class Dialog_buy extends DialogFragment {
                         buy_success.setArguments(bundle1);
                         bundle1.putInt("shares", a);
                         buy_success.show(getChildFragmentManager(), "Buy_Success");
+                        dismiss();
                         // }
                     }
                 }
