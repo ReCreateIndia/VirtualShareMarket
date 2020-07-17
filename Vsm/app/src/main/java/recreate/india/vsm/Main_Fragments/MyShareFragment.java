@@ -12,8 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-import recreate.india.vsm.R;
-import recreate.india.vsm.sharemodel;
+import recreate.india.vsm.Constructor.sharemodel;
+import recreate.india.vsm.Main_Activities.R;
+
 
 public class MyShareFragment extends Fragment {
 

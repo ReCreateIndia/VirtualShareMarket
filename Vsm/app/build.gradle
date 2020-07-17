@@ -22,6 +22,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main {
+            res {
+                srcDirs 'src/main/res', 'src/main/res/Layouts/mainLayouts', 'src/main/res/Layouts/Dialog', 'src/main/res/Layouts/Fragments', 'src/main/res/Layouts/Singleitem', 'src/main/res/Layouts/extra'
+            }
+        }
+    }
 
 }
 

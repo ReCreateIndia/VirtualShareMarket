@@ -16,7 +16,8 @@ import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 
-import recreate.india.vsm.R;
+import recreate.india.vsm.Main_Activities.R;
+
 
 public class EarnMoneyFragment extends Fragment implements RewardedVideoAdListener {
 

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:2:1-45:12
-INJECTED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:2:1-45:12
-INJECTED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:2:1-45:12
-INJECTED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:2:1-45:12
+ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:2:1-44:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Anubhav goyal\.gradle\caches\transforms-2\files-2.1\1cc324bca91cb281f85c4c1528b9e48b\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.mediarouter:mediarouter:1.1.0] C:\Users\Anubhav goyal\.gradle\caches\transforms-2\files-2.1\ff309c4ea88264bfa4edf7fed5e6cdce\mediarouter-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.ramotion.circlemenu:circle-menu:0.3.2] C:\Users\Anubhav goyal\.gradle\caches\transforms-2\files-2.1\c459804fb40a53f4aa7c239881b34fa1\jetified-circle-menu-0.3.2\AndroidManifest.xml:2:1-17:12
@@ -79,20 +79,20 @@ MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Anubhav goyal\.grad
 MERGED from [com.google.firebase:firebase-database-collection:16.0.1] C:\Users\Anubhav goyal\.gradle\caches\transforms-2\files-2.1\6b8b44574b7e392678548d524cc10938\jetified-firebase-database-collection-16.0.1\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.firebase:protolite-well-known-types:16.0.1] C:\Users\Anubhav goyal\.gradle\caches\transforms-2\files-2.1\13aafb1d47cc95bd5ed8e7e7f0b13bc8\jetified-protolite-well-known-types-16.0.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.gms:play-services-ads-base:19.1.0] C:\Users\Anubhav goyal\.gradle\caches\transforms-2\files-2.1\5205b2911033c4392a613bcceeeb4980\jetified-play-services-ads-base-19.1.0\AndroidManifest.xml:2:1-9:12
-INJECTED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:2:1-45:12
-INJECTED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:2:1-45:12
-INJECTED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:2:1-44:12
 	package
-		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:3:5-33
+		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:3:5-49
 		INJECTED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:2:1-45:12
+		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:2:1-44:12
 		INJECTED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:2:1-45:12
+		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:2:1-44:12
 		INJECTED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:2:11-69
@@ -131,7 +131,7 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.2] C:
 	android:name
 		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:6:22-65
 application
-ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:8:5-43:19
+ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:8:5-42:19
 MERGED from [com.ramotion.circlemenu:circle-menu:0.3.2] C:\Users\Anubhav goyal\.gradle\caches\transforms-2\files-2.1\c459804fb40a53f4aa7c239881b34fa1\jetified-circle-menu-0.3.2\AndroidManifest.xml:11:5-15:19
 MERGED from [com.ramotion.circlemenu:circle-menu:0.3.2] C:\Users\Anubhav goyal\.gradle\caches\transforms-2\files-2.1\c459804fb40a53f4aa7c239881b34fa1\jetified-circle-menu-0.3.2\AndroidManifest.xml:11:5-15:19
 MERGED from [com.google.android.material:material:1.1.0-alpha03] C:\Users\Anubhav goyal\.gradle\caches\transforms-2\files-2.1\fc37217233c06e0f2f030759bc627901\material-1.1.0-alpha03\AndroidManifest.xml:22:5-20
@@ -208,58 +208,54 @@ MERGED from [com.google.android.gms:play-services-ads-base:19.1.0] C:\Users\Anub
 		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:9:9-35
 	android:theme
 		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:14:9-40
-activity#recreate.india.vsm.AboutShare
+activity#recreate.india.vsm.Main_Activities.AboutShare
 ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:15:9-17:20
 	android:name
 		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:15:19-45
-activity#recreate.india.vsm.IntroActivity
-ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:18:9-60
-	android:name
-		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:18:19-48
-activity#recreate.india.vsm.SplashScreen
-ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:19:9-28:20
+activity#recreate.india.vsm.Main_Activities.SplashScreen
+ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:18:9-27:20
 	android:configChanges
-		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:21:13-63
+		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:20:13-63
 	android:theme
-		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:22:13-46
+		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:21:13-46
 	android:name
-		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:20:13-41
+		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:19:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:23:13-27:29
+ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:22:13-26:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:24:17-69
+ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:23:17-69
 	android:name
-		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:24:25-66
+		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:23:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:26:17-77
+ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:25:17-77
 	android:name
-		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:26:27-74
-activity#recreate.india.vsm.RegisterActivity
-ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:29:9-63
+		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:25:27-74
+activity#recreate.india.vsm.Main_Activities.RegisterActivity
+ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:28:9-63
 	android:name
-		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:29:19-51
-activity#recreate.india.vsm.LoginActivity
-ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:30:9-32:58
+		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:28:19-51
+activity#recreate.india.vsm.Main_Activities.LoginActivity
+ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:29:9-31:58
 	android:theme
-		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:32:13-46
+		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:31:13-46
 	android:name
-		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:31:13-42
-activity#recreate.india.vsm.MainActivity
-ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:33:9-35:20
+		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:30:13-42
+activity#recreate.india.vsm.Main_Activities.MainActivity
+ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:32:9-34:20
 	android:name
-		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:33:19-47
+		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:32:19-47
 meta-data#com.google.android.gms.ads.APPLICATION_ID
-ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:37:9-39:69
+ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:36:9-38:69
 	android:value
-		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:39:13-67
+		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:38:13-67
 	android:name
-		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:38:13-69
+		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:37:13-69
 meta-data#preloaded_fonts
-ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:40:9-42:57
+ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:39:9-41:57
 	android:resource
-		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:42:13-54
+		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:41:13-54
 	android:name
-		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:41:13-43
+		ADDED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:40:13-43
 uses-sdk
 INJECTED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml

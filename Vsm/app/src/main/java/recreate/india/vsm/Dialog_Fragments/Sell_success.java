@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-import recreate.india.vsm.R;
+import recreate.india.vsm.Main_Activities.R;
 
 public class Sell_success extends DialogFragment {
 

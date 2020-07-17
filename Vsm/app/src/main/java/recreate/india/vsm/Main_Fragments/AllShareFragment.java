@@ -22,9 +22,10 @@ import com.google.firebase.firestore.Query;
 
 import java.util.List;
 
-import recreate.india.vsm.AboutShare;
-import recreate.india.vsm.R;
-import recreate.india.vsm.sharemodel;
+import recreate.india.vsm.Constructor.sharemodel;
+import recreate.india.vsm.Main_Activities.AboutShare;
+import recreate.india.vsm.Main_Activities.R;
+
 
 
 public class AllShareFragment extends Fragment {
@@ -44,7 +45,7 @@ public class AllShareFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_all_share, container, false);
         techll = view.findViewById(R.id.techlinearlayout);
         fundll = view.findViewById(R.id.fundedlinearlayout);
         thirdll = view.findViewById(R.id.thirdlinearlayout);
@@ -127,7 +128,7 @@ public class AllShareFragment extends Fragment {
                 postViewHolder.aboutshare.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        getContext().startActivity(new Intent(getContext(),AboutShare.class).putExtra("shareid",sharemodel.getId()));
+                        getContext().startActivity(new Intent(getContext(), AboutShare.class).putExtra("shareid",sharemodel.getId()));
                     }
                 });
             }

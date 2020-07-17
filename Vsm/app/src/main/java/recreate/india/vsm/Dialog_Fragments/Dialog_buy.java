@@ -27,9 +27,11 @@ import com.google.firebase.firestore.ThrowOnExtraProperties;
 import java.util.HashMap;
 import java.util.Map;
 
-import recreate.india.vsm.R;
-import recreate.india.vsm.credits;
-import recreate.india.vsm.sharedetails;
+import recreate.india.vsm.Constructor.credits;
+import recreate.india.vsm.Constructor.sharedetails;
+import recreate.india.vsm.Main_Activities.R;
+
+
 
 public class Dialog_buy extends DialogFragment {
 
