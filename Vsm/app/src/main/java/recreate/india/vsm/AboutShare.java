@@ -6,6 +6,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.icu.text.MessagePattern;
 import android.media.Image;
@@ -55,13 +56,31 @@ public class AboutShare extends AppCompatActivity  {
     private BottomNavigationView bottomNavigationView;
     credits credits=new credits();
     String shareid;
+    private TextView coins;
+
+    @SuppressLint("WrongConstant")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_share);
+        getSupportActionBar().setElevation(0);
+        getSupportActionBar().setDisplayOptions(android.app.ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.abs_layout);
+        View view= getSupportActionBar().getCustomView();
+        coins=view.findViewById(R.id.coins);
         ff=FirebaseFirestore.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
+        ff.collection("Users").document(firebaseUser.getUid()).collection("Credits")
+                .document("Credits").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                DocumentSnapshot documentSnapshot=task.getResult();
+
+                credits.setCredits(documentSnapshot.getString("credits"));
+                coins.setText(credits.getCredits());
+            }
+        });
         ff.collection("Users").document(firebaseUser.getUid()).collection("Credits")
                 .document("Credits").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
@@ -152,5 +171,10 @@ public class AboutShare extends AppCompatActivity  {
             return false;
         }
     };
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.coin_menu,menu);
+        return true;
+    }
 
 }

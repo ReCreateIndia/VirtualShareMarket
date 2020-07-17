@@ -1565,6 +1565,7 @@ drawable tictactoe
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable top_background
+drawable vsm_coin
 drawable vsm_logo
 font abril_fatface
 id ALT
@@ -1668,6 +1669,7 @@ id circleImageView3
 id circle_menu_main_button
 id clip_horizontal
 id clip_vertical
+id coins
 id collapseActionView
 id confirmPassword
 id container
@@ -2042,6 +2044,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout abs_layout
 layout activity_about_share
 layout activity_intro
 layout activity_login
@@ -2122,10 +2125,9 @@ layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_reflow_chipgroup
 menu bottommeny
+menu coin_menu
 menu drawer_menu
 menu sharemenu
-mipmap ic_launcher
-mipmap ic_launcher_round
 string Close
 string Open
 string abc_action_bar_home_description

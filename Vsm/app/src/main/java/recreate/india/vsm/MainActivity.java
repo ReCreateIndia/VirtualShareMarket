@@ -1,10 +1,15 @@
 package recreate.india.vsm;
 
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.GestureDetector;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -33,11 +38,20 @@ public class MainActivity extends AppCompatActivity {
     private ActionBarDrawerToggle toggle;
     private BottomNavigationView bottomNavigationView;
     private ActionBar actionBar;
-
+    TextView coins;
+    credits credits=new credits();
+    @SuppressLint("WrongConstant")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportActionBar().setElevation(0);
+        getSupportActionBar().setTitle("Karvaan");
+        getSupportActionBar().setDisplayOptions(android.app.ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.abs_layout);
+        View view= getSupportActionBar().getCustomView();
+        coins=view.findViewById(R.id.coins);
         ff=FirebaseFirestore.getInstance();
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home()).commit();
         bottomNavigationView = findViewById(R.id.aboutsharebottomnavview);
@@ -50,18 +64,17 @@ public class MainActivity extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
-//        ff.collection("Users").document(firebaseUser.getUid()).collection("Credits")
-//                .document("Credits").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-//            @Override
-//            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-//                DocumentSnapshot documentSnapshot=task.getResult();
-//                credits credits=new credits();
-//                credits.setCredits(documentSnapshot.getDouble("credits"));
-//                if(credits.getCredits()==100){
-//                    Toast.makeText(MainActivity.this,"yes",Toast.LENGTH_LONG).show();
-//                }
-//            }
-//        });
+                ff.collection("Users").document(firebaseUser.getUid()).collection("Credits")
+                .document("Credits").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                DocumentSnapshot documentSnapshot=task.getResult();
+
+                credits.setCredits(documentSnapshot.getString("credits"));
+                coins.setText(credits.getCredits());
+            }
+        });
+
         bottomNavigationView.setOnNavigationItemSelectedListener(navListner);
 
     }
@@ -87,6 +100,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
     };
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.coin_menu,menu);
+        return true;
+    }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

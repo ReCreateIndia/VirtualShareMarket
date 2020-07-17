@@ -34,7 +34,6 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
         ff=FirebaseFirestore.getInstance();
         firebaseAuth=FirebaseAuth.getInstance();
-        firebaseUser=firebaseAuth.getCurrentUser();
         user_name=findViewById(R.id.username);
         pass_word=findViewById(R.id.password);
         confirm_password=findViewById(R.id.confirmPassword);
@@ -47,6 +46,8 @@ public class RegisterActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
+
+                                firebaseUser=firebaseAuth.getCurrentUser();
                                 Map<String,Object>map=new HashMap<>();
                                 map.put("Email",firebaseUser.getEmail());
                                 map.put("PhoneNumber","phone Number");

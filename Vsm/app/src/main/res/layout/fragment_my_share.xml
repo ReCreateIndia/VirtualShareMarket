@@ -8,9 +8,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/myshares_recyclerview"
-        tools:listitem="@layout/list_item_single">
+        android:id="@+id/myshares_recyclerview">
 
-    </androidx.recyclerview.widget.RecyclerView>>
-
+    </androidx.recyclerview.widget.RecyclerView>
 </FrameLayout>

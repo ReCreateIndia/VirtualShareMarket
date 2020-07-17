@@ -51,7 +51,7 @@ public class Dialog_buy extends DialogFragment {
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        View view = inflater.inflate(R.layout.dialog_buy_shares,null,false);
+        final View view = inflater.inflate(R.layout.dialog_buy_shares,null,false);
         builder.setView(view);
 
         firebaseAuth = FirebaseAuth.getInstance();
@@ -73,33 +73,33 @@ public class Dialog_buy extends DialogFragment {
         });
 
         textView=view.findViewById(R.id.totalAmount);
-       textView.setText("Total Amount:"+Integer.parseInt(sharedetails.getBuyingprice())*(Integer.parseInt(noofshares.getText().toString())));
+        //textView.setText("Total Amount:"+Integer.parseInt(sharedetails.getBuyingprice())*(Integer.parseInt(noofshares.getText().toString())));
         Bundle bundle= getArguments();
         String s= bundle.getString("shareid");
-        Toast.makeText(getContext(),s,Toast.LENGTH_LONG).show();
-        ff.collection("Shares").document("1509")
+        ff.collection("Shares").document(s)
                 .collection("ShareDetails").document("price").get()
                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 DocumentSnapshot snapshot=task.getResult();
                 sharedetails.setBuyingprice(snapshot.getString("buyingprice"));
+                shareprice=view.findViewById(R.id.shareprice);
+                shareprice.setText(sharedetails.getBuyingprice());
             }
         });
 
 
-        shareprice=view.findViewById(R.id.shareprice);
-        shareprice.setText(sharedetails.getBuyingprice()); // this is not working
+         // this is not working
 
         btn_buy = view.findViewById(R.id.btn_buy);
         btn_buy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 priceofshare = Integer.parseInt(sharedetails.getBuyingprice());
-                if (noofshares.getText().toString() == null) {
+                if (Integer.parseInt(noofshares.getText().toString()) == 0) {
                     Toast.makeText(getContext(), "error", Toast.LENGTH_LONG).show();
-                } else {
+                }
+                else {
                     int a = Integer.parseInt(noofshares.getText().toString());
 //
 //                    //user having current credits less then needed
@@ -127,7 +127,7 @@ public class Dialog_buy extends DialogFragment {
                         buy_success.setArguments(bundle1);
                         bundle1.putInt("shares", a);
                         buy_success.show(getChildFragmentManager(), "Buy_Success");
-                        dismiss();
+                        //dismiss();
                         // }
                     }
                 }
