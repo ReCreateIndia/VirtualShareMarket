@@ -39,6 +39,17 @@
         android:layout_height="5dp"
         android:background="#2a7440"/>
     <TextView
+        android:id="@+id/totalAvailable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Total available:"
+        android:fontFamily="@font/abril_fatface"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"
+        android:textColor="#e1ff8a"/>
+    <TextView
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:layout_width="wrap_content"
@@ -60,16 +71,7 @@
         android:layout_marginBottom="20dp"
         android:background="@drawable/border"
         android:fontFamily="@font/abril_fatface" />
-    <TextView
-        android:id="@+id/totalAmount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="Total amount: \t $35"
-        android:fontFamily="@font/abril_fatface"
-        android:layout_gravity="center_horizontal"
-        android:textSize="20sp"
-        android:textColor="#e1ff8a"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

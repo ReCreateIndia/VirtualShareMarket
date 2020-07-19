@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Home">
+    tools:context=".AllShareFragment">
    <LinearLayout
        android:id="@+id/techlinearlayout"
        android:layout_width="match_parent"
@@ -133,7 +133,7 @@
          <TextView
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:text="Top Third Startups"
+             android:text="Top Non-Tech Startups"
              android:textSize="30sp"
              android:textStyle="bold"
              android:textColor="#ffffff">

@@ -23,7 +23,11 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+
+import javax.annotation.Nullable;
 
 import recreate.india.vsm.Constructor.credits;
 import recreate.india.vsm.Main_Fragments.AllShareFragment;
@@ -69,15 +73,15 @@ public class MainActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
                 ff.collection("Users").document(firebaseUser.getUid()).collection("Credits")
-                .document("Credits").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                DocumentSnapshot documentSnapshot=task.getResult();
+                .document("Credits").addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                    @Override
+                    public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+                        DocumentSnapshot snapshot=documentSnapshot;
 
-                credits.setCredits(documentSnapshot.getString("credits"));
-                coins.setText(credits.getCredits());
-            }
-        });
+                        credits.setCredits(snapshot.getString("credits"));
+                        coins.setText(credits.getCredits());
+                    }
+                });
 
         bottomNavigationView.setOnNavigationItemSelectedListener(navListner);
 

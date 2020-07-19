@@ -21,12 +21,15 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.ThrowOnExtraProperties;
 
 import java.util.HashMap;
 import java.util.Map;
 
+import recreate.india.vsm.Constructor.Sharequantity;
 import recreate.india.vsm.Constructor.credits;
 import recreate.india.vsm.Constructor.sharedetails;
 import recreate.india.vsm.Main_Activities.R;
@@ -45,7 +48,9 @@ public class Dialog_buy extends DialogFragment {
     private TextView shareprice;
     sharedetails sharedetails=new sharedetails();
     credits credits=new credits();
-    int priceofshare;
+    Sharequantity sharequantity=new Sharequantity();
+    double priceofshare;
+    TextView totalavailable;
 
     //Bundle bundle = getArguments();
     @NonNull
@@ -55,7 +60,7 @@ public class Dialog_buy extends DialogFragment {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         final View view = inflater.inflate(R.layout.dialog_buy_shares,null,false);
         builder.setView(view);
-
+        totalavailable=view.findViewById(R.id.totalAvailable);
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
         ff=FirebaseFirestore.getInstance();
@@ -65,28 +70,35 @@ public class Dialog_buy extends DialogFragment {
         //getting current credits of current user
         ff.collection("Users")
                 .document(firebaseUser.getUid()).collection("Credits")
-                .document("Credits").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                .document("Credits").addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-
-                DocumentSnapshot snapshot=task.getResult();
+            public void onEvent(@javax.annotation.Nullable DocumentSnapshot documentSnapshot, @javax.annotation.Nullable FirebaseFirestoreException e) {
+                DocumentSnapshot snapshot=documentSnapshot;
                 credits.setCredits(snapshot.getString("credits"));
             }
         });
 
-        textView=view.findViewById(R.id.totalAmount);
         //textView.setText("Total Amount:"+Integer.parseInt(sharedetails.getBuyingprice())*(Integer.parseInt(noofshares.getText().toString())));
         Bundle bundle= getArguments();
         String s= bundle.getString("shareid");
         ff.collection("Shares").document(s)
-                .collection("ShareDetails").document("price").get()
-                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                .collection("ShareDetails").document("price").addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                DocumentSnapshot snapshot=task.getResult();
+            public void onEvent(@javax.annotation.Nullable DocumentSnapshot documentSnapshot, @javax.annotation.Nullable FirebaseFirestoreException e) {
+                DocumentSnapshot snapshot=documentSnapshot;
                 sharedetails.setBuyingprice(snapshot.getString("buyingprice"));
                 shareprice=view.findViewById(R.id.shareprice);
-                shareprice.setText(sharedetails.getBuyingprice());
+                shareprice.setText("$"+sharedetails.getBuyingprice());
+            }
+        });
+        ff.collection("Shares").document(s)
+                .collection("ShareDetails").document("quantity").addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@javax.annotation.Nullable DocumentSnapshot documentSnapshot, @javax.annotation.Nullable FirebaseFirestoreException e) {
+                DocumentSnapshot snapshot=documentSnapshot;
+                sharequantity.setAvailable(documentSnapshot.getString("available"));
+                sharequantity.setTotal(documentSnapshot.getString("total"));
+                totalavailable.setText(sharequantity.getAvailable());
             }
         });
 
@@ -98,8 +110,10 @@ public class Dialog_buy extends DialogFragment {
             @Override
             public void onClick(View v) {
                 priceofshare = Integer.parseInt(sharedetails.getBuyingprice());
-                if (Integer.parseInt(noofshares.getText().toString()) == 0) {
-                    Toast.makeText(getContext(), "error", Toast.LENGTH_LONG).show();
+                if (Integer.parseInt(noofshares.getText().toString())>Integer.parseInt(sharequantity.getAvailable())) {
+                    Toast.makeText(getContext(),"Sorry "+noofshares.getText().toString()
+                                    +" shares are not available now you can buy "+sharequantity.getAvailable(),
+                            Toast.LENGTH_LONG).show();
                 }
                 else {
                     int a = Integer.parseInt(noofshares.getText().toString());

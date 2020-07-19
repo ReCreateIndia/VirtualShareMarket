@@ -38,21 +38,6 @@
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/userImage"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:visibility="gone"
-            android:id="@+id/userPostText"
-            android:layout_width="0dp"
-            android:layout_height="220dp"
-            android:layout_marginTop="20dp"
-            android:padding="10dp"
-            android:text="TextView hahahaha hahahaha hahaha aahahah hahahah hahaha haaha hahaa hahah haahah haah hahah ahhah"
-            android:textSize="23sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/userImage" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -100,7 +85,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/userImage"
-            android:background="#330033" />
+            android:background="@drawable/vsm_logo" />
 
         <VideoView
             android:visibility="gone"

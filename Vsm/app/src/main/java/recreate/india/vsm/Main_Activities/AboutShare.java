@@ -23,11 +23,15 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.annotation.Nullable;
 
 import recreate.india.vsm.Constructor.PostModal;
 import recreate.india.vsm.Constructor.credits;
@@ -65,22 +69,13 @@ public class AboutShare extends AppCompatActivity  {
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
         ff.collection("Users").document(firebaseUser.getUid()).collection("Credits")
-                .document("Credits").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                .document("Credits").addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                DocumentSnapshot documentSnapshot=task.getResult();
+            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+                DocumentSnapshot snapshot=documentSnapshot;
 
-                credits.setCredits(documentSnapshot.getString("credits"));
+                credits.setCredits(snapshot.getString("credits"));
                 coins.setText(credits.getCredits());
-            }
-        });
-        ff.collection("Users").document(firebaseUser.getUid()).collection("Credits")
-                .document("Credits").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                DocumentSnapshot documentSnapshot = task.getResult();
-
-                credits.setCredits(documentSnapshot.getString("credits"));
             }
         });
         shareRecyclerView=findViewById(R.id.shareRecyclerView);
@@ -97,9 +92,6 @@ public class AboutShare extends AppCompatActivity  {
 
             @Override
             protected void onBindViewHolder(@NonNull PostViewHolder postViewHolder, int i, @NonNull PostModal postModal) {
-                if(Integer.parseInt(postModal.getType())==1){
-                    postViewHolder.userposttext.setVisibility(View.VISIBLE);
-                }
                 if(Integer.parseInt(postModal.getType())==2){
                     postViewHolder.userpostimage.setVisibility(View.VISIBLE);
                 }
@@ -127,7 +119,6 @@ public class AboutShare extends AppCompatActivity  {
             super(itemView);
             name=itemView.findViewById(R.id.CompanyName);
             userpostimage=itemView.findViewById(R.id.userPostImage);
-            userposttext=itemView.findViewById(R.id.userPostText);
         }
     }
 
@@ -158,6 +149,7 @@ public class AboutShare extends AppCompatActivity  {
                     Dialog_sell dialog_sell = new Dialog_sell();
                     Bundle bundle1 = new Bundle();
                     bundle1.putString("shareid",shareid);
+                    dialog_sell.setArguments(bundle1);
                     dialog_sell.show(getSupportFragmentManager(),"Dialog_Sell");
                     break;
             }

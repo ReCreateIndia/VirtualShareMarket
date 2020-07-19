@@ -58,16 +58,7 @@
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/abril_fatface"
         android:background="@drawable/border_sell"/>
-    <TextView
-        android:id="@+id/totalAmount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="Total amount: \t $35"
-        android:fontFamily="@font/abril_fatface"
-        android:layout_gravity="center_horizontal"
-        android:textSize="20sp"
-        android:textColor="#ffd08a"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
