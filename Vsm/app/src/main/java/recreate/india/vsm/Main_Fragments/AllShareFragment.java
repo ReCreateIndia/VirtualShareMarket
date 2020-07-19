@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -29,7 +30,7 @@ import recreate.india.vsm.Main_Activities.R;
 
 
 
-public class AllShareFragment extends Fragment {
+public class AllShareFragment extends Fragment implements GestureDetector.OnGestureListener{
 
     private RecyclerView tech_recycler_view, funded_recycler_view, third_recycler_view;
     private List<sharemodel> tech_list, funded_list, third_list;
@@ -161,6 +162,42 @@ public class AllShareFragment extends Fragment {
         tech_recycler_view.setAdapter(adapter);
         tech_recycler_view.setLayoutManager(new LinearLayoutManager(getContext()));
         return view;
+    }
+
+
+    @Override
+    public boolean onDown(MotionEvent e) {
+        return false;
+    }
+
+
+    @Override
+    public void onShowPress(MotionEvent e) {
+
+    }
+
+
+    @Override
+    public boolean onSingleTapUp(MotionEvent e) {
+        return false;
+    }
+
+
+    @Override
+    public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+        return false;
+    }
+
+
+    @Override
+    public void onLongPress(MotionEvent e) {
+
+    }
+
+
+    @Override
+    public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+        return false;
     }
     //ViewHolder
 

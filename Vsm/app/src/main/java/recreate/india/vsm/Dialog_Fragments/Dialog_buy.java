@@ -60,11 +60,16 @@ public class Dialog_buy extends DialogFragment {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         final View view = inflater.inflate(R.layout.dialog_buy_shares,null,false);
         builder.setView(view);
-        totalavailable=view.findViewById(R.id.totalAvailable);
+        Bundle bundle= getArguments();
+        final String s= bundle.getString("shareid");
+
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
         ff=FirebaseFirestore.getInstance();
 
+
+
+        totalavailable=view.findViewById(R.id.totalAvailable);
         noofshares=view.findViewById(R.id.noofshares);
 
         //getting current credits of current user
@@ -79,8 +84,7 @@ public class Dialog_buy extends DialogFragment {
         });
 
         //textView.setText("Total Amount:"+Integer.parseInt(sharedetails.getBuyingprice())*(Integer.parseInt(noofshares.getText().toString())));
-        Bundle bundle= getArguments();
-        String s= bundle.getString("shareid");
+
         ff.collection("Shares").document(s)
                 .collection("ShareDetails").document("price").addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
@@ -91,6 +95,7 @@ public class Dialog_buy extends DialogFragment {
                 shareprice.setText("$"+sharedetails.getBuyingprice());
             }
         });
+
         ff.collection("Shares").document(s)
                 .collection("ShareDetails").document("quantity").addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
@@ -98,35 +103,39 @@ public class Dialog_buy extends DialogFragment {
                 DocumentSnapshot snapshot=documentSnapshot;
                 sharequantity.setAvailable(documentSnapshot.getString("available"));
                 sharequantity.setTotal(documentSnapshot.getString("total"));
-                totalavailable.setText(sharequantity.getAvailable());
+                totalavailable.setText("Total Available  "+sharequantity.getAvailable());
             }
         });
-
-
-         // this is not working
 
         btn_buy = view.findViewById(R.id.btn_buy);
         btn_buy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 priceofshare = Integer.parseInt(sharedetails.getBuyingprice());
+
                 if (Integer.parseInt(noofshares.getText().toString())>Integer.parseInt(sharequantity.getAvailable())) {
                     Toast.makeText(getContext(),"Sorry "+noofshares.getText().toString()
                                     +" shares are not available now you can buy "+sharequantity.getAvailable(),
                             Toast.LENGTH_LONG).show();
                 }
                 else {
-                    int a = Integer.parseInt(noofshares.getText().toString());
+
+                    final int a = Integer.parseInt(noofshares.getText().toString());
 //
 //                    //user having current credits less then needed
                     if ((double) (a * priceofshare) > Double.parseDouble(credits.getCredits())) {
                         Toast.makeText(getContext(), "needed" + a * priceofshare + "you have " + credits.getCredits(), Toast.LENGTH_LONG).show();
                     } else {
 
-                        netCredits = Double.parseDouble(credits.getCredits()) - (a * priceofshare);
-
+                        netCredits = Double.parseDouble(credits.getCredits()) - Double.valueOf(a * priceofshare);
+                        Map<String ,Object>new_quantity=new HashMap<>();
+                        new_quantity.put("available",String.valueOf(Integer.valueOf(sharequantity.getAvailable())-Integer.valueOf(a)));
+                        new_quantity.put("total",sharequantity.getTotal());
+                        ff.collection("Shares").document(s)
+                                .collection("ShareDetails").document("quantity").set(new_quantity);
                         // putting new credts into map
-                        Map<String, Object> map = new HashMap<>();
+                        final Map<String, Object> map = new HashMap<>();
                         map.put("credits", String.valueOf(netCredits));
 
                         //pushing new credits of current user in firebase
@@ -135,6 +144,22 @@ public class Dialog_buy extends DialogFragment {
                                 .collection("Credits")
                                 .document("Credits")
                                 .set(map);
+                        ff.collection("Users").document(firebaseUser.getUid()).collection("Shares").document(s).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                DocumentSnapshot snapshot=task.getResult();
+                                if(snapshot.getString("holding")==null){
+                                    Map<String ,Object>new_map=new HashMap<>();
+                                    new_map.put("holding",String.valueOf(a));
+                                    ff.collection("Users").document(firebaseUser.getUid()).collection("Shares").document(s).set(new_map);
+                                }
+                                else{
+                                    Map<String ,Object>new_map=new HashMap<>();
+                                    new_map.put("holding",String.valueOf(a+Integer.parseInt(snapshot.getString("holding"))));
+                                    ff.collection("Users").document(firebaseUser.getUid()).collection("Shares").document(s).set(new_map);
+                                }
+                            }
+                        });
 
 
                         //success dailog with no of shares has been bought

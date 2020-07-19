@@ -1632,7 +1632,6 @@ id action_mode_close_button
 id action_text
 id actions
 id activity_chooser_view_content
-id adView
 id add
 id adjust_height
 id adjust_width
@@ -1690,7 +1689,6 @@ id dialog_button
 id dimensions
 id direct
 id disableHome
-id donate_add
 id drawerlayout
 id edit_query
 id end
@@ -1749,7 +1747,6 @@ id left
 id light
 id line1
 id line3
-id linearLayout2
 id linearLayout3
 id listMode
 id list_item
@@ -1816,6 +1813,7 @@ id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
 id myHoldings
+id myholdings
 id myshares_recyclerview
 id n1
 id navigation_header_container
@@ -1852,7 +1850,6 @@ id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
 id scale
-id score
 id screen
 id scroll
 id scrollIndicatorDown
@@ -1871,6 +1868,7 @@ id search_src_text
 id search_voice_btn
 id select_dialog_listview
 id selected
+id sellsuccess
 id shareRecyclerView
 id sharebuy
 id sharename

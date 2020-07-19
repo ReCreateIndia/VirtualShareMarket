@@ -59,6 +59,7 @@ public class MyShareFragment extends Fragment {
 
             @Override
             protected void onBindViewHolder(@NonNull MyShareFragment.PostViewHolder postViewHolder, int i, @NonNull final MyShareInfo myShareInfo) {
+
                 postViewHolder.holdings.setText(myShareInfo.getHolding());
                 postViewHolder.trade.setOnClickListener(new View.OnClickListener() {
                     @Override

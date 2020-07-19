@@ -30,6 +30,7 @@
         android:layout_gravity="center_horizontal"
         android:src="@drawable/ic_baseline_thumb_up_24"/>
     <TextView
+        android:id="@+id/sellsuccess"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="- 29 shares"

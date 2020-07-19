@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -146,12 +147,26 @@ public class AboutShare extends AppCompatActivity  {
                     dialog_buy.show(getSupportFragmentManager(),"Dialog_Buy");
                     break;
                 case R.id.sharesell:
-                    Dialog_sell dialog_sell = new Dialog_sell();
-                    Bundle bundle1 = new Bundle();
-                    bundle1.putString("shareid",shareid);
-                    dialog_sell.setArguments(bundle1);
-                    dialog_sell.show(getSupportFragmentManager(),"Dialog_Sell");
+                    ff.collection("Users").document(firebaseUser.getUid()).
+                            collection("Shares").document(shareid).get()
+                            .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                @Override
+                                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                    DocumentSnapshot snapshot=task.getResult();
+                                    if(snapshot.getString("holding")==null||Integer.parseInt(snapshot.getString("holding"))==0){
+                                        Toast.makeText(AboutShare.this,"You do not have any holdings of this share",Toast.LENGTH_LONG).show();
+                                    }
+                                    else{
+                                        Dialog_sell dialog_sell = new Dialog_sell();
+                                        Bundle bundle1 = new Bundle();
+                                        bundle1.putString("shareid",shareid);
+                                        dialog_sell.setArguments(bundle1);
+                                        dialog_sell.show(getSupportFragmentManager(),"Dialog_Sell");
+                                    }
+                                }
+                            });
                     break;
+
             }
             return false;
         }
