@@ -97,6 +97,8 @@ public class AboutShare extends AppCompatActivity  {
                     postViewHolder.userpostimage.setVisibility(View.VISIBLE);
                 }
                 postViewHolder.name.setText(postModal.getName());
+                String s=firebaseUser.getEmail();
+                postViewHolder.username.setText(postModal.getName());
             }
 
             @NonNull
@@ -113,13 +115,16 @@ public class AboutShare extends AppCompatActivity  {
     public class PostViewHolder extends RecyclerView.ViewHolder {
        String type;
        TextView name;
-       TextView userposttext;
+       TextView desc;
+       TextView username;
        ImageView userpostimage;
 
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);
             name=itemView.findViewById(R.id.CompanyName);
             userpostimage=itemView.findViewById(R.id.userPostImage);
+            desc=itemView.findViewById(R.id.description);
+            username=itemView.findViewById(R.id.username);
         }
     }
 

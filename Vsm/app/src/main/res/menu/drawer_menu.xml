@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
-        <item android:id="@+id/i1"
-            android:title="item1"></item>
+        <item android:id="@+id/logout"
+            android:title="logout"></item>
         <item android:id="@+id/i2"
             android:title="item2"></item>
         <item android:id="@+id/i3"

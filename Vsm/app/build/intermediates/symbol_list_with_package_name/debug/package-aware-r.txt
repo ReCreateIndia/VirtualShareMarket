@@ -1679,6 +1679,7 @@ id cut
 id dark
 id decor_content_parent
 id default_activity_button
+id description
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -1720,7 +1721,6 @@ id group_divider
 id groups
 id home
 id homeAsUp
-id i1
 id i2
 id i3
 id icon
@@ -1746,10 +1746,12 @@ id left
 id light
 id line1
 id line3
+id linearLayout
 id linearLayout3
 id listMode
 id list_item
 id loginbutton
+id logout
 id masked
 id media_actions
 id message
