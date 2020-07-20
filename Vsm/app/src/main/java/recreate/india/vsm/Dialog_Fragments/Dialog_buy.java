@@ -151,11 +151,13 @@ public class Dialog_buy extends DialogFragment {
                                 if(snapshot.getString("holding")==null){
                                     Map<String ,Object>new_map=new HashMap<>();
                                     new_map.put("holding",String.valueOf(a));
+                                    new_map.put("id",s);
                                     ff.collection("Users").document(firebaseUser.getUid()).collection("Shares").document(s).set(new_map);
                                 }
                                 else{
                                     Map<String ,Object>new_map=new HashMap<>();
                                     new_map.put("holding",String.valueOf(a+Integer.parseInt(snapshot.getString("holding"))));
+                                    new_map.put("id",s);
                                     ff.collection("Users").document(firebaseUser.getUid()).collection("Shares").document(s).set(new_map);
                                 }
                             }
