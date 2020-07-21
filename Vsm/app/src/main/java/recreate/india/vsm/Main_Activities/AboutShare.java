@@ -42,6 +42,7 @@ import recreate.india.vsm.Constructor.credits;
 import recreate.india.vsm.Dialog_Fragments.Dialog_buy;
 import recreate.india.vsm.Dialog_Fragments.Dialog_sell;
 
+import recreate.india.vsm.Dialog_Fragments.Like_Comment;
 import recreate.india.vsm.Main_Activities.R;
 
 
@@ -83,7 +84,7 @@ public class AboutShare extends AppCompatActivity  {
             }
         });
         shareRecyclerView=findViewById(R.id.shareRecyclerView);
-        Bundle bundle = getIntent().getExtras();
+        final Bundle bundle = getIntent().getExtras();
         shareid = bundle.getString("shareid");
         bottomNavigationView=findViewById(R.id.aboutsharebottomnavview);
         bottomNavigationView.setOnNavigationItemSelectedListener(navlistner);
@@ -102,18 +103,40 @@ public class AboutShare extends AppCompatActivity  {
                 postViewHolder.name.setText(postModal.getName());
                 String s=firebaseUser.getEmail();
                 postViewHolder.username.setText(postModal.getName());
+
+                /*
+
+                Set appropriate values for PostViewHolder.isliked and PostViewHolder.iscommented
+                If the likes_map contains the current user then set PostViewHolder.isliked = true.
+                If the comments_map contains the current user then set PostViewHolder.iscommented = true
+
+                */
+                if(postViewHolder.isliked)
+                {
+                    postViewHolder.like_icon.setImageResource(R.drawable.ic_baseline_thumb_up_24);
+                    postViewHolder.like_text.setTextColor(getResources().getColor(R.color.like_comment));
+                }
+                if(postViewHolder.iscommented)
+                {
+                    postViewHolder.comment_text.setTextColor(getResources().getColor(R.color.like_comment));
+                    postViewHolder.comment_icon.setImageResource(R.drawable.comment_green);
+                }
                 View.OnClickListener likelistener = new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if(postViewHolder.isliked)
+                        if(!postViewHolder.isliked)
                         {
                             postViewHolder.like_icon.setImageResource(R.drawable.ic_baseline_thumb_up_24);
                             postViewHolder.like_text.setTextColor(getResources().getColor(R.color.like_comment));
+
+                            //User has liked the post. Save it inside the backend.
                         }
                         else
                         {
                             postViewHolder.like_icon.setImageResource(R.drawable.like_black);
                             postViewHolder.like_text.setTextColor(getResources().getColor(R.color.black));
+
+                            //User has disliked the post. Remove the like from the backend.
                         }
                     }
                 };
@@ -131,11 +154,38 @@ public class AboutShare extends AppCompatActivity  {
                             postViewHolder.iscommented=true;
                             postViewHolder.comment_text.setTextColor(getResources().getColor(R.color.like_comment));
                             postViewHolder.comment_icon.setImageResource(R.drawable.comment_green);
+
+                            //User has written a comment and wants to post it.
+                            //Save the comment into the backend here.
+                            //Comment is written inside the edittext write comment.
                         }
                     }
                 });
                 postViewHolder.like_icon.setOnClickListener(likelistener);
                 postViewHolder.like_text.setOnClickListener(likelistener);
+                postViewHolder.comment_icon.setOnClickListener(comment_listener);
+                postViewHolder.comment_text.setOnClickListener(comment_listener);
+                postViewHolder.showlikes.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Like_Comment lcdialog = new Like_Comment();
+                        Bundle bundle1 = new Bundle();
+                        bundle1.putInt("choice",10);
+                        lcdialog.setArguments(bundle1);
+                        lcdialog.show(getSupportFragmentManager(),"Likes_Dialog");
+                    }
+                });
+                postViewHolder.showcomments.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Like_Comment lcdialog = new Like_Comment();
+                        Bundle bundle1 = new Bundle();
+                        bundle1.putInt("choice",20);
+                        lcdialog.setArguments(bundle1);
+                        lcdialog.show(getSupportFragmentManager(),"Comments_Dialog");
+
+                    }
+                });
             }
 
             @NonNull
@@ -151,7 +201,7 @@ public class AboutShare extends AppCompatActivity  {
     }
     public class PostViewHolder extends RecyclerView.ViewHolder {
        String type;
-       TextView name, comment_text, like_text;
+       TextView name, comment_text, like_text, showcomments, showlikes;
        boolean isliked = false;
        boolean iscommented = false;
        TextView username;
@@ -165,6 +215,8 @@ public class AboutShare extends AppCompatActivity  {
             name=itemView.findViewById(R.id.CompanyName);
             userpostimage=itemView.findViewById(R.id.userPostImage);
             username=itemView.findViewById(R.id.username);
+            showcomments = itemView.findViewById(R.id.showcomments);
+            showlikes = itemView.findViewById(R.id.showlikes);
             write_comment_layout = itemView.findViewById(R.id.write_comment_layout);
             write_comment = itemView.findViewById(R.id.write_comment_edittext);
             post_comment = itemView.findViewById(R.id.post_comment);
