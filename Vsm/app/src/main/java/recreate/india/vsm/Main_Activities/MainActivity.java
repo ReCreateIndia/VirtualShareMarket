@@ -145,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void gotoLoginActivity() {
+        firebaseAuth.signOut();
         firebaseUser=null;
         Intent logIntent = new Intent(MainActivity.this, LoginActivity.class);
         logIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
