@@ -102,7 +102,7 @@ public class AboutShare extends AppCompatActivity  {
                 }
                 postViewHolder.name.setText(postModal.getName());
                 String s=firebaseUser.getEmail();
-                postViewHolder.username.setText(postModal.getName());
+              //  postViewHolder.username.setText(postModal.getName());
 
                 /*
 
@@ -128,13 +128,14 @@ public class AboutShare extends AppCompatActivity  {
                         {
                             postViewHolder.like_icon.setImageResource(R.drawable.ic_baseline_thumb_up_24);
                             postViewHolder.like_text.setTextColor(getResources().getColor(R.color.like_comment));
-
+                            postModal.getLikes().put(firebaseUser.getUid(),"liked");
                             //User has liked the post. Save it inside the backend.
                         }
                         else
                         {
                             postViewHolder.like_icon.setImageResource(R.drawable.like_black);
                             postViewHolder.like_text.setTextColor(getResources().getColor(R.color.black));
+                            postModal.getLikes().remove(firebaseUser.getUid());
 
                             //User has disliked the post. Remove the like from the backend.
                         }
