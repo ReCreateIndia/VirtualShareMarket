@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/write_comment_layout"
+            android:visibility="visible"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp">
+            <ImageView
+                android:id="@+id/commenterimage"
+                android:layout_width="33dp"
+                android:layout_height="32dp"
+                android:background="@drawable/vsm_logo" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/commentername"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#FFFFFF"
+                android:lines="1"
+                tools:autoSizeTextType="uniform"
+                android:text="Lakshay Bhagtani"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/actualcomment"
+            android:layout_marginLeft="63dp"
+            android:layout_marginRight="30dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="20dp"
+            android:text="Nice Share man, although I have a doubt. If I buy this, do I get to be a fucking millionare within two days?"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
