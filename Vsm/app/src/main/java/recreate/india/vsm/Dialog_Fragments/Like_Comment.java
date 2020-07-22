@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import recreate.india.vsm.Constructor.Comments;
 import recreate.india.vsm.Constructor.Likes;
@@ -32,8 +33,10 @@ public class Like_Comment extends DialogFragment {
         likes_recyclerview = view.findViewById(R.id.likes_recycler_view);
         comments_recyclerview = view.findViewById(R.id.comments_recycler_view);
         int choice = getArguments().getInt("choice");
+        HashMap<String,String> lcmap = (HashMap<String, String>) getArguments().getSerializable("map");
         if(choice==10)
         {
+            //User has clicked on likes. Display likes.
             comments_recyclerview.setVisibility(View.GONE);
             ArrayList<Likes> likes_list = new ArrayList<>();
             //Retrieve data of likes from the backend into likes_list.
@@ -44,6 +47,7 @@ public class Like_Comment extends DialogFragment {
         }
         else if(choice==20)
         {
+            //User has clicked on comments. Display data of comments
             likes_recyclerview.setVisibility(View.GONE);
             ArrayList<Comments> comments_list = new ArrayList<>();
             //Retrieve data of comments from the backend into comments_list.

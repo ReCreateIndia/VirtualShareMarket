@@ -172,6 +172,7 @@ public class AboutShare extends AppCompatActivity  {
                         Like_Comment lcdialog = new Like_Comment();
                         Bundle bundle1 = new Bundle();
                         bundle1.putInt("choice",10);
+                        bundle1.putSerializable("map",postModal.getComments());
                         lcdialog.setArguments(bundle1);
                         lcdialog.show(getSupportFragmentManager(),"Likes_Dialog");
                     }
@@ -182,6 +183,7 @@ public class AboutShare extends AppCompatActivity  {
                         Like_Comment lcdialog = new Like_Comment();
                         Bundle bundle1 = new Bundle();
                         bundle1.putInt("choice",20);
+                        bundle1.putSerializable("map",postModal.getComments());
                         lcdialog.setArguments(bundle1);
                         lcdialog.show(getSupportFragmentManager(),"Comments_Dialog");
 
