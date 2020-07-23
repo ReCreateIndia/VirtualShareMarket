@@ -6,7 +6,7 @@ public class Comments {
     Uri imageuri;
     String username;
     String comment;
-
+    public Comments(){}
     public Comments(Uri imageuri, String username, String comment) {
         this.imageuri = imageuri;
         this.username = username;
@@ -23,5 +23,17 @@ public class Comments {
 
     public String getComment() {
         return comment;
+    }
+
+    public void setImageuri(Uri imageuri) {
+        this.imageuri = imageuri;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 }

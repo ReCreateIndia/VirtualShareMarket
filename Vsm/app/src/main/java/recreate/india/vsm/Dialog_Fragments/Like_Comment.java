@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 import recreate.india.vsm.Constructor.Comments;
 import recreate.india.vsm.Constructor.Likes;
@@ -50,6 +51,12 @@ public class Like_Comment extends DialogFragment {
             //User has clicked on comments. Display data of comments
             likes_recyclerview.setVisibility(View.GONE);
             ArrayList<Comments> comments_list = new ArrayList<>();
+            for (Map.Entry<String,String> entry : lcmap.entrySet()){
+                Comments comments=new Comments();
+                comments.setComment(entry.getValue());
+                comments.setUsername(entry.getKey());
+                comments_list.add(comments);
+            }
             //Retrieve data of comments from the backend into comments_list.
             // Refer to the class Comments (inside Constructor package) for details.
             Comments_Adapter adapter = new Comments_Adapter(comments_list);
