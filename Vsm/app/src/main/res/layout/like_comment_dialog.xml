@@ -7,16 +7,16 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/likes_recycler_view"
         tools:listitem="@layout/likes_item"
         android:visibility="visible"
         />
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/comments_recycler_view"
         tools:listitem="@layout/comments_item"
-        android:visibility="gone"/>
+        android:visibility="visible"/>
 
 </LinearLayout>

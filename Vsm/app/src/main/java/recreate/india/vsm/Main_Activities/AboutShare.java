@@ -39,9 +39,11 @@ import javax.annotation.Nullable;
 
 import recreate.india.vsm.Constructor.PostModal;
 import recreate.india.vsm.Constructor.credits;
+import recreate.india.vsm.Dialog_Fragments.CommentDialog;
 import recreate.india.vsm.Dialog_Fragments.Dialog_buy;
 import recreate.india.vsm.Dialog_Fragments.Dialog_sell;
 
+import recreate.india.vsm.Dialog_Fragments.LikeDialog;
 import recreate.india.vsm.Dialog_Fragments.Like_Comment;
 import recreate.india.vsm.Main_Activities.R;
 
@@ -169,23 +171,27 @@ public class AboutShare extends AppCompatActivity  {
                 postViewHolder.showlikes.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Like_Comment lcdialog = new Like_Comment();
-                        Bundle bundle1 = new Bundle();
-                        bundle1.putInt("choice",10);
-                        bundle1.putSerializable("map",postModal.getComments());
-                        lcdialog.setArguments(bundle1);
-                        lcdialog.show(getSupportFragmentManager(),"Likes_Dialog");
+//                        Like_Comment lcdialog = new Like_Comment();
+//                        Bundle bundle1 = new Bundle();
+//                        bundle1.putInt("choice",10);
+//                        bundle1.putSerializable("map",postModal.getComments());
+//                        lcdialog.setArguments(bundle1);
+//                        lcdialog.show(getSupportFragmentManager(),"Likes_Dialog");
+                        LikeDialog likeDialog=new LikeDialog();
+                        likeDialog.show(getSupportFragmentManager(),"LikeDialog");
                     }
                 });
                 postViewHolder.showcomments.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Like_Comment lcdialog = new Like_Comment();
-                        Bundle bundle1 = new Bundle();
-                        bundle1.putInt("choice",20);
-                        bundle1.putSerializable("map",postModal.getComments());
-                        lcdialog.setArguments(bundle1);
-                        lcdialog.show(getSupportFragmentManager(),"Comments_Dialog");
+//                        Like_Comment lcdialog = new Like_Comment();
+//                        Bundle bundle1 = new Bundle();
+//                        bundle1.putInt("choice",20);
+//                        bundle1.putSerializable("map",postModal.getComments());
+//                        lcdialog.setArguments(bundle1);
+//                        lcdialog.show(getSupportFragmentManager(),"Comments_Dialog");
+                        CommentDialog commentDialog=new CommentDialog();
+                        commentDialog.show(getSupportFragmentManager(),"CommentDialog");
 
                     }
                 });
