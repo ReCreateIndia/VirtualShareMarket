@@ -120,7 +120,7 @@
 
                     android:background="@drawable/loginbuttonbg"
 
-                    android:text="Login"
+                    android:text="Register"
                     android:textColor="#ffffff"
                     android:textSize="10sp"
                     android:layout_marginLeft="20dp"
