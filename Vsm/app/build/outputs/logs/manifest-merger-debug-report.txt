@@ -20,6 +20,7 @@ MERGED from [com.google.firebase:firebase-ads:19.1.0] C:\Users\Prachi Singhal\.g
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\50f185d7e9bd37b6d01b14d383ccac39\jetified-circleimageview-3.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [com.github.bumptech.glide:glide:4.8.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\27b76e43152d57f63ad798975c90e90b\jetified-glide-4.8.0\AndroidManifest.xml:2:1-12:12
 MERGED from [com.google.android.gms:play-services-ads:19.1.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\e72bc7f8f189acc57d7f9b836758081d\jetified-play-services-ads-19.1.0\AndroidManifest.xml:17:1-25:12
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\b0f7aec653391c4a2ce26c5cf0fc41cb\jetified-picasso-2.71828\AndroidManifest.xml:2:1-14:12
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\40901ca6ce3fedd904480108591740da\jetified-firebase-auth-interop-19.0.0\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-analytics:17.2.2] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\3869b47be141af223e7a4ec7aa5e1ec2\jetified-firebase-analytics-17.2.2\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\4cf11f806248f69485acbfe366b0122b\jetified-play-services-measurement-api-17.2.2\AndroidManifest.xml:17:1-36:12
@@ -66,6 +67,7 @@ MERGED from [com.google.firebase:firebase-components:16.0.0] C:\Users\Prachi Sin
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\0b8086a4eb91a0b51b9c558c5af06d6e\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
 MERGED from [com.firebaseui:firebase-ui-common:4.3.1] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\3c65cf8bb2b2a082146df83b980f1875\jetified-firebase-ui-common-4.3.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\1d7fd6eec831a418770f8deba251fef9\jetified-gifdecoder-4.8.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\6bc250b910a536afc6cb6a31e7848ca1\exifinterface-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\eff3b887575ba11b32853a4f6c021ff5\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\468ce79092f15593026d29383e329c87\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\b55ae32354d6a01c1a54b392cc10599e\print-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -150,6 +152,8 @@ MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\Prachi Singhal\.gradle
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\50f185d7e9bd37b6d01b14d383ccac39\jetified-circleimageview-3.1.0\AndroidManifest.xml:9:5-20
 MERGED from [com.github.bumptech.glide:glide:4.8.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\27b76e43152d57f63ad798975c90e90b\jetified-glide-4.8.0\AndroidManifest.xml:10:5-20
 MERGED from [com.github.bumptech.glide:glide:4.8.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\27b76e43152d57f63ad798975c90e90b\jetified-glide-4.8.0\AndroidManifest.xml:10:5-20
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\b0f7aec653391c4a2ce26c5cf0fc41cb\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\b0f7aec653391c4a2ce26c5cf0fc41cb\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\40901ca6ce3fedd904480108591740da\jetified-firebase-auth-interop-19.0.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\40901ca6ce3fedd904480108591740da\jetified-firebase-auth-interop-19.0.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-analytics:17.2.2] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\3869b47be141af223e7a4ec7aa5e1ec2\jetified-firebase-analytics-17.2.2\AndroidManifest.xml:7:5-20
@@ -292,6 +296,8 @@ MERGED from [com.github.bumptech.glide:glide:4.8.0] C:\Users\Prachi Singhal\.gra
 MERGED from [com.github.bumptech.glide:glide:4.8.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\27b76e43152d57f63ad798975c90e90b\jetified-glide-4.8.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.android.gms:play-services-ads:19.1.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\e72bc7f8f189acc57d7f9b836758081d\jetified-play-services-ads-19.1.0\AndroidManifest.xml:21:5-23:52
 MERGED from [com.google.android.gms:play-services-ads:19.1.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\e72bc7f8f189acc57d7f9b836758081d\jetified-play-services-ads-19.1.0\AndroidManifest.xml:21:5-23:52
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\b0f7aec653391c4a2ce26c5cf0fc41cb\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\b0f7aec653391c4a2ce26c5cf0fc41cb\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\40901ca6ce3fedd904480108591740da\jetified-firebase-auth-interop-19.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\40901ca6ce3fedd904480108591740da\jetified-firebase-auth-interop-19.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics:17.2.2] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\3869b47be141af223e7a4ec7aa5e1ec2\jetified-firebase-analytics-17.2.2\AndroidManifest.xml:5:5-44
@@ -384,6 +390,8 @@ MERGED from [com.firebaseui:firebase-ui-common:4.3.1] C:\Users\Prachi Singhal\.g
 MERGED from [com.firebaseui:firebase-ui-common:4.3.1] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\3c65cf8bb2b2a082146df83b980f1875\jetified-firebase-ui-common-4.3.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\1d7fd6eec831a418770f8deba251fef9\jetified-gifdecoder-4.8.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\1d7fd6eec831a418770f8deba251fef9\jetified-gifdecoder-4.8.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\6bc250b910a536afc6cb6a31e7848ca1\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\6bc250b910a536afc6cb6a31e7848ca1\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\eff3b887575ba11b32853a4f6c021ff5\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\eff3b887575ba11b32853a4f6c021ff5\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\468ce79092f15593026d29383e329c87\documentfile-1.0.0\AndroidManifest.xml:20:5-44
@@ -484,6 +492,14 @@ ADDED from [com.google.firebase:firebase-firestore:17.1.4] C:\Users\Prachi Singh
 		ADDED from [com.google.firebase:firebase-firestore:17.1.4] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\1faeedba7e0cac7f3686af4449dbcf75\jetified-firebase-firestore-17.1.4\AndroidManifest.xml:17:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-firestore:17.1.4] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\1faeedba7e0cac7f3686af4449dbcf75\jetified-firebase-firestore-17.1.4\AndroidManifest.xml:16:17-111
+provider#com.squareup.picasso.PicassoProvider
+ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\b0f7aec653391c4a2ce26c5cf0fc41cb\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+	android:authorities
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\b0f7aec653391c4a2ce26c5cf0fc41cb\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\b0f7aec653391c4a2ce26c5cf0fc41cb\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\b0f7aec653391c4a2ce26c5cf0fc41cb\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
 meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
 ADDED from [com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\Prachi Singhal\.gradle\caches\transforms-2\files-2.1\4cf11f806248f69485acbfe366b0122b\jetified-play-services-measurement-api-17.2.2\AndroidManifest.xml:30:13-32:85
 	android:value

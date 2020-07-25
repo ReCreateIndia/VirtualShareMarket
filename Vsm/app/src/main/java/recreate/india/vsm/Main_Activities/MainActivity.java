@@ -2,12 +2,14 @@ package recreate.india.vsm.Main_Activities;
 
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -42,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     FirebaseFirestore ff;
     GestureDetector gestureDetector;
-    private NavigationView navigationView;
     private ActionBarDrawerToggle toggle;
     private BottomNavigationView bottomNavigationView;
     private ActionBar actionBar;
@@ -63,7 +64,20 @@ public class MainActivity extends AppCompatActivity {
         ff=FirebaseFirestore.getInstance();
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AllShareFragment()).commit();
         bottomNavigationView = findViewById(R.id.aboutsharebottomnavview);
-        NavigationView navigationView = (NavigationView) findViewById(R.id.n1);
+
+        NavigationView navigationView =findViewById(R.id.n1);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.logout:
+                        gotoLoginActivity();
+                        break;
+                }
+
+                return false;
+            }
+        });
         drawerLayout = findViewById(R.id.drawerlayout);
         toggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.Open, R.string.Close);
         drawerLayout.addDrawerListener(toggle);
@@ -121,7 +135,21 @@ public class MainActivity extends AppCompatActivity {
 
             return true;
         }
+        switch (item.getItemId()) {
+            case R.id.logout:
+                firebaseAuth.signOut();
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                break;
+        }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void gotoLoginActivity() {
+        firebaseAuth.signOut();
+        firebaseUser=null;
+        Intent logIntent = new Intent(MainActivity.this, LoginActivity.class);
+        logIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(logIntent);
     }
 
 }

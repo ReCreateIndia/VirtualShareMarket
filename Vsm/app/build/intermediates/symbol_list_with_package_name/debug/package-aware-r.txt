@@ -756,6 +756,7 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color black
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -834,6 +835,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color like_comment
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -1291,6 +1293,8 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable comment_black
+drawable comment_green
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1508,6 +1512,7 @@ drawable ic_vol_type_tv_dark
 drawable ic_vol_type_tv_light
 drawable ic_vol_unmute
 drawable lefttriangle
+drawable like_black
 drawable loginbuttonbg
 drawable mr_button_connected_dark
 drawable mr_button_connected_light
@@ -1559,6 +1564,7 @@ drawable redtriangle
 drawable righttriangle
 drawable round_backgroundred
 drawable roundbackground_green
+drawable send
 drawable text_background
 drawable text_input_bg
 drawable tictactoe
@@ -1632,6 +1638,7 @@ id action_mode_close_button
 id action_text
 id actions
 id activity_chooser_view_content
+id actualcomment
 id add
 id adjust_height
 id adjust_width
@@ -1669,6 +1676,12 @@ id clip_horizontal
 id clip_vertical
 id coins
 id collapseActionView
+id comment_icon
+id comment_text
+id commenterimage
+id commentername
+id commenting_user_image
+id comments_recycler_view
 id container
 id content
 id contentPanel
@@ -1720,7 +1733,6 @@ id group_divider
 id groups
 id home
 id homeAsUp
-id i1
 id i2
 id i3
 id icon
@@ -1744,12 +1756,19 @@ id labeled
 id largeLabel
 id left
 id light
+id like_icon
+id like_text
+id likerimage
+id likername
+id likes_recycler_view
 id line1
 id line3
+id linearLayout
 id linearLayout3
 id listMode
 id list_item
 id loginbutton
+id logout
 id masked
 id media_actions
 id message
@@ -1834,6 +1853,7 @@ id parent_matrix
 id password
 id percent
 id pin
+id post_comment
 id price_of_shares
 id progress_circular
 id progress_horizontal
@@ -1878,6 +1898,8 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id showcomments
+id showlikes
 id slide
 id smallLabel
 id snackbar_action
@@ -1957,9 +1979,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
-id userComment
 id userImage
-id userLikes
 id userPostImage
 id userPostVideo
 id username
@@ -1970,6 +1990,8 @@ id wide
 id withText
 id wrap
 id wrap_content
+id write_comment_edittext
+id write_comment_layout
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration
@@ -2041,6 +2063,7 @@ layout activity_splash_screen
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout circle_menu
+layout comments_item
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2064,6 +2087,8 @@ layout fragment_all_share
 layout fragment_earn_money
 layout fragment_my_share
 layout header
+layout like_comment_dialog
+layout likes_item
 layout list_item_single
 layout material_alert_dialog
 layout material_alert_dialog_title

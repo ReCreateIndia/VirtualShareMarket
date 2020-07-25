@@ -150,6 +150,7 @@ public class Dialog_sell extends DialogFragment {
 
                             Map<String,Object>new_holding=new HashMap<>();
                             new_holding.put("holding",new_holdings);
+                            new_holding.put("id",s);
                             ff.collection("Users").document(firebaseUser.getUid()).
                                     collection("Shares").document(s).set(new_holding);
                             String new_available;
