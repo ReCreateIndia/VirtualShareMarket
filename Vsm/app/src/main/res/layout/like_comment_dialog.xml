@@ -9,14 +9,50 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/likes_recycler_view"
-        tools:listitem="@layout/likes_item"
-        android:visibility="visible"
+        android:visibility="gone"
         />
-    <androidx.recyclerview.widget.RecyclerView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/comments_recycler_view"
-        tools:listitem="@layout/comments_item"
-        android:visibility="visible"/>
+        android:orientation="vertical">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/comments_recycler_view"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:id="@+id/write_comment_layout"
+            android:visibility="visible"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp">
+            <ImageView
+                android:id="@+id/commenting_user_image"
+                android:layout_width="43dp"
+                android:layout_height="42dp"
+                android:background="@drawable/vsm_logo" />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:id="@+id/write_comment_edittext"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#FFFFFF"
+                android:hint="Write Your Comment Here"/>
+            <ImageButton
+                android:layout_width="43dp"
+                android:layout_height="42dp"
+                android:id="@+id/post_comment"
+                android:background="@drawable/send"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
 
 </LinearLayout>

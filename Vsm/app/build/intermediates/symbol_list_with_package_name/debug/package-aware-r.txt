@@ -1283,6 +1283,8 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable back1
+drawable bcak2
 drawable border
 drawable border_sell
 drawable btn_checkbox_checked_mtrl
@@ -1293,6 +1295,8 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable button
+drawable button2
 drawable comment_black
 drawable comment_green
 drawable common_full_open_on_phone
@@ -1511,6 +1515,7 @@ drawable ic_vol_type_speaker_light
 drawable ic_vol_type_tv_dark
 drawable ic_vol_type_tv_light
 drawable ic_vol_unmute
+drawable inputtype
 drawable lefttriangle
 drawable like_black
 drawable loginbuttonbg
@@ -1741,7 +1746,6 @@ id icon_only
 id ifRoom
 id image
 id imageView
-id imageView2
 id imageView3
 id imageView4
 id imageView5
@@ -1764,7 +1768,6 @@ id likes_recycler_view
 id line1
 id line3
 id linearLayout
-id linearLayout3
 id listMode
 id list_item
 id loginbutton
@@ -1949,9 +1952,7 @@ id textView3
 id textView4
 id textView5
 id textView6
-id textView7
 id textView8
-id textView9
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
