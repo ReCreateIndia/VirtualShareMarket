@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -92,89 +93,46 @@ public class AboutShare extends AppCompatActivity  {
         bottomNavigationView.setOnNavigationItemSelectedListener(navlistner);
         ff = FirebaseFirestore.getInstance();
         tech_list=new ArrayList<>();
-
         Query query = ff.collection("Shares").document(shareid).collection("Bloging");
         FirestoreRecyclerOptions<PostModal> options = new FirestoreRecyclerOptions.Builder<PostModal>().setQuery(query, PostModal.class).build();
         adapter = new FirestoreRecyclerAdapter<PostModal, PostViewHolder>(options) {
 
             @Override
             protected void onBindViewHolder(@NonNull final PostViewHolder postViewHolder, int i, @NonNull final PostModal postModal) {
-                if(Integer.parseInt(postModal.getType())==2){
-                    postViewHolder.userpostimage.setVisibility(View.VISIBLE);
-                }
-                postViewHolder.name.setText(postModal.getName());
+                postViewHolder.companyname.setText(postModal.getName());
                 String s=firebaseUser.getEmail();
-//                if(postViewHolder.isliked)
-//                {
-//                    postViewHolder.like_icon.setImageResource(R.drawable.ic_baseline_thumb_up_24);
-//                    postViewHolder.like_text.setTextColor(getResources().getColor(R.color.like_comment));
-//                }
-//                if(postViewHolder.iscommented)
-//                {
-//                    postViewHolder.comment_text.setTextColor(getResources().getColor(R.color.like_comment));
-//                    postViewHolder.comment_icon.setImageResource(R.drawable.comment_green);
-//                }
-//                View.OnClickListener likelistener = new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        if(!postViewHolder.isliked)
-//                        {
-//                            postViewHolder.like_icon.setImageResource(R.drawable.ic_baseline_thumb_up_24);
-//                            postViewHolder.like_text.setTextColor(getResources().getColor(R.color.like_comment));
-//                            postModal.getLikes().put(firebaseUser.getUid(),"liked");
-//                            //User has liked the post. Save it inside the backend.
-//                        }
-//                        else
-//                        {
-//                            postViewHolder.like_icon.setImageResource(R.drawable.like_black);
-//                            postViewHolder.like_text.setTextColor(getResources().getColor(R.color.black));
-//                            postModal.getLikes().remove(firebaseUser.getUid());
-//
-//                            //User has disliked the post. Remove the like from the backend.
-//                        }
-//                    }
-//                };
-//                View.OnClickListener comment_listener = new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        postViewHolder.write_comment_layout.setVisibility(View.VISIBLE);
-//                    }
-//                };
-//                postViewHolder.post_comment.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        if(!postViewHolder.iscommented)
-//                        {
-//                            postViewHolder.iscommented=true;
-//                            postViewHolder.comment_text.setTextColor(getResources().getColor(R.color.like_comment));
-//                            postViewHolder.comment_icon.setImageResource(R.drawable.comment_green);
-//
-//                            //User has written a comment and wants to post it.
-//                            //Save the comment into the backend here.
-//                            //Comment is written inside the edittext write comment.
-//                        }
-//                    }
-//                });
-//                postViewHolder.like_icon.setOnClickListener(likelistener);
-//                postViewHolder.like_text.setOnClickListener(likelistener);
-//                postViewHolder.comment_icon.setOnClickListener(comment_listener);
-//                postViewHolder.comment_text.setOnClickListener(comment_listener);
-                postViewHolder.showlikes.setOnClickListener(new View.OnClickListener() {
+                postViewHolder.username.setText(s.substring(0,s.length()-10));
+                postViewHolder.noofcomments.setText(postModal.getNo_comments());
+//                postViewHolder.nooflikes.setText(postModal.getNo_likes());
+                postViewHolder.description.setText(postModal.getDescription());
+                postViewHolder.comment.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        LikeDialog likeDialog=new LikeDialog();
-                        likeDialog.show(getSupportFragmentManager(),"LikeDialog");
+                        CommentDialog commentDialog  = new CommentDialog();
+                        Bundle bundle = new Bundle();
+                        bundle.putString("shareid",shareid);
+                        commentDialog.setArguments(bundle);
+                        commentDialog.show(getSupportFragmentManager(),"Comments");
                     }
                 });
-                postViewHolder.showcomments.setOnClickListener(new View.OnClickListener() {
+                postViewHolder.nooflikes.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        CommentDialog commentDialog=new CommentDialog();
-                        commentDialog.show(getSupportFragmentManager(),"CommentDialog");
+                        LikeDialog likeDialog  = new LikeDialog();
+                        Bundle bundle = new Bundle();
+                        bundle.putString("shareid",shareid);
+                        likeDialog.setArguments(bundle);
+                        likeDialog.show(getSupportFragmentManager(),"Likes");
+                    }
+                });
+                if (Integer.parseInt(postModal.getType())==1){
+                    postViewHolder.postimage.setVisibility(View.VISIBLE);
+                }
+                if (Integer.parseInt(postModal.getType())==2){
+                    postViewHolder.postvideo.setVisibility(View.VISIBLE);
+                }
+                }
 
-                    }
-                });
-            }
 
             @NonNull
             @Override
@@ -188,28 +146,20 @@ public class AboutShare extends AppCompatActivity  {
         shareRecyclerView.setAdapter(adapter);
     }
     public class PostViewHolder extends RecyclerView.ViewHolder {
-       String type;
-       TextView name,showcomments, showlikes;
-       boolean isliked = false;
-       boolean iscommented = false;
-       TextView username;
-       LinearLayout write_comment_layout;
-       EditText write_comment;
-       ImageButton post_comment;
-       ImageView userpostimage, like_icon, comment_icon;
-
+        private TextView companyname,username,description,nooflikes,noofcomments,comment;
+        ImageView postimage,likeicon;
+        VideoView postvideo;
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);
-            name=itemView.findViewById(R.id.CompanyName);
-            userpostimage=itemView.findViewById(R.id.userPostImage);
+            companyname=itemView.findViewById(R.id.companyName);
             username=itemView.findViewById(R.id.username);
-            showcomments = itemView.findViewById(R.id.comments);
-            showlikes = itemView.findViewById(R.id.number_of_comments);
-            write_comment_layout = itemView.findViewById(R.id.write_comment_layout);
-            write_comment = itemView.findViewById(R.id.write_comment_edittext);
-            post_comment = itemView.findViewById(R.id.post_comment);
-            like_icon = itemView.findViewById(R.id.like_icon);
-
+            description=itemView.findViewById(R.id.description);
+            nooflikes=itemView.findViewById(R.id.number_of_likes);
+            noofcomments=itemView.findViewById(R.id.number_of_comments);
+            comment=itemView.findViewById(R.id.comments);
+            likeicon=itemView.findViewById(R.id.like_icon);
+            postvideo=itemView.findViewById(R.id.userPostVideo);
+            postimage=itemView.findViewById(R.id.userPostImage);
         }
     }
 

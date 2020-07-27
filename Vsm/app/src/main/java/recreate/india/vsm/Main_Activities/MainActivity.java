@@ -91,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
                         DocumentSnapshot snapshot=documentSnapshot;
-
                         credits.setCredits(snapshot.getString("credits"));
                         coins.setText(credits.getCredits());
                     }

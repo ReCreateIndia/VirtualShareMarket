@@ -36,6 +36,7 @@ public class CommentDialog extends DialogFragment {
         final View view = inflater.inflate(R.layout.like_comment_dialog,null,false);
         ff=FirebaseFirestore.getInstance();
         commentsView=view.findViewById(R.id.comments_recycler_view);
+        commentsView.setVisibility(View.VISIBLE);
         Query query=ff.collection("Shares").document("1509").collection("Bloging").document(
                 "oVG37qiPn6NlUPuFE746").collection("comments");
         FirestoreRecyclerOptions<Comments>options=new FirestoreRecyclerOptions.Builder<Comments>().setQuery(query,Comments.class).build();

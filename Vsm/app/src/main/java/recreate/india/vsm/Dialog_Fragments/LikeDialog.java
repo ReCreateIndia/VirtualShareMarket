@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,16 +27,20 @@ import recreate.india.vsm.Main_Activities.R;
 
 public class LikeDialog extends DialogFragment {
     private FirebaseFirestore ff;
+    private LinearLayout putcomment;
     private FirestoreRecyclerAdapter adapter;
-    private RecyclerView commentsView;
+    private RecyclerView likesView;
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder=new AlertDialog.Builder(getActivity());
         LayoutInflater inflater=getActivity().getLayoutInflater();
         final View view = inflater.inflate(R.layout.like_comment_dialog,null,false);
+        putcomment=view.findViewById(R.id.putcomments);
+        putcomment.setVisibility(View.GONE);
         ff=FirebaseFirestore.getInstance();
-        commentsView=view.findViewById(R.id.comments_recycler_view);
+        likesView=view.findViewById(R.id.likes_recycler_view);
+        likesView.setVisibility(View.VISIBLE);
         Query query=ff.collection("Shares").document("1509").collection("Bloging").document(
                 "oVG37qiPn6NlUPuFE746").collection("likes");
         FirestoreRecyclerOptions<Comments>options=new FirestoreRecyclerOptions.Builder<Comments>().setQuery(query,Comments.class).build();
@@ -52,8 +57,8 @@ public class LikeDialog extends DialogFragment {
                 postView.username.setText(comments.getUsername());
             }
         };
-        commentsView.setAdapter(adapter);
-        commentsView.setLayoutManager(new LinearLayoutManager(getContext()));
+        likesView.setAdapter(adapter);
+        likesView.setLayoutManager(new LinearLayoutManager(getContext()));
         builder.setView(view);
         return builder.create();
     }

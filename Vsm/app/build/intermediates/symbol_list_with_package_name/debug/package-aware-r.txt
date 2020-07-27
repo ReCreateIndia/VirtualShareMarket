@@ -1582,7 +1582,6 @@ font abril_fatface
 id ALT
 id AllShares
 id CTRL
-id CompanyName
 id EarnCredits
 id FUNCTION
 id META
@@ -1681,12 +1680,12 @@ id clip_horizontal
 id clip_vertical
 id coins
 id collapseActionView
-id comment_icon
-id comment_text
 id commenterimage
 id commentername
 id commenting_user_image
+id comments
 id comments_recycler_view
+id companyName
 id container
 id content
 id contentPanel
@@ -1697,6 +1696,7 @@ id cut
 id dark
 id decor_content_parent
 id default_activity_button
+id description
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -1761,13 +1761,11 @@ id largeLabel
 id left
 id light
 id like_icon
-id like_text
 id likerimage
 id likername
 id likes_recycler_view
 id line1
 id line3
-id linearLayout
 id listMode
 id list_item
 id loginbutton
@@ -1845,6 +1843,8 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id number_of_comments
+id number_of_likes
 id off
 id on
 id outline
@@ -1860,6 +1860,7 @@ id post_comment
 id price_of_shares
 id progress_circular
 id progress_horizontal
+id putcomments
 id radio
 id recyclerScrool
 id register1
@@ -1901,8 +1902,6 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
-id showcomments
-id showlikes
 id slide
 id smallLabel
 id snackbar_action
