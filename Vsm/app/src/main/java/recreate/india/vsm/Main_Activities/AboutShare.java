@@ -1,6 +1,7 @@
 package recreate.india.vsm.Main_Activities;
 
 import android.annotation.SuppressLint;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -37,6 +38,9 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
+import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
+import hb.xvideoplayer.MxVideoPlayer;
+import hb.xvideoplayer.MxVideoPlayerWidget;
 import recreate.india.vsm.Constructor.PostModal;
 import recreate.india.vsm.Constructor.credits;
 import recreate.india.vsm.Dialog_Fragments.Dialog_buy;
@@ -97,8 +101,16 @@ public class AboutShare extends AppCompatActivity  {
 
             @Override
             protected void onBindViewHolder(@NonNull final PostViewHolder postViewHolder, int i, @NonNull final PostModal postModal) {
-                if(Integer.parseInt(postModal.getType())==2){
-                    postViewHolder.userpostimage.setVisibility(View.VISIBLE);
+//                if(Integer.parseInt(postModal.getType())==1){
+//                    //postViewHolder.userpostimage.setVisibility(View.VISIBLE);
+//                }
+                //else
+                if(true)//Integer.parseInt(postModal.getType())==2)
+                {
+                    postViewHolder.userpostimage.setVisibility(View.GONE);
+                    postViewHolder.videoview.setVisibility(View.VISIBLE);
+                    postViewHolder.videoview.setUp("https://firebasestorage.googleapis.com/v0/b/vitual-share-market.appspot.com/o/BARCELONA%203-0%20LIVERPOOL%20%23UCL%20HIGHLIGHTS.mp4?alt=media&token=eeadd70d-6605-4ce1-b53b-dc1b6d82ab5a",JCVideoPlayerStandard.SCREEN_LAYOUT_NORMAL,"POST");
+
                 }
                 postViewHolder.name.setText(postModal.getName());
                 String s=firebaseUser.getEmail();
@@ -211,6 +223,7 @@ public class AboutShare extends AppCompatActivity  {
        LinearLayout write_comment_layout;
        EditText write_comment;
        ImageButton post_comment;
+       JCVideoPlayerStandard videoview;
        ImageView userpostimage, like_icon, comment_icon;
 
         public PostViewHolder(@NonNull View itemView) {
@@ -227,6 +240,7 @@ public class AboutShare extends AppCompatActivity  {
             comment_icon = itemView.findViewById(R.id.comment_icon);
             like_text = itemView.findViewById(R.id.like_text);
             comment_text = itemView.findViewById(R.id.comment_text);
+            videoview = itemView.findViewById(R.id.userPostVideo);
 
         }
     }
@@ -284,5 +298,6 @@ public class AboutShare extends AppCompatActivity  {
         getMenuInflater().inflate(R.menu.coin_menu,menu);
         return true;
     }
+
 
 }

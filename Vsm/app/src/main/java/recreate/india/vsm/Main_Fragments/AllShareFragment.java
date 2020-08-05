@@ -24,6 +24,7 @@ import com.google.firebase.firestore.Query;
 
 import java.util.List;
 
+import lecho.lib.hellocharts.view.LineChartView;
 import recreate.india.vsm.Constructor.sharemodel;
 import recreate.india.vsm.Main_Activities.AboutShare;
 import recreate.india.vsm.Main_Activities.R;
@@ -207,12 +208,13 @@ public class AllShareFragment extends Fragment implements GestureDetector.OnGest
         private ImageView postImage;
         private TextView date;
         private Button aboutshare;
+        private LineChartView chart;
 
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);
             name=itemView.findViewById(R.id.sharename);
             aboutshare=itemView.findViewById(R.id.gotoshare);
-
+            chart = itemView.findViewById(R.id.chart);
 
         }
     }

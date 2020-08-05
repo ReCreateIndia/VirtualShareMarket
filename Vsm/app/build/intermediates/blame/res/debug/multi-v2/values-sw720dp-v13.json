@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+            "outputFile": "G:\\VSM_Repo\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-v13\\values-sw720dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Anubhav goyal\\.gradle\\caches\\transforms-2\\files-2.1\\ff309c4ea88264bfa4edf7fed5e6cdce\\mediarouter-1.1.0\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "source": "C:\\Users\\LAKSHAY\\.gradle\\caches\\transforms-2\\files-2.1\\b5cdcc02f242611ab32d134fa5aa9465\\mediarouter-1.1.0\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
