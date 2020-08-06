@@ -1,6 +1,7 @@
 package recreate.india.vsm.Main_Activities;
 
 import android.annotation.SuppressLint;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -38,6 +39,9 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
+import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
+import hb.xvideoplayer.MxVideoPlayer;
+import hb.xvideoplayer.MxVideoPlayerWidget;
 import recreate.india.vsm.Constructor.PostModal;
 import recreate.india.vsm.Constructor.credits;
 import recreate.india.vsm.Dialog_Fragments.CommentDialog;
@@ -99,38 +103,54 @@ public class AboutShare extends AppCompatActivity  {
 
             @Override
             protected void onBindViewHolder(@NonNull final PostViewHolder postViewHolder, int i, @NonNull final PostModal postModal) {
-                postViewHolder.companyname.setText(postModal.getName());
-                String s=firebaseUser.getEmail();
-                postViewHolder.username.setText(s.substring(0,s.length()-10));
-                postViewHolder.noofcomments.setText(postModal.getNo_comments());
-//                postViewHolder.nooflikes.setText(postModal.getNo_likes());
-                postViewHolder.description.setText(postModal.getDescription());
-                postViewHolder.comment.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        CommentDialog commentDialog  = new CommentDialog();
-                        Bundle bundle = new Bundle();
-                        bundle.putString("shareid",shareid);
-                        commentDialog.setArguments(bundle);
-                        commentDialog.show(getSupportFragmentManager(),"Comments");
-                    }
-                });
-                postViewHolder.nooflikes.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        LikeDialog likeDialog  = new LikeDialog();
-                        Bundle bundle = new Bundle();
-                        bundle.putString("shareid",shareid);
-                        likeDialog.setArguments(bundle);
-                        likeDialog.show(getSupportFragmentManager(),"Likes");
-                    }
-                });
-                if (Integer.parseInt(postModal.getType())==1){
-                    postViewHolder.postimage.setVisibility(View.VISIBLE);
+
+//                postViewHolder.companyname.setText(postModal.getName());
+
+//                if(Integer.parseInt(postModal.getType())==1){
+//                    //postViewHolder.userpostimage.setVisibility(View.VISIBLE);
+//                }
+                //else
+                if(true)//Integer.parseInt(postModal.getType())==2)
+                {
+                    postViewHolder.postimage.setVisibility(View.GONE);
+                    postViewHolder.videoview.setVisibility(View.VISIBLE);
+                    postViewHolder.videoview.setUp("https://firebasestorage.googleapis.com/v0/b/vitual-share-market.appspot.com/o/BARCELONA%203-0%20LIVERPOOL%20%23UCL%20HIGHLIGHTS.mp4?alt=media&token=eeadd70d-6605-4ce1-b53b-dc1b6d82ab5a",JCVideoPlayerStandard.SCREEN_LAYOUT_NORMAL,"POST");
+
+
                 }
-                if (Integer.parseInt(postModal.getType())==2){
-                    postViewHolder.postvideo.setVisibility(View.VISIBLE);
-                }
+//                postViewHolder.name.setText(postModal.getName());
+//
+//                String s=firebaseUser.getEmail();
+//                postViewHolder.username.setText(s.substring(0,s.length()-10));
+//                postViewHolder.noofcomments.setText(postModal.getNo_comments());
+////                postViewHolder.nooflikes.setText(postModal.getNo_likes());
+//                postViewHolder.description.setText(postModal.getDescription());
+//                postViewHolder.comment.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        CommentDialog commentDialog  = new CommentDialog();
+//                        Bundle bundle = new Bundle();
+//                        bundle.putString("shareid",shareid);
+//                        commentDialog.setArguments(bundle);
+//                        commentDialog.show(getSupportFragmentManager(),"Comments");
+//                    }
+//                });
+//                postViewHolder.nooflikes.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        LikeDialog likeDialog  = new LikeDialog();
+//                        Bundle bundle = new Bundle();
+//                        bundle.putString("shareid",shareid);
+//                        likeDialog.setArguments(bundle);
+//                        likeDialog.show(getSupportFragmentManager(),"Likes");
+//                    }
+//                });
+////                if (Integer.parseInt(postModal.getType())==1){
+////                    postViewHolder.postimage.setVisibility(View.VISIBLE);
+////                }
+////                if (Integer.parseInt(postModal.getType())==2){
+////                    postViewHolder.videoview.setVisibility(View.VISIBLE);
+////                }
                 }
 
 
@@ -146,20 +166,37 @@ public class AboutShare extends AppCompatActivity  {
         shareRecyclerView.setAdapter(adapter);
     }
     public class PostViewHolder extends RecyclerView.ViewHolder {
+
         private TextView companyname,username,description,nooflikes,noofcomments,comment;
         ImageView postimage,likeicon;
-        VideoView postvideo;
+       String type;
+       TextView name, comment_text, like_text, showcomments, showlikes;
+       boolean isliked = false;
+       boolean iscommented = false;
+       LinearLayout write_comment_layout;
+       EditText write_comment;
+       ImageButton post_comment;
+       JCVideoPlayerStandard videoview;
+       ImageView userpostimage, like_icon, comment_icon;
+
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);
             companyname=itemView.findViewById(R.id.companyName);
             username=itemView.findViewById(R.id.username);
+
             description=itemView.findViewById(R.id.description);
             nooflikes=itemView.findViewById(R.id.number_of_likes);
             noofcomments=itemView.findViewById(R.id.number_of_comments);
             comment=itemView.findViewById(R.id.comments);
             likeicon=itemView.findViewById(R.id.like_icon);
-            postvideo=itemView.findViewById(R.id.userPostVideo);
             postimage=itemView.findViewById(R.id.userPostImage);
+
+            write_comment_layout = itemView.findViewById(R.id.write_comment_layout);
+            write_comment = itemView.findViewById(R.id.write_comment_edittext);
+            post_comment = itemView.findViewById(R.id.post_comment);
+            like_icon = itemView.findViewById(R.id.like_icon);
+            videoview = itemView.findViewById(R.id.userPostVideo);
+
         }
     }
 
@@ -216,5 +253,6 @@ public class AboutShare extends AppCompatActivity  {
         getMenuInflater().inflate(R.menu.coin_menu,menu);
         return true;
     }
+
 
 }

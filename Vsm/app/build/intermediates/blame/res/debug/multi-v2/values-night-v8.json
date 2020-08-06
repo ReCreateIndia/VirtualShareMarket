@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Anubhav goyal\\.gradle\\caches\\transforms-2\\files-2.1\\95c27f1e561f59170f577bf124144243\\appcompat-1.1.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\Anubhav goyal\\.gradle\\caches\\transforms-2\\files-2.1\\396e7ddea1addefd32f4f3d87ec48909\\appcompat-1.1.0\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Anubhav goyal\\.gradle\\caches\\transforms-2\\files-2.1\\fc37217233c06e0f2f030759bc627901\\material-1.1.0-alpha03\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\Anubhav goyal\\.gradle\\caches\\transforms-2\\files-2.1\\591c2b78001015d9cf4fa64d1df29b4d\\material-1.1.0-alpha03\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",
