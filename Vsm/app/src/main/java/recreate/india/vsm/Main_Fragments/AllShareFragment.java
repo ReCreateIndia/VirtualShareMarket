@@ -1,6 +1,7 @@
 package recreate.india.vsm.Main_Fragments;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
@@ -19,9 +20,20 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.AxisBase;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.formatter.IAxisValueFormatter;
+import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
+import com.github.mikephil.charting.formatter.ValueFormatter;
+import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import lecho.lib.hellocharts.view.LineChartView;
@@ -134,6 +146,29 @@ public class AllShareFragment extends Fragment implements GestureDetector.OnGest
                         getContext().startActivity(new Intent(getContext(), AboutShare.class).putExtra("shareid",sharemodel.getId()));
                     }
                 });
+                ArrayList<Entry> yvalues = new ArrayList<>();
+                yvalues.add(new Entry(1,25));
+                yvalues.add(new Entry(2,50));
+                yvalues.add(new Entry(3,75));
+                yvalues.add(new Entry(4,60));
+                yvalues.add(new Entry(5,35));
+                yvalues.add(new Entry(6,80));
+                yvalues.add(new Entry(7,40));
+                LineDataSet set1 = new LineDataSet(yvalues,"Share Prices");
+                set1.setColor(Color.GREEN);
+                set1.setLineWidth(3f);
+                set1.setFillAlpha(110);
+                ArrayList<ILineDataSet> dataSets = new ArrayList<>();
+                dataSets.add(set1);
+                LineData data = new LineData(dataSets);
+                postViewHolder.chart.setData(data);
+                postViewHolder.chart.getAxisRight().setEnabled(false);
+                String[] values = new String[] {"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
+                XAxis xAxis = postViewHolder.chart.getXAxis();
+                xAxis.setValueFormatter(new myformatter(values));
+                xAxis.setGranularity(1);
+
+                //postViewHolder.chart.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             }
         };
         Query query2 = ff.collection("FundedStartups");
@@ -208,7 +243,7 @@ public class AllShareFragment extends Fragment implements GestureDetector.OnGest
         private ImageView postImage;
         private TextView date;
         private Button aboutshare;
-        private LineChartView chart;
+        private LineChart chart;
 
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -231,5 +266,17 @@ public class AllShareFragment extends Fragment implements GestureDetector.OnGest
         super.onStop();
         adapter.stopListening();
         adapter2.stopListening();
+    }
+    public class myformatter extends ValueFormatter implements IAxisValueFormatter {
+        private String[] myvalues;
+        public myformatter(String[] myvalues)
+        {
+            this.myvalues = myvalues;
+        }
+
+        @Override
+        public String getFormattedValue(float value, AxisBase axis) {
+            return myvalues[(int)value];
+        }
     }
 }

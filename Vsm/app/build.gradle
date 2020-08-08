@@ -31,6 +31,9 @@ android {
     }
 
 }
+repositories {
+    maven { url 'https://jitpack.io' }
+}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -62,6 +65,7 @@ dependencies {
     implementation 'com.henryblue.mxvideoplayer:xvideoplayer:1.2.1'
     implementation 'com.github.lecho:hellocharts-library:1.5.8@aar'
     implementation 'fm.jiecao:jiecaovideoplayer:5.7'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
 
 
