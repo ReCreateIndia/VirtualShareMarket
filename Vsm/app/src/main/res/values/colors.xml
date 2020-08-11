@@ -5,4 +5,6 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="like_comment">#64F127</color>
     <color name="black">#000000</color>
+    <color name="gradientstart">#190B1A</color>
+    <color name="gradientend">#260B1E</color>
 </resources>
