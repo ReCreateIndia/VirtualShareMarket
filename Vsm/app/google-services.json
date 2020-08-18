@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "128045272026-sfp3semsodarq1h5jgmsc7opthehhums.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "recreate.india.vsm",
+            "certificate_hash": "894ea858a077083167049cce4d23a0421a47f3f2"
+          }
+        },
+        {
           "client_id": "128045272026-9iu4l7im8a1e73unktb1ppmrc7v875ao.apps.googleusercontent.com",
           "client_type": 3
         }

@@ -839,6 +839,8 @@ color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
 color gary
+color gradientend
+color gradientstart
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color like_comment
@@ -1712,6 +1714,7 @@ drawable righttriangle
 drawable round_backgroundred
 drawable roundbackground_green
 drawable send
+drawable splash_screen_bg
 drawable text_background
 drawable text_input_bg
 drawable tictactoe
@@ -1721,6 +1724,10 @@ drawable top_background
 drawable vsm_coin
 drawable vsm_logo
 font abril_fatface
+font aclonica
+font coolvetica_compressed_rg
+font coolvetica_condensed_rg
+font coolvetica_rg
 id ALT
 id AllShares
 id CTRL
@@ -1886,6 +1893,7 @@ id fundedright
 id ghost_view
 id glide_custom_view_target_tag
 id gone
+id googlelogin
 id gotologin
 id gotoregister
 id gotoshare
@@ -1900,7 +1908,7 @@ id icon_group
 id icon_only
 id ifRoom
 id image
-id imageView
+id imageView2
 id imageView3
 id imageView4
 id imageView5
@@ -2132,6 +2140,7 @@ id textView3
 id textView4
 id textView5
 id textView6
+id textView7
 id textView8
 id text_input_password_toggle
 id textinput_counter

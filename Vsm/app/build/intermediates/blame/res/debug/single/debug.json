@@ -1,5 +1,9 @@
 [
     {
+        "merged": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\font_coolvetica_condensed_rg.ttf.flat",
+        "source": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\font\\coolvetica_condensed_rg.ttf"
+    },
+    {
         "merged": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_comment_black.png.flat",
         "source": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\comment_black.png"
     },
@@ -152,6 +156,10 @@
         "source": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\comment_green.png"
     },
     {
+        "merged": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\font_coolvetica_rg.ttf.flat",
+        "source": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\font\\coolvetica_rg.ttf"
+    },
+    {
         "merged": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_likes_item.xml.flat",
         "source": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\layout\\likes_item.xml"
     },
@@ -184,12 +192,20 @@
         "source": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Fragments\\layout\\fragment_all_share.xml"
     },
     {
+        "merged": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\font_aclonica.ttf.flat",
+        "source": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\font\\aclonica.ttf"
+    },
+    {
         "merged": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_comment_green.png.flat",
         "source": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\comment_green.png"
     },
     {
         "merged": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_like_comment_dialog.xml.flat",
         "source": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\layout\\like_comment_dialog.xml"
+    },
+    {
+        "merged": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\font_coolvetica_compressed_rg.ttf.flat",
+        "source": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\font\\coolvetica_compressed_rg.ttf"
     },
     {
         "merged": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_send.png.flat",
@@ -261,7 +277,7 @@
     },
     {
         "merged": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash_screen.xml.flat",
-        "source": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\mainLayouts\\layout\\activity_splash_screen.xml"
+        "source": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\layout\\activity_splash_screen.xml"
     },
     {
         "merged": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_loginbuttonbg.xml.flat",
@@ -306,6 +322,10 @@
     {
         "merged": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_register.xml.flat",
         "source": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\mainLayouts\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_splash_screen_bg.xml.flat",
+        "source": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\splash_screen_bg.xml"
     },
     {
         "merged": "G:\\VirtualShareMarket\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",

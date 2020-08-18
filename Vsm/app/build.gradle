@@ -66,6 +66,8 @@ dependencies {
     implementation 'com.github.lecho:hellocharts-library:1.5.8@aar'
     implementation 'fm.jiecao:jiecaovideoplayer:5.7'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.google.firebase:firebase-core:17.0.0'
+    implementation 'com.google.android.gms:play-services-auth:18.0.0'
 
 
 
