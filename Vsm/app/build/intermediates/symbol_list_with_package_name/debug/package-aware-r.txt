@@ -11,6 +11,7 @@ anim abc_slide_out_bottom
 anim abc_slide_out_top
 anim abc_tooltip_enter
 anim abc_tooltip_exit
+anim bottom
 anim btn_checkbox_to_checked_box_inner_merged_animation
 anim btn_checkbox_to_checked_box_outer_merged_animation
 anim btn_checkbox_to_checked_icon_null_animation
@@ -31,6 +32,7 @@ anim mtrl_bottom_sheet_slide_in
 anim mtrl_bottom_sheet_slide_out
 anim quit_fullscreen
 anim start_fullscreen
+anim top
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -1798,11 +1800,15 @@ id adjust_width
 id alertTitle
 id all
 id always
+id applogo
+id appmotto
+id appname
 id async
 id auto
 id back
 id back_tiny
 id barrier
+id barrier2
 id battery_level
 id battery_time_layout
 id beginning
@@ -1908,7 +1914,6 @@ id icon_group
 id icon_only
 id ifRoom
 id image
-id imageView2
 id imageView3
 id imageView4
 id imageView5
@@ -2140,8 +2145,6 @@ id textView3
 id textView4
 id textView5
 id textView6
-id textView7
-id textView8
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
