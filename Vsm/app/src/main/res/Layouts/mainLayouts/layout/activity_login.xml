@@ -71,7 +71,7 @@
             android:layout_marginTop="50dp"
             android:background="@drawable/button"
             android:id="@+id/loginbutton"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="#FFFFFF"/>
         <Button

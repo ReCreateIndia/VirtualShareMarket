@@ -9,34 +9,36 @@
        android:id="@+id/techlinearlayout"
        android:layout_width="match_parent"
        android:layout_height="match_parent"
+
        android:orientation="vertical">
       <LinearLayout
           android:layout_width="match_parent"
-          android:background="#330033"
+          android:background="#49407f"
+
           android:orientation="horizontal"
-          android:gravity="center_horizontal"
+          android:gravity="center"
           android:layout_height="50dp">
          <ImageView
              android:id="@+id/techleft"
-             android:layout_width="40dp"
+             android:layout_width="30dp"
              android:layout_marginRight="10dp"
              android:layout_marginLeft="5dp"
-             android:layout_height="wrap_content"
+             android:layout_height="30dp"
              android:background="@drawable/lefttriangle">
          </ImageView>
          <TextView
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:text="Top Tech Startups"
-             android:textSize="30sp"
+             android:textSize="25sp"
              android:textStyle="bold"
              android:textColor="#ffffff">
 
          </TextView>
          <ImageView
              android:id="@+id/techright"
-             android:layout_width="40dp"
-             android:layout_height="wrap_content"
+             android:layout_width="30dp"
+             android:layout_height="30dp"
              android:layout_marginLeft="10dp"
              android:layout_marginRight="5dp"
              android:background="@drawable/righttriangle">

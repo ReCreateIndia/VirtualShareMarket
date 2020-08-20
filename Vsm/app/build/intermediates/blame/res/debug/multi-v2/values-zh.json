@@ -1,10 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh\\values-zh.xml",
+            "outputFile": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh\\values-zh.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\VISH31\\.gradle\\caches\\transforms-2\\files-2.1\\c6ad72cf36a420e92e08f154b427123d\\jetified-xvideoplayer-1.2.1\\res\\values-zh\\values-zh.xml",
+                    "source": "C:\\Users\\Prachi Singhal\\.gradle\\caches\\transforms-2\\files-2.1\\d5f92609cae259d29f78522622184994\\jetified-jiecaovideoplayer-5.7\\res\\values-zh\\values-zh.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "97",
+                        "endColumns": "37",
+                        "endOffsets": "130"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Prachi Singhal\\.gradle\\caches\\transforms-2\\files-2.1\\457a2ce06265ba97a1bbf8fa4a2f71b6\\jetified-xvideoplayer-1.2.1\\res\\values-zh\\values-zh.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",
@@ -18,16 +28,6 @@
                         "startOffsets": "55,135,194,245,309,363",
                         "endColumns": "41,58,50,63,53,54",
                         "endOffsets": "92,189,240,304,358,413"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\VISH31\\.gradle\\caches\\transforms-2\\files-2.1\\a77918edf8645ce9fccb409e31cdd129\\jetified-jiecaovideoplayer-5.7\\res\\values-zh\\values-zh.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "97",
-                        "endColumns": "37",
-                        "endOffsets": "130"
                     }
                 }
             ]

@@ -7,42 +7,90 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:id="@+id/drawerlayout">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@+id/aboutsharebottomnavview"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
 
-            <FrameLayout
-                android:id="@+id/fragment_container"
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-            </FrameLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/aboutsharebottomnavview"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+
+                    <FrameLayout
+                        android:id="@+id/fragment_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </FrameLayout>
 
 
-        </LinearLayout>
+                </LinearLayout>
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/aboutsharebottomnavview"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="#330033"
-            android:textAlignment="center"
-            android:gravity="center_horizontal"
-            app:itemHorizontalTranslationEnabled="true"
-            app:itemTextColor="#ffffff"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/bottommeny" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <recreate.india.vsm.Main_Activities.CurvedNavigationBottomView
+                    android:id="@+id/aboutsharebottomnavview"
+                    android:layout_width="match_parent"
+                    android:layout_height="73dp"
+                    app:itemIconTint="#FFFFFF"
+                    app:itemTextColor="#FFFFFF"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:id="@+id/lin_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_margin="40dp"
+                android:background="@drawable/oval">
+
+                <com.sdsmdg.harjot.vectormaster.VectorMasterView
+                    android:id="@+id/fab"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="12dp"
+                    android:visibility="gone"
+                    app:elevation="6dp"
+                    app:vector_src="@drawable/ic_baseline_account_circle_24" />
+
+                <com.sdsmdg.harjot.vectormaster.VectorMasterView
+                    android:id="@+id/fab1"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="12dp"
+                    app:elevation="6dp"
+                    app:vector_src="@drawable/ic_baseline_home_24" />
+
+                <com.sdsmdg.harjot.vectormaster.VectorMasterView
+                    android:id="@+id/fab2"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="12dp"
+                    android:visibility="gone"
+                    app:elevation="6dp"
+                    app:vector_src="@drawable/ic_baseline_attach_money_24" />
+
+            </RelativeLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/n1"
         app:headerLayout="@layout/header"

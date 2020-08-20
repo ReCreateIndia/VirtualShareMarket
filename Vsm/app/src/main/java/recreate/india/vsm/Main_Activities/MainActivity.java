@@ -1,13 +1,16 @@
 package recreate.india.vsm.Main_Activities;
 
 
+import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +34,8 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.sdsmdg.harjot.vectormaster.VectorMasterView;
+import com.sdsmdg.harjot.vectormaster.models.PathModel;
 
 import javax.annotation.Nullable;
 
@@ -41,14 +46,21 @@ import recreate.india.vsm.Main_Fragments.MyShareFragment;
 import recreate.india.vsm.Main_Activities.R;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
     DrawerLayout drawerLayout;
     FirebaseFirestore ff;
     GestureDetector gestureDetector;
     private ActionBarDrawerToggle toggle;
-    private BottomNavigationView bottomNavigationView;
+    private CurvedNavigationBottomView mView;
+    private VectorMasterView heartVector;
+    private VectorMasterView heartVector1;
+    private VectorMasterView heartVector2;
+    private float mYVal;
+    private RelativeLayout mlinId;
+    PathModel outline;
+
     private ActionBar actionBar;
     TextView coins;
     credits credits=new credits();
@@ -66,7 +78,17 @@ public class MainActivity extends AppCompatActivity {
         coins=view.findViewById(R.id.coins);
         ff=FirebaseFirestore.getInstance();
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AllShareFragment()).commit();
-        bottomNavigationView = findViewById(R.id.aboutsharebottomnavview);
+         mView= findViewById(R.id.aboutsharebottomnavview);
+        heartVector = findViewById(R.id.fab);
+        heartVector1 = findViewById(R.id.fab1);
+        heartVector2 = findViewById(R.id.fab2);
+
+        mlinId = findViewById(R.id.lin_id);
+        mView.inflateMenu(R.menu.bottommeny);
+        mView.setSelectedItemId(R.id.AllShares);
+
+
+        mView.setOnNavigationItemSelectedListener(MainActivity.this);
 
         NavigationView navigationView =findViewById(R.id.n1);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -74,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.logout:
-                        //firebaseAuth.signOut();
+                        firebaseAuth.signOut();
                         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestIdToken(getString(R.string.default_web_client_id)).requestEmail().build();
                         GoogleSignInClient googleSignInClient = GoogleSignIn.getClient(MainActivity.this,googleSignInOptions);
                         if(googleSignInClient!=null) {
@@ -101,41 +123,20 @@ public class MainActivity extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
-                ff.collection("Users").document(firebaseUser.getUid()).collection("Credits")
+               ff.collection("Users").document(firebaseUser.getUid()).collection("Credits")
                 .document("Credits").addSnapshotListener(new EventListener<DocumentSnapshot>() {
                     @Override
                     public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
-                        DocumentSnapshot snapshot=documentSnapshot;
+                       DocumentSnapshot snapshot=documentSnapshot;
                         credits.setCredits(snapshot.getString("credits"));
                         coins.setText(credits.getCredits());
                     }
-                });
+               });
 
-        bottomNavigationView.setOnNavigationItemSelectedListener(navListner);
 
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener navListner = new BottomNavigationView.OnNavigationItemSelectedListener() {
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-            Fragment selectedFragment = null;
-            switch (menuItem.getItemId()) {
-                case R.id.AllShares:
-                    selectedFragment = new AllShareFragment();
-                    break;
-                case R.id.MyShares:
-                    selectedFragment = new MyShareFragment();
-                    break;
-                case R.id.EarnCredits:
-                    selectedFragment = new EarnMoneyFragment();
-                    break;
 
-            }
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
-            return true;
-        }
-
-    };
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -176,5 +177,114 @@ public class MainActivity extends AppCompatActivity {
         logIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(logIntent);
     }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        Fragment selectedFragment = null;
+        switch (item.getItemId()) {
+            case R.id.MyShares:
+                tet(6);
+                // find the correct path using name
+                mlinId.setX(mView.mFirstCurveControlPoint1.x );
+                heartVector.setVisibility(View.VISIBLE);
+                heartVector1.setVisibility(View.GONE);
+                heartVector2.setVisibility(View.GONE);
+                selectedFragment = new MyShareFragment();
+                selectAnimation(heartVector);
+                break;
+            case R.id.AllShares:
+                tet(2);
+                mlinId.setX(mView.mFirstCurveControlPoint1.x );
+                heartVector.setVisibility(View.GONE);
+                heartVector1.setVisibility(View.VISIBLE);
+                heartVector2.setVisibility(View.GONE);
+                selectedFragment = new AllShareFragment();
+
+                selectAnimation(heartVector1);
+                break;
+            case R.id.EarnCredits:
+                tet();
+                mlinId.setX(mView.mFirstCurveControlPoint1.x ) ;
+                heartVector.setVisibility(View.GONE);
+                heartVector1.setVisibility(View.GONE);
+                heartVector2.setVisibility(View.VISIBLE);
+                selectedFragment = new EarnMoneyFragment();
+
+                selectAnimation(heartVector2);
+                break;
+        }
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
+
+        return true;
+    }
+    private void selectAnimation(final VectorMasterView heartVector) {
+
+        outline = heartVector.getPathModelByName("outline");
+        outline.setStrokeColor(Color.parseColor("#ffffff"));
+        outline.setTrimPathEnd(0.0f);
+        // initialise valueAnimator and pass start and end float values
+        ValueAnimator valueAnimator = ValueAnimator.ofFloat(0.0f, 1.0f);
+        valueAnimator.setDuration(1000);
+        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator valueAnimator) {
+                // set trim end value and update view
+                outline.setTrimPathEnd((Float) valueAnimator.getAnimatedValue());
+                heartVector.update();
+            }
+        });
+        valueAnimator.start();
+    }
+
+    private void tet(int i) {
+
+        // get width and height of navigation bar
+        // Navigation bar bounds (width & height)
+        //mNavigationBarHeight = getHeight();
+        //mNavigationBarWidth = getWidth();
+        // the coordinates (x,y) of the start point before curve
+        mView.mFirstCurveStartPoint.set((mView.mNavigationBarWidth / i) - (mView.CURVE_CIRCLE_RADIUS * 2) - (mView.CURVE_CIRCLE_RADIUS / 3), 0);
+        // the coordinates (x,y) of the end point after curve
+        mView.mFirstCurveEndPoint.set(mView.mNavigationBarWidth / i, mView.CURVE_CIRCLE_RADIUS + (mView.CURVE_CIRCLE_RADIUS / 4));
+        // same thing for the second curve
+        mView.mSecondCurveStartPoint = mView.mFirstCurveEndPoint;
+        mView.mSecondCurveEndPoint.set((mView.mNavigationBarWidth / i) + (mView.CURVE_CIRCLE_RADIUS * 2) + (mView.CURVE_CIRCLE_RADIUS / 3), 0);
+
+        // the coordinates (x,y)  of the 1st control point on a cubic curve
+        mView.mFirstCurveControlPoint1.set(mView.mFirstCurveStartPoint.x + mView.CURVE_CIRCLE_RADIUS + (mView.CURVE_CIRCLE_RADIUS / 4), mView.mFirstCurveStartPoint.y);
+        // the coordinates (x,y)  of the 2nd control point on a cubic curve
+        mView.mFirstCurveControlPoint2.set(mView.mFirstCurveEndPoint.x - (mView.CURVE_CIRCLE_RADIUS * 2) + mView.CURVE_CIRCLE_RADIUS, mView.mFirstCurveEndPoint.y);
+
+        mView.mSecondCurveControlPoint1.set(mView.mSecondCurveStartPoint.x + (mView.CURVE_CIRCLE_RADIUS * 2) - mView.CURVE_CIRCLE_RADIUS, mView.mSecondCurveStartPoint.y);
+        mView.mSecondCurveControlPoint2.set(mView.mSecondCurveEndPoint.x - (mView.CURVE_CIRCLE_RADIUS + (mView.CURVE_CIRCLE_RADIUS / 4)), mView.mSecondCurveEndPoint.y);
+
+
+
+    }
+
+    private void tet() {
+
+        // get width and height of navigation bar
+        // Navigation bar bounds (width & height)
+        //mNavigationBarHeight = getHeight();
+        //mNavigationBarWidth = getWidth();
+        // the coordinates (x,y) of the start point before curve
+        mView.mFirstCurveStartPoint.set((mView.mNavigationBarWidth * 10/12) - (mView.CURVE_CIRCLE_RADIUS * 2) - (mView.CURVE_CIRCLE_RADIUS / 3), 0);
+        // the coordinates (x,y) of the end point after curve
+
+        mView.mFirstCurveEndPoint.set(mView.mNavigationBarWidth  * 10/12, mView.CURVE_CIRCLE_RADIUS + (mView.CURVE_CIRCLE_RADIUS / 4));
+        // same thing for the second curve
+        mView.mSecondCurveStartPoint = mView.mFirstCurveEndPoint;
+        mView.mSecondCurveEndPoint.set((mView.mNavigationBarWidth  * 10/12) + (mView.CURVE_CIRCLE_RADIUS * 2) + (mView.CURVE_CIRCLE_RADIUS / 3), 0);
+
+        // the coordinates (x,y)  of the 1st control point on a cubic curve
+        mView.mFirstCurveControlPoint1.set(mView.mFirstCurveStartPoint.x + mView.CURVE_CIRCLE_RADIUS + (mView.CURVE_CIRCLE_RADIUS / 4), mView.mFirstCurveStartPoint.y);
+        // the coordinates (x,y)  of the 2nd control point on a cubic curve
+        mView.mFirstCurveControlPoint2.set(mView.mFirstCurveEndPoint.x - (mView.CURVE_CIRCLE_RADIUS * 2) + mView.CURVE_CIRCLE_RADIUS, mView.mFirstCurveEndPoint.y);
+
+        mView.mSecondCurveControlPoint1.set(mView.mSecondCurveStartPoint.x + (mView.CURVE_CIRCLE_RADIUS * 2) - mView.CURVE_CIRCLE_RADIUS, mView.mSecondCurveStartPoint.y);
+        mView.mSecondCurveControlPoint2.set(mView.mSecondCurveEndPoint.x - (mView.CURVE_CIRCLE_RADIUS + (mView.CURVE_CIRCLE_RADIUS / 4)), mView.mSecondCurveEndPoint.y);
+    }
+
 
 }

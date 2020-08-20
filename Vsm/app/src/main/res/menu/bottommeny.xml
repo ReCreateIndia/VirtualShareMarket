@@ -3,13 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/AllShares"
-        android:title="AllShares" />
+
     <item
         android:id="@+id/MyShares"
-        android:title="MyShares" />
+        android:title="MyShares"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/AllShares"
+        android:title="AllShares"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_home_24"
+
+        app:showAsAction="ifRoom"/>
     <item
         android:id="@+id/EarnCredits"
-        android:title="EarnCredits" />
+        android:title="EarnCredits"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_attach_money_24"
+
+        app:showAsAction="ifRoom"/>
 </menu>
