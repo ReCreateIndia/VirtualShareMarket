@@ -838,6 +838,7 @@ color background_floating_material_light
 color background_material_dark
 color background_material_light
 color black
+color bottomnav
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -1473,6 +1474,7 @@ drawable ic_audiotrack_light
 drawable ic_baseline_account_circle_24
 drawable ic_baseline_attach_money_24
 drawable ic_baseline_home_24
+drawable ic_baseline_play_arrow_24
 drawable ic_baseline_thumb_up_24
 drawable ic_checked_checkbox
 drawable ic_close_black_24dp
@@ -1873,9 +1875,12 @@ id action_text
 id actions
 id activity_chooser_view_content
 id actualcomment
+id ad_layout
 id add
 id adjust_height
 id adjust_width
+id ads_recycler_view
+id ads_text
 id alertTitle
 id all
 id always
@@ -2384,6 +2389,7 @@ layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout circle_menu
 layout comments_item
+layout credits_by_ads_item
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

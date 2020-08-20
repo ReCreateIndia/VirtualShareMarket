@@ -7,4 +7,5 @@
     <color name="black">#000000</color>
     <color name="gradientstart">#190B1A</color>
     <color name="gradientend">#260B1E</color>
+    <color name="bottomnav">#49407f</color>
 </resources>

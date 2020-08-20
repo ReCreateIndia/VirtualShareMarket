@@ -1,5 +1,6 @@
 package recreate.india.vsm.Main_Fragments;
 
+import android.graphics.Canvas;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,7 +9,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
@@ -18,13 +24,17 @@ import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 import com.google.android.gms.ads.rewarded.RewardedAd;
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 
+import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator;
+import recreate.india.vsm.Main_Activities.MainActivity;
 import recreate.india.vsm.Main_Activities.R;
+import recreate.india.vsm.Recycler_View_Adapters.Ads_Adapter;
 
 
 public class EarnMoneyFragment extends Fragment implements RewardedVideoAdListener {
 
     private RewardedVideoAd rewardedVideoAd;
     private Button showadd;
+    private RecyclerView ad_recycler_view;
 
     public EarnMoneyFragment() {
         // Required empty public constructor
@@ -44,15 +54,59 @@ public class EarnMoneyFragment extends Fragment implements RewardedVideoAdListen
         rewardedVideoAd=MobileAds.getRewardedVideoAdInstance(getContext());
         rewardedVideoAd.setRewardedVideoAdListener(this);
         laodAds();
-        showadd=view.findViewById(R.id.startadd);
-        showadd.setOnClickListener(new View.OnClickListener() {
+//        showadd=view.findViewById(R.id.startadd);
+//        showadd.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(rewardedVideoAd.isLoaded()){
+//                    rewardedVideoAd.show();
+//                }
+//            }
+//        });
+        ad_recycler_view = view.findViewById(R.id.ads_recycler_view);
+        final Ads_Adapter ads_adapter = new Ads_Adapter();
+        ad_recycler_view.setAdapter(ads_adapter);
+        ad_recycler_view.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        ItemTouchHelper.SimpleCallback simpleCallback = new ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.LEFT) {
             @Override
-            public void onClick(View v) {
-                if(rewardedVideoAd.isLoaded()){
-                    rewardedVideoAd.show();
-                }
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+                return false;
             }
-        });
+
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+
+                int position = viewHolder.getAdapterPosition();
+                switch (direction)
+                {
+                    case ItemTouchHelper.LEFT:
+                        if(position==0)
+                            Toast.makeText(getContext(),"Display 30 second ad",Toast.LENGTH_LONG).show();
+                        else if(position==1)
+                            Toast.makeText(getContext(),"Display 45 second ad",Toast.LENGTH_LONG).show();
+                        else if(position==2)
+                            Toast.makeText(getContext(),"Display 60 second ad",Toast.LENGTH_LONG).show();
+                        break;
+                }
+                ads_adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onChildDraw(@NonNull Canvas c, @NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
+                new RecyclerViewSwipeDecorator.Builder(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive)
+                        .addSwipeLeftBackgroundColor(getResources().getColor(R.color.bottomnav))
+                        .addSwipeLeftActionIcon(R.drawable.ic_baseline_play_arrow_24)
+                        .create()
+                        .decorate();
+                super.onChildDraw(c, recyclerView, viewHolder, dX/2, dY, actionState, isCurrentlyActive);
+            }
+        };
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleCallback);
+        itemTouchHelper.attachToRecyclerView(ad_recycler_view);
+
+
+
         return view;
     }
 
