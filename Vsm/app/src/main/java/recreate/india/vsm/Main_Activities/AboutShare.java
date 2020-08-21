@@ -114,7 +114,7 @@ public class AboutShare extends AppCompatActivity  {
                 {
                     postViewHolder.postimage.setVisibility(View.GONE);
                     postViewHolder.videoview.setVisibility(View.VISIBLE);
-                    postViewHolder.videoview.setUp("https://firebasestorage.googleapis.com/v0/b/vitual-share-market.appspot.com/o/BARCELONA%203-0%20LIVERPOOL%20%23UCL%20HIGHLIGHTS.mp4?alt=media&token=eeadd70d-6605-4ce1-b53b-dc1b6d82ab5a",JCVideoPlayerStandard.SCREEN_LAYOUT_NORMAL,"POST");
+                    postViewHolder.videoview.setUp("https://firebasestorage.googleapis.com/v0/b/vitual-share-market.appspot.com/o/Nature%20Beautiful%20short%20video%20720p%20HD.mp4?alt=media&token=3ad4713e-73b1-4814-8173-bc0f2f4f03d7",JCVideoPlayerStandard.SCREEN_LAYOUT_NORMAL,"POST");
 
 
                 }
