@@ -68,7 +68,7 @@ public class EarnMoneyFragment extends Fragment implements RewardedVideoAdListen
         ad_recycler_view.setAdapter(ads_adapter);
         ad_recycler_view.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        ItemTouchHelper.SimpleCallback simpleCallback = new ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.LEFT) {
+        ItemTouchHelper.SimpleCallback simpleCallback = new ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.RIGHT) {
             @Override
             public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
                 return false;
@@ -80,7 +80,7 @@ public class EarnMoneyFragment extends Fragment implements RewardedVideoAdListen
                 int position = viewHolder.getAdapterPosition();
                 switch (direction)
                 {
-                    case ItemTouchHelper.LEFT:
+                    case ItemTouchHelper.RIGHT:
                         if(position==0)
                             Toast.makeText(getContext(),"Display 30 second ad",Toast.LENGTH_LONG).show();
                         else if(position==1)
@@ -95,8 +95,8 @@ public class EarnMoneyFragment extends Fragment implements RewardedVideoAdListen
             @Override
             public void onChildDraw(@NonNull Canvas c, @NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
                 new RecyclerViewSwipeDecorator.Builder(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive)
-                        .addSwipeLeftBackgroundColor(getResources().getColor(R.color.bottomnav))
-                        .addSwipeLeftActionIcon(R.drawable.ic_baseline_play_arrow_24)
+                        .addSwipeRightBackgroundColor(getResources().getColor(R.color.bottomnav))
+                        .addSwipeRightActionIcon(R.drawable.ic_baseline_play_arrow_24)
                         .create()
                         .decorate();
                 super.onChildDraw(c, recyclerView, viewHolder, dX/2, dY, actionState, isCurrentlyActive);

@@ -33,6 +33,7 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -66,6 +67,7 @@ public class AboutShare extends AppCompatActivity  {
     credits credits=new credits();
     String shareid;
     private TextView coins;
+    public static JCVideoPlayerStandard current_vv;
 
     @SuppressLint("WrongConstant")
     @Override
@@ -114,8 +116,10 @@ public class AboutShare extends AppCompatActivity  {
                 {
                     postViewHolder.postimage.setVisibility(View.GONE);
                     postViewHolder.videoview.setVisibility(View.VISIBLE);
-                    postViewHolder.videoview.setUp("https://firebasestorage.googleapis.com/v0/b/vitual-share-market.appspot.com/o/Nature%20Beautiful%20short%20video%20720p%20HD.mp4?alt=media&token=3ad4713e-73b1-4814-8173-bc0f2f4f03d7",JCVideoPlayerStandard.SCREEN_LAYOUT_NORMAL,"POST");
 
+                    postViewHolder.videoview.setUp("https://firebasestorage.googleapis.com/v0/b/vitual-share-market.appspot.com/o/Nature%20Beautiful%20short%20video%20720p%20HD.mp4?alt=media&token=3ad4713e-73b1-4814-8173-bc0f2f4f03d7",JCVideoPlayerStandard.SCREEN_LAYOUT_NORMAL,"POST");
+                    Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vitual-share-market.appspot.com/o/40390415410_4933f04732_b_660_280220071938_180820090351.jpg?alt=media&token=16db16e6-bac6-40c9-ac7c-dd82ae74367c").into(postViewHolder.videoview.thumbImageView);
+                    //postViewHolder.videoview.thumbImageView.setImageURI(Uri.parse("https://firebasestorage.googleapis.com/v0/b/vitual-share-market.appspot.com/o/40390415410_4933f04732_b_660_280220071938_180820090351.jpg?alt=media&token=16db16e6-bac6-40c9-ac7c-dd82ae74367c"));
 
                 }
 //                postViewHolder.name.setText(postModal.getName());
@@ -164,6 +168,7 @@ public class AboutShare extends AppCompatActivity  {
         };
         shareRecyclerView.setLayoutManager(new LinearLayoutManager(AboutShare.this));
         shareRecyclerView.setAdapter(adapter);
+
     }
     public class PostViewHolder extends RecyclerView.ViewHolder {
 
@@ -254,5 +259,9 @@ public class AboutShare extends AppCompatActivity  {
         return true;
     }
 
-
+    @Override
+    public void onBackPressed() {
+        adapter.notifyDataSetChanged();
+        super.onBackPressed();
+    }
 }
