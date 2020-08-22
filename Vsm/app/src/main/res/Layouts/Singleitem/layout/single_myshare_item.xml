@@ -4,60 +4,103 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="14dp"
+
+
+    app:cardElevation="10dp">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/text_background"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="10dp">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/circleImageView3"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleImageView3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
 
 
-            android:src="@drawable/vsm_logo"
-           ></de.hdodenhof.circleimageview.CircleImageView>
+                android:src="@drawable/vsm_logo"
+                ></de.hdodenhof.circleimageview.CircleImageView>
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+
+                android:text="shareyfName7"
+                android:textColor="#000000"
+                android:textSize="20sp"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="18dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-            android:text="shareName"
-            android:textSize="25sp"
 
-             />
+                android:textColor="#000000"
+                android:textSize="16sp"
+
+                android:text="Buying price"/>
+
             <TextView
                 android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
+
+                android:layout_marginLeft="10dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+
                 android:text="up"
-               />
+                />
             <ImageView
                 android:id="@+id/imageView5"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="12dp"
 
 
-                android:src="@drawable/greentriangle"
-               />
+                android:src="@drawable/top"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="12dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+
+                android:text="selling price"/>
+
             <TextView
                 android:id="@+id/textView13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="12dp"
+                android:textColor="#000000"
+                android:textSize="15sp"
+
                 android:text="do"
-              />
+                />
 
         </LinearLayout>
         <LinearLayout
@@ -65,40 +108,43 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
+            android:layout_marginBottom="10dp"
             android:layout_marginTop="16dp">
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Your Holdings"
+                android:textSize="17sp"
+                />
 
-            android:text="Your Holdings"
-            android:textSize="18sp"
-          />
+            <TextView
+                android:id="@+id/myHoldings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="TextView"
+                android:textSize="17sp"
+                android:textColor="#000000"
 
-        <TextView
-            android:id="@+id/myHoldings"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-            android:text="TextView"
-            android:textSize="18sp"
-
-            />
+                />
 
 
 
-        <Button
-            android:id="@+id/trade"
-            android:layout_width="80dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="50dp"
 
-            android:text="trade"
-            android:background="@drawable/text_input_bg"
-            android:textColor="#ffffff"
-            android:textStyle="bold"
-            />
+            <Button
+                android:id="@+id/trade"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+
+                android:text="trade"
+                android:background="@drawable/text_input_bg"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                />
 
         </LinearLayout>
 

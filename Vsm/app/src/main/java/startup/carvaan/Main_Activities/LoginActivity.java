@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,7 +42,8 @@ public class LoginActivity extends AppCompatActivity {
     private EditText user_name;
     private EditText pass_word;
     private FirebaseAuth firebaseAuth;
-    private Button lo_gin, google_sign_in;
+    private Button lo_gin;
+    private ImageView googlesign;
     private TextView movetoregister;
     private FirebaseFirestore ff;
     public static GoogleSignInClient googleSignInClient;
@@ -56,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
         user_name=findViewById(R.id.username);
         pass_word=findViewById(R.id.password);
         lo_gin=findViewById(R.id.loginbutton);
-        google_sign_in = findViewById(R.id.googlelogin);
+        googlesign = findViewById(R.id.googlelogin);
         lo_gin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
 
         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestIdToken(getString(R.string.default_web_client_id)).requestEmail().build();
         googleSignInClient = GoogleSignIn.getClient(LoginActivity.this,googleSignInOptions);
-        google_sign_in.setOnClickListener(new View.OnClickListener() {
+        googlesign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 gsignin();

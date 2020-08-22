@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -30,6 +31,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText confirm_password;
     private FirebaseAuth firebaseAuth;
     private Button regis_ter;
+    private TextView movetologin;
     FirebaseFirestore ff;
     FirebaseUser firebaseUser;
     @Override
@@ -41,6 +43,7 @@ public class RegisterActivity extends AppCompatActivity {
         user_name=findViewById(R.id.username);
         pass_word=findViewById(R.id.password);
         regis_ter=findViewById(R.id.register1);
+        movetologin=findViewById(R.id.gotologin);
         regis_ter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,6 +75,12 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
+        movetologin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+            }
+        });
 
     }
 

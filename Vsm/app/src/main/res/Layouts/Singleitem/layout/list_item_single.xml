@@ -5,6 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="16dp"
+
+
+    app:cardElevation="10dp"
     android:background="#ffffff">
     <LinearLayout
         android:padding="10dp"
@@ -34,7 +39,7 @@
                 tools:autoSizeTextType="uniform"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="20dp"
-                android:textColor="#330033"
+                android:textColor="#000000"
                 android:textStyle="bold"
                 android:text="Flipkart Private Limited"
                 android:textSize="25sp"
@@ -48,7 +53,7 @@
             android:layout_height="50dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
-            android:textColor="#330033"
+            android:textColor="#000000"
             android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard "
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.125"
@@ -74,7 +79,7 @@
             android:text="Invest in me"
             android:textColor="#ffffff"
             android:textSize="20sp"
-            android:background="#330033"
+            android:background="#FF533D78"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="10dp"
             app:layout_constraintEnd_toStartOf="@+id/imageView4"
@@ -84,14 +89,14 @@
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="39dp"
-            android:layout_height="48dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView10"
-            android:background="@drawable/greentriangle" />
+            android:background="@drawable/top" />
         </LinearLayout>
 
     </LinearLayout>

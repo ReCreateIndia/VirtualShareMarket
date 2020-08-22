@@ -9,7 +9,7 @@
         android:id="@+id/aboutsharebottomnavview"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#330033"
+        android:background="#FF533D78"
         app:itemTextColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
