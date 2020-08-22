@@ -6,7 +6,7 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "recreate.india.vsm"
+        applicationId 'startup.carvaan'
         minSdkVersion 16
         targetSdkVersion 29
         versionCode 2

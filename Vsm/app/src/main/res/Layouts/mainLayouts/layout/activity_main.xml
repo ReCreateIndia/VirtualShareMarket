@@ -37,7 +37,7 @@
 
                 </LinearLayout>
 
-                <recreate.india.vsm.Main_Activities.CurvedNavigationBottomView
+                <startup.carvaan.Main_Activities.CurvedNavigationBottomView
                     android:id="@+id/aboutsharebottomnavview"
                     android:layout_width="match_parent"
                     android:layout_height="73dp"

@@ -1,4 +1,4 @@
-recreate.india.vsm
+startup.carvaan
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -1512,6 +1512,8 @@ drawable ic_group_expand_12
 drawable ic_group_expand_13
 drawable ic_group_expand_14
 drawable ic_group_expand_15
+drawable ic_launcher_background
+drawable ic_launcher_foreground
 drawable ic_media_pause_dark
 drawable ic_media_pause_light
 drawable ic_media_play_dark
@@ -2474,6 +2476,8 @@ menu bottommeny
 menu coin_menu
 menu drawer_menu
 menu sharemenu
+mipmap ic_launcher
+mipmap ic_launcher_round
 string Close
 string Open
 string abc_action_bar_home_description

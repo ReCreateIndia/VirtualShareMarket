@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="recreate.india.vsm"
+    package="startup.carvaan"
     android:versionCode="2"
     android:versionName="1.0" >
 
@@ -26,28 +26,28 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="recreate.india.vsm.Main_Activities.AboutShare" >
+        <activity android:name="startup.carvaan.Main_Activities.AboutShare" >
         </activity>
         <activity
-            android:name="recreate.india.vsm.Main_Activities.SplashScreen"
+            android:name="startup.carvaan.Main_Activities.SplashScreen"
             android:configChanges="orientation|keyboardHidden"
             android:theme="@style/FullScreen" >
-        </activity>
-        <activity android:name="recreate.india.vsm.Main_Activities.RegisterActivity" />
-        <activity
-            android:name="recreate.india.vsm.Main_Activities.LoginActivity"
-            android:theme="@style/FullScreen" />
-        <activity android:name="recreate.india.vsm.Main_Activities.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="startup.carvaan.Main_Activities.RegisterActivity" />
+        <activity
+            android:name="startup.carvaan.Main_Activities.LoginActivity"
+            android:theme="@style/FullScreen" />
+        <activity android:name="startup.carvaan.Main_Activities.MainActivity" >
+        </activity>
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-5536388301931451~5642954827" />
+            android:value="ca-app-pub-1372656325166770~1018059934" />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
@@ -80,7 +80,7 @@
 
         <provider
             android:name="com.squareup.picasso.PicassoProvider"
-            android:authorities="recreate.india.vsm.com.squareup.picasso"
+            android:authorities="startup.carvaan.com.squareup.picasso"
             android:exported="false" />
 
         <activity
@@ -138,7 +138,7 @@
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="recreate.india.vsm.firebaseinitprovider"
+            android:authorities="startup.carvaan.firebaseinitprovider"
             android:exported="false"
             android:initOrder="100" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity
@@ -149,7 +149,7 @@
 
         <provider
             android:name="com.google.android.gms.ads.MobileAdsInitProvider"
-            android:authorities="recreate.india.vsm.mobileadsinitprovider"
+            android:authorities="startup.carvaan.mobileadsinitprovider"
             android:exported="false"
             android:initOrder="100" />
 

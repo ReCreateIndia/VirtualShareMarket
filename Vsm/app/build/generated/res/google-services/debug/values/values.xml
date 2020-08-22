@@ -4,7 +4,7 @@
     <string name="firebase_database_url" translatable="false">https://vitual-share-market.firebaseio.com</string>
     <string name="gcm_defaultSenderId" translatable="false">128045272026</string>
     <string name="google_api_key" translatable="false">AIzaSyAPKx-HaRpyJwhCVNwvEgbRCEgrzabCzFY</string>
-    <string name="google_app_id" translatable="false">1:128045272026:android:b58508a91e3dc1c7790ee3</string>
+    <string name="google_app_id" translatable="false">1:128045272026:android:85e0fe963242deb3790ee3</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAPKx-HaRpyJwhCVNwvEgbRCEgrzabCzFY</string>
     <string name="google_storage_bucket" translatable="false">vitual-share-market.appspot.com</string>
     <string name="project_id" translatable="false">vitual-share-market</string>
