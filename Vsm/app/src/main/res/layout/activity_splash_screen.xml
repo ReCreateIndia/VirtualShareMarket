@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e59866">
+    android:background="#FF533D78">
 
     <TextView
         android:id="@+id/appname"
@@ -14,7 +14,7 @@
         android:layout_marginLeft="10dp"
         android:fontFamily="@font/coolvetica_rg"
         android:text="Virtual Share Market"
-        android:textColor="#1b4f72"
+        android:textColor="#FFFFFF"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
 
