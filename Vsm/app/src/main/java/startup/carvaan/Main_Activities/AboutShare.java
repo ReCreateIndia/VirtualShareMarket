@@ -122,39 +122,38 @@ public class AboutShare extends AppCompatActivity  {
                     //postViewHolder.videoview.thumbImageView.setImageURI(Uri.parse("https://firebasestorage.googleapis.com/v0/b/vitual-share-market.appspot.com/o/40390415410_4933f04732_b_660_280220071938_180820090351.jpg?alt=media&token=16db16e6-bac6-40c9-ac7c-dd82ae74367c"));
 
                 }
-//                postViewHolder.name.setText(postModal.getName());
-//
-//                String s=firebaseUser.getEmail();
-//                postViewHolder.username.setText(s.substring(0,s.length()-10));
-//                postViewHolder.noofcomments.setText(postModal.getNo_comments());
-////                postViewHolder.nooflikes.setText(postModal.getNo_likes());
-//                postViewHolder.description.setText(postModal.getDescription());
-//                postViewHolder.comment.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        CommentDialog commentDialog  = new CommentDialog();
-//                        Bundle bundle = new Bundle();
-//                        bundle.putString("shareid",shareid);
-//                        commentDialog.setArguments(bundle);
-//                        commentDialog.show(getSupportFragmentManager(),"Comments");
-//                    }
-//                });
-//                postViewHolder.nooflikes.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        LikeDialog likeDialog  = new LikeDialog();
-//                        Bundle bundle = new Bundle();
-//                        bundle.putString("shareid",shareid);
-//                        likeDialog.setArguments(bundle);
-//                        likeDialog.show(getSupportFragmentManager(),"Likes");
-//                    }
-//                });
-////                if (Integer.parseInt(postModal.getType())==1){
-////                    postViewHolder.postimage.setVisibility(View.VISIBLE);
-////                }
-////                if (Integer.parseInt(postModal.getType())==2){
-////                    postViewHolder.videoview.setVisibility(View.VISIBLE);
-////                }
+                postViewHolder.companyname.setText(postModal.getName());
+                String s=firebaseUser.getEmail();
+                postViewHolder.username.setText(s.substring(0,s.length()-10));
+                postViewHolder.noofcomments.setText(postModal.getNo_comments());
+                //postViewHolder.nooflikes.setText(postModal.getNo_likes());
+                postViewHolder.description.setText(postModal.getDescription());
+                postViewHolder.comment.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        CommentDialog commentDialog  = new CommentDialog();
+                        Bundle bundle = new Bundle();
+                        bundle.putString("shareid",shareid);
+                        commentDialog.setArguments(bundle);
+                        commentDialog.show(getSupportFragmentManager(),"Comments");
+                    }
+                });
+                postViewHolder.nooflikes.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        LikeDialog likeDialog  = new LikeDialog();
+                        Bundle bundle = new Bundle();
+                        bundle.putString("shareid",shareid);
+                        likeDialog.setArguments(bundle);
+                        likeDialog.show(getSupportFragmentManager(),"Likes");
+                    }
+                });
+                if (Integer.parseInt(postModal.getType())==1){
+                    postViewHolder.postimage.setVisibility(View.VISIBLE);
+                }
+                if (Integer.parseInt(postModal.getType())==2){
+                    postViewHolder.videoview.setVisibility(View.VISIBLE);
+                }
                 }
 
 
@@ -171,7 +170,6 @@ public class AboutShare extends AppCompatActivity  {
 
     }
     public class PostViewHolder extends RecyclerView.ViewHolder {
-
         private TextView companyname,username,description,nooflikes,noofcomments,comment;
         ImageView postimage,likeicon;
        String type;
@@ -186,6 +184,7 @@ public class AboutShare extends AppCompatActivity  {
 
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);
+
             companyname=itemView.findViewById(R.id.companyName);
             username=itemView.findViewById(R.id.username);
 
