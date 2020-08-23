@@ -1429,6 +1429,7 @@ drawable back1
 drawable bcak2
 drawable border
 drawable border_sell
+drawable bottom
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1466,6 +1467,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable google
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable greentriangle
@@ -1804,6 +1806,7 @@ drawable text_input_bg
 drawable tictactoe
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable top
 drawable top_background
 drawable vsm_coin
 drawable vsm_logo
@@ -2003,6 +2006,7 @@ id ghost_view
 id glide_custom_view_target_tag
 id gone
 id googlelogin
+id googlesignup
 id gotologin
 id gotoregister
 id gotoshare

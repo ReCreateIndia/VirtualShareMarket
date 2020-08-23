@@ -29,6 +29,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import startup.carvaan.Main_Activities.R;
 
@@ -40,6 +45,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button lo_gin;
     private ImageView googlesign;
     private TextView movetoregister;
+    private FirebaseFirestore ff;
     public static GoogleSignInClient googleSignInClient;
 
     @Override
@@ -47,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         movetoregister=findViewById(R.id.gotoregister);
-
+        ff=FirebaseFirestore.getInstance();
         firebaseAuth=FirebaseAuth.getInstance();
         user_name=findViewById(R.id.username);
         pass_word=findViewById(R.id.password);
@@ -110,9 +116,42 @@ public class LoginActivity extends AppCompatActivity {
                         if(task.isSuccessful())
                         {
                             Toast.makeText(LoginActivity.this,"LOGIN SUCCESSFUL",Toast.LENGTH_LONG).show();
-                            FirebaseUser user = firebaseAuth.getCurrentUser();
-                            startActivity(new Intent(LoginActivity.this,MainActivity.class));
-                            progressDialog.dismiss();
+                            final FirebaseUser user = firebaseAuth.getCurrentUser();
+                            ff.collection("Users").document(user.getUid()).collection("Credits").document("Credits").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                @Override
+                                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                    DocumentSnapshot documentSnapshot=task.getResult();
+                                    if(!documentSnapshot.exists()){
+                                        Map<String,Object> map=new HashMap<>();
+                                        map.put("Email",user.getEmail());
+                                        map.put("PhoneNumber","phone Number");
+                                        map.put("ImageUrl","imageURL");
+                                        ff.collection("Users").document(user.getUid())
+                                                .collection("PersonalInformation")
+                                                .document("personalInformation").set(map);
+                                        Map<String,Object> credits=new HashMap<>();
+                                        credits.put("credits","100");
+                                        ff.collection("Users").document(user.getUid()).collection("Credits")
+                                                .document("Credits").set(credits).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<Void> task) {
+                                                if(task.isSuccessful()){
+                                                    Toast.makeText(LoginActivity.this,"signin successful",Toast.LENGTH_LONG).show();
+                                                }
+                                                else{
+                                                    Toast.makeText(LoginActivity.this,"signin unsuccessful",Toast.LENGTH_LONG).show();
+                                                }
+                                            }
+                                        });
+
+                                    }
+                                    startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                                    progressDialog.dismiss();
+                                }
+                            });
+
+
+
                         }
                         else
                         {

@@ -40,7 +40,7 @@ public class SplashScreen extends AppCompatActivity {
             public void run() {
                 gotonextpage();
             }
-        }, 4000);
+        }, 1000);
 //         Thread t= new Thread(){
 //            public void run(){
 //                try {
