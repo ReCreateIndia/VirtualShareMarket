@@ -1,4 +1,4 @@
-#Sat Aug 22 19:47:11 IST 2020
+#Sun Aug 23 13:18:18 IST 2020
 path.3=classes4.dex
 path.2=classes3.dex
 path.1=classes2.dex
@@ -7,7 +7,7 @@ renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.3=C\:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes4.dex
-base.2=C\:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes3.dex
-base.1=C\:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes2.dex
-base.0=C\:\\Users\\Anubhav goyal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+base.3=C\:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes4.dex
+base.2=C\:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes3.dex
+base.1=C\:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes2.dex
+base.0=C\:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
