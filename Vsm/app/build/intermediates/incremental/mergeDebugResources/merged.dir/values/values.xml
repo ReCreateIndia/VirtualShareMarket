@@ -1006,9 +1006,9 @@
   </style>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#330033</item>
-        <item name="colorPrimaryDark">#330033</item>
-        <item name="colorAccent">#330033</item>
+        <item name="colorPrimary">#FF533D78</item>
+        <item name="colorPrimaryDark">#FF533D78</item>
+        <item name="colorAccent">#FF533D78</item>
     </style>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
@@ -2733,9 +2733,9 @@
     </style>
     <style name="FullScreen" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#330033</item>
-        <item name="colorPrimaryDark">#330033</item>
-        <item name="colorAccent">#330033</item>
+        <item name="colorPrimary">#FF533D78</item>
+        <item name="colorPrimaryDark">#FF533D78</item>
+        <item name="colorAccent">#FF533D78</item>
 
     </style>
     <style name="MaterialAlertDialog.MaterialComponents" parent="AlertDialog.AppCompat">

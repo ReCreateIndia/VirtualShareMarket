@@ -52,36 +52,36 @@
 28-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:15:19-45
 29        </activity>
 30        <activity
-30-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:18:9-23:20
+30-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:18:9-27:20
 31            android:name="startup.carvaan.Main_Activities.SplashScreen"
 31-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:19:13-41
 32            android:configChanges="orientation|keyboardHidden"
 32-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:20:13-63
 33            android:theme="@style/FullScreen" >
 33-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:21:13-46
-34        </activity>
-35        <activity android:name="startup.carvaan.Main_Activities.RegisterActivity" />
-35-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:24:9-63
-35-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:24:19-51
-36        <activity
-36-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:25:9-27:58
-37            android:name="startup.carvaan.Main_Activities.LoginActivity"
-37-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:26:13-42
-38            android:theme="@style/FullScreen" />
-38-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:27:13-46
-39        <activity android:name="startup.carvaan.Main_Activities.MainActivity" >
-39-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:28:9-35:20
-39-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:28:19-47
-40            <intent-filter>
-40-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:29:13-33:29
-41                <action android:name="android.intent.action.MAIN" />
-41-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:30:17-69
-41-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:30:25-66
-42
-43                <category android:name="android.intent.category.LAUNCHER" />
-43-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:32:17-77
-43-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:32:27-74
-44            </intent-filter>
+34            <intent-filter>
+34-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:22:13-26:29
+35                <action android:name="android.intent.action.MAIN" />
+35-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:23:17-69
+35-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:23:25-66
+36
+37                <category android:name="android.intent.category.LAUNCHER" />
+37-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:25:17-77
+37-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:25:27-74
+38            </intent-filter>
+39        </activity>
+40        <activity android:name="startup.carvaan.Main_Activities.RegisterActivity" />
+40-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:28:9-63
+40-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:28:19-51
+41        <activity
+41-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:29:9-31:58
+42            android:name="startup.carvaan.Main_Activities.LoginActivity"
+42-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:30:13-42
+43            android:theme="@style/FullScreen" />
+43-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:31:13-46
+44        <activity android:name="startup.carvaan.Main_Activities.MainActivity" >
+44-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:32:9-35:20
+44-->C:\Users\Anubhav goyal\AndroidStudioProjects\VirtualShareMarket\Vsm\app\src\main\AndroidManifest.xml:32:19-47
 45        </activity>
 46
 47        <meta-data
