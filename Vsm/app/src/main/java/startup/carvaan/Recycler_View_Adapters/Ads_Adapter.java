@@ -1,5 +1,6 @@
 package startup.carvaan.Recycler_View_Adapters;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,8 +29,16 @@ public class Ads_Adapter extends RecyclerView.Adapter<Ads_Adapter.Ads_ViewHolder
 
         switch (position)
         {
-            case 1: holder.ads_text.setText("150 Credits - 45 second ad"); break;
-            case 2: holder.ads_text.setText("200 Credits - 60 second ad"); break;
+            case 1:
+                holder.ads_text.setText("150 Credits");
+                holder.ad_layout.setBackgroundColor(Color.parseColor("#AB35BF"));
+
+                break;
+            case 2: holder.ads_text.setText("200 Credits");
+
+
+                    holder.ad_layout.setBackgroundColor(Color.parseColor("#188F84"));
+                break;
         }
     }
 
