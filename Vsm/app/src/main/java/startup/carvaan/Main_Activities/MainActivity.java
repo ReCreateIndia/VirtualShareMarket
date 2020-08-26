@@ -123,16 +123,17 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
-               ff.collection("Users").document(firebaseUser.getUid()).collection("Credits")
-                .document("Credits").addSnapshotListener(new EventListener<DocumentSnapshot>() {
-                    @Override
-                    public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
-                       DocumentSnapshot snapshot=documentSnapshot;
-                        credits.setCredits(snapshot.getString("credits"));
-                        coins.setText(credits.getCredits());
-                    }
-               });
-
+        if(firebaseUser!=null) {
+            ff.collection("Users").document(firebaseUser.getUid()).collection("Credits")
+                    .document("Credits").addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                @Override
+                public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+                    DocumentSnapshot snapshot = documentSnapshot;
+                    credits.setCredits(snapshot.getString("credits"));
+                    coins.setText(credits.getCredits());
+                }
+            });
+        }
 
     }
 

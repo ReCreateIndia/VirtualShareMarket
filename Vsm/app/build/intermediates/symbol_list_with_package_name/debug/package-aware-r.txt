@@ -781,6 +781,18 @@ attr trackTintMode
 attr transitionEasing
 attr transitionPathRotate
 attr ttcIndex
+attr umanoAnchorPoint
+attr umanoClipPanel
+attr umanoDragView
+attr umanoFadeColor
+attr umanoFlingVelocity
+attr umanoInitialState
+attr umanoOverlay
+attr umanoPanelHeight
+attr umanoParallaxOffset
+attr umanoScrollInterpolator
+attr umanoScrollableView
+attr umanoShadowHeight
 attr useCompatPadding
 attr useMaterialThemeColors
 attr use_legacy_parser
@@ -1423,10 +1435,12 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable above_shadow
 drawable avd_hide_password
 drawable avd_show_password
 drawable back1
 drawable bcak2
+drawable below_shadow
 drawable border
 drawable border_sell
 drawable bottom
@@ -1892,6 +1906,7 @@ id ads_text
 id alertTitle
 id all
 id always
+id anchored
 id anticipate
 id applogo
 id appmotto
@@ -1910,6 +1925,7 @@ id blocking
 id bottom
 id bottom_progress
 id bottom_seek_progress
+id bottomsheet
 id bounce
 id brightness_progressbar
 id browser_actions_header_text
@@ -1938,6 +1954,7 @@ id clip_horizontal
 id clip_vertical
 id coins
 id collapseActionView
+id collapsed
 id commenterimage
 id commentername
 id commenting_user_image
@@ -1986,6 +2003,7 @@ id enterAlways
 id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
+id expanded
 id expanded_menu
 id fab
 id fab1
@@ -2015,6 +2033,7 @@ id gotoregister
 id gotoshare
 id group_divider
 id groups
+id hidden
 id home
 id homeAsUp
 id i2
@@ -3293,6 +3312,7 @@ styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
 styleable ShapeAppearance cornerFamily cornerFamilyBottomLeft cornerFamilyBottomRight cornerFamilyTopLeft cornerFamilyTopRight cornerSize cornerSizeBottomLeft cornerSizeBottomRight cornerSizeTopLeft cornerSizeTopRight
 styleable SignInButton buttonSize colorScheme scopeUris
+styleable SlidingUpPanelLayout umanoAnchorPoint umanoClipPanel umanoDragView umanoFadeColor umanoFlingVelocity umanoInitialState umanoOverlay umanoPanelHeight umanoParallaxOffset umanoScrollInterpolator umanoScrollableView umanoShadowHeight
 styleable Snackbar snackbarButtonStyle snackbarStyle
 styleable SnackbarLayout android_maxWidth actionTextColorAlpha animationMode backgroundOverlayColorAlpha elevation maxActionInlineWidth
 styleable Spinner android_entries android_popupBackground android_prompt android_dropDownWidth popupTheme

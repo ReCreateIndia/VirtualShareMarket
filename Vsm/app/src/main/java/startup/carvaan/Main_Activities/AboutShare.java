@@ -26,6 +26,7 @@ import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -55,6 +56,7 @@ import startup.carvaan.Main_Activities.R;
 
 
 public class AboutShare extends AppCompatActivity  {
+    private BottomSheetBehavior bottomSheetBehavior;
     private TextView textView;
     private int a;
     private  FirebaseFirestore ff;
@@ -95,8 +97,8 @@ public class AboutShare extends AppCompatActivity  {
         shareRecyclerView=findViewById(R.id.shareRecyclerView);
         final Bundle bundle = getIntent().getExtras();
         shareid = bundle.getString("shareid");
-        bottomNavigationView=findViewById(R.id.aboutsharebottomnavview);
-        bottomNavigationView.setOnNavigationItemSelectedListener(navlistner);
+//        bottomNavigationView=findViewById(R.id.aboutsharebottomnavview);
+//        bottomNavigationView.setOnNavigationItemSelectedListener(navlistner);
         ff = FirebaseFirestore.getInstance();
         tech_list=new ArrayList<>();
         Query query = ff.collection("Shares").document(shareid).collection("Bloging");
@@ -167,6 +169,9 @@ public class AboutShare extends AppCompatActivity  {
         };
         shareRecyclerView.setLayoutManager(new LinearLayoutManager(AboutShare.this));
         shareRecyclerView.setAdapter(adapter);
+
+        View bottomsheet = findViewById(R.id.bottomsheet);
+        bottomSheetBehavior = BottomSheetBehavior.from(bottomsheet);
 
     }
     public class PostViewHolder extends RecyclerView.ViewHolder {
