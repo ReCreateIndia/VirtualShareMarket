@@ -2,105 +2,100 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
-    android:layout_marginTop="5dp"
-    android:layout_marginBottom="5dp"
-    android:layout_marginLeft="10dp"
-    app:cardCornerRadius="30dp"
+    app:cardCornerRadius="20dp"
     android:layout_margin="15dp"
-
-
     app:cardElevation="10dp"
-    android:layout_marginRight="10dp">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@drawable/roundbackground_green"
     >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:background="#188F84"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
 
+            <TextView
+                android:id="@+id/shareprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="5dp"
+
+                android:fontFamily="@font/abril_fatface"
+                android:gravity="right"
+                android:text="$ 2.15"
+                android:textColor="#BECA4D"
+                android:textSize="70sp" />
+            <TextView
+                android:layout_width="wrap_content"
+
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/abril_fatface"
+                android:text="Per Share"
+                android:textColor="#BECA4D"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
         <TextView
-            android:id="@+id/shareprice"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#2a7440"/>
+        <TextView
+            android:id="@+id/totalAvailable"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Total available:"
+            android:fontFamily="@font/abril_fatface"
             android:layout_gravity="center_horizontal"
-            android:layout_marginRight="5dp"
-            android:layout_weight="3"
-            android:fontFamily="@font/abril_fatface"
-            android:gravity="right"
-            android:text="$ 2.15"
-            android:textColor="#e1ff8a"
-            android:textSize="80sp" />
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="2"
-            android:layout_marginRight="5dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:fontFamily="@font/abril_fatface"
-            android:text="Per Share"
-            android:textColor="#e1ff8a"
             android:textSize="20sp"
-            />
+            android:textColor="#FFFFFF"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number of Shares"
+            android:fontFamily="@font/abril_fatface"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"/>
+
+        <EditText
+            android:id="@+id/noofshares"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:hint="Enter"
+            android:textColorHint="#FFFFFF"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/border"
+            android:fontFamily="@font/abril_fatface" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="Buy"
+            android:id="@+id/btn_buy"
+            android:textAllCaps="false"
+            android:fontFamily="@font/abril_fatface"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/roundbackground_green"/>
+
+
+
     </LinearLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:background="#2a7440"/>
-    <TextView
-        android:id="@+id/totalAvailable"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:text="Total available:"
-        android:fontFamily="@font/abril_fatface"
-        android:layout_gravity="center_horizontal"
-        android:textSize="20sp"
-        android:textColor="#e1ff8a"/>
-    <TextView
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Number of Shares"
-        android:fontFamily="@font/abril_fatface"
-        android:layout_gravity="center_horizontal"
-        android:textSize="20sp"
-        android:textColor="#0b4926"/>
-
-    <EditText
-        android:id="@+id/noofshares"
-        android:layout_width="160dp"
-        android:layout_height="50dp"
-        android:textColor="#ffffff"
-        android:gravity="center"
-        android:hint="enter"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/border"
-        android:fontFamily="@font/abril_fatface" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Buy"
-        android:id="@+id/btn_buy"
-        android:textAllCaps="false"
-        android:fontFamily="@font/abril_fatface"
-        android:layout_gravity="center_horizontal"
-        android:textColor="#0b4926"
-        android:textSize="25sp"
-        android:layout_marginBottom="10dp"
-        android:background="#e1ff8a"/>
-
-
-
-</LinearLayout>
 </androidx.cardview.widget.CardView>
