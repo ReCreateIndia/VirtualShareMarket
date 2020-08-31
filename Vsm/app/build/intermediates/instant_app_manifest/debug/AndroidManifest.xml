@@ -11,10 +11,11 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" /> <!-- Required by older versions of Google Play services to create IID tokens -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
 
     <application
         android:name="androidx.multidex.MultiDexApplication"
@@ -27,8 +28,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="startup.carvaan.Main_Activities.AboutShare" >
-        </activity>
+        <activity android:name="startup.carvaan.Main_Fragments.PaymentActivity" />
+        <activity android:name="startup.carvaan.Main_Activities.AboutShare" />
         <activity
             android:name="startup.carvaan.Main_Activities.SplashScreen"
             android:configChanges="orientation|keyboardHidden"
@@ -43,8 +44,7 @@
         <activity
             android:name="startup.carvaan.Main_Activities.LoginActivity"
             android:theme="@style/FullScreen" />
-        <activity android:name="startup.carvaan.Main_Activities.MainActivity" >
-        </activity>
+        <activity android:name="startup.carvaan.Main_Activities.MainActivity" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
@@ -52,6 +52,9 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
@@ -98,6 +101,42 @@
             android:exported="true"
             android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
 
+        <activity
+            android:name="com.gocashfree.cashfreesdk.ui.web_checkout.CFPaymentActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.gocashfree.cashfreesdk.ui.upi.CFUPIPaymentActivity"
+            android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity
+            android:name="com.gocashfree.cashfreesdk.ui.amazonpay.AmazonPayActivity"
+            android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity
+            android:name="com.gocashfree.cashfreesdk.ui.gpay.GooglePayActivity"
+            android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity
+            android:name="com.gocashfree.cashfreesdk.ui.phonepe.CFPhonePayActivity"
+            android:theme="@style/Theme.AppCompat.Translucent" />
+
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="startup.carvaan.firebaseinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
+
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
             android:enabled="true"
@@ -121,27 +160,7 @@
             android:name="com.google.android.gms.measurement.AppMeasurementJobService"
             android:enabled="true"
             android:exported="false"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
-
-        <receiver
-            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-            android:exported="true"
-            android:permission="com.google.android.c2dm.permission.SEND" >
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-            </intent-filter>
-        </receiver>
-
-        <activity
-            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-        <provider
-            android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="startup.carvaan.firebaseinitprovider"
-            android:exported="false"
-            android:initOrder="100" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+            android:permission="android.permission.BIND_JOB_SERVICE" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
@@ -153,10 +172,6 @@
             android:authorities="startup.carvaan.mobileadsinitprovider"
             android:exported="false"
             android:initOrder="100" />
-
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

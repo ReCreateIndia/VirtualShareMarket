@@ -14,11 +14,12 @@
         android:orientation="vertical">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ads_recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/ads_recycler_view"
             android:layout_marginTop="20dp"
-            tools:listitem="@layout/credits_by_ads_item"/>
+           />
+
         <Button
             android:layout_gravity="center"
             android:id="@+id/startadd"
@@ -32,6 +33,11 @@
             android:textSize="18sp"
              >
         </Button>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="makePayment"
+            android:id="@+id/payment"></Button>
     </LinearLayout>
 
 

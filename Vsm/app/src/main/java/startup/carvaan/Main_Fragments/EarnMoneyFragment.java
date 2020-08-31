@@ -1,7 +1,10 @@
 package startup.carvaan.Main_Fragments;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Canvas;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,20 +15,38 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.gocashfree.cashfreesdk.CFPaymentService;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.google.android.gms.ads.reward.RewardedVideoAdListener;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
+
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.functions.Consumer;
+import io.reactivex.schedulers.Schedulers;
 import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator;
+import startup.carvaan.Constructor.CashFreeToken;
+import startup.carvaan.Main_Activities.MainActivity;
 import startup.carvaan.Main_Activities.R;
 import startup.carvaan.Recycler_View_Adapters.Ads_Adapter;
+import startup.carvaan.remote.ICloudFunctions;
+import startup.carvaan.remote.RetrofitClient;
+
+import static android.content.ContentValues.TAG;
 
 public class EarnMoneyFragment extends Fragment implements RewardedVideoAdListener {
 
     private RewardedVideoAd rewardedVideoAd;
     private Button showadd;
     private RecyclerView ad_recycler_view;
+    private Button payment;
 
     public EarnMoneyFragment() {
         // Required empty public constructor
@@ -44,6 +65,14 @@ public class EarnMoneyFragment extends Fragment implements RewardedVideoAdListen
         MobileAds.initialize(getContext(),"ca-app-pub-1372656325166770~1018059934");
         rewardedVideoAd=MobileAds.getRewardedVideoAdInstance(getContext());
         rewardedVideoAd.setRewardedVideoAdListener(this);
+
+        payment=view.findViewById(R.id.payment);
+        payment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(),PaymentActivity.class));
+            }
+        });
         loadAds();
 //        showadd=view.findViewById(R.id.startadd);
 //        showadd.setOnClickListener(new View.OnClickListener() {
@@ -152,4 +181,6 @@ public class EarnMoneyFragment extends Fragment implements RewardedVideoAdListen
     public void onRewardedVideoCompleted() {
 
     }
+
+
 }

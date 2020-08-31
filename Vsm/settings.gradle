@@ -1,2 +1,4 @@
+include ':ccashfreesdk-1.4.9.8-release'
+include ':cashfreesdk-1.4.9.8-release'
 rootProject.name='Vsm'
 include ':app'

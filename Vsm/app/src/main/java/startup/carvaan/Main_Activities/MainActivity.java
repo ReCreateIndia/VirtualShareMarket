@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,6 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import com.gocashfree.cashfreesdk.CFPaymentService;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -37,16 +39,29 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.sdsmdg.harjot.vectormaster.VectorMasterView;
 import com.sdsmdg.harjot.vectormaster.models.PathModel;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
+
 import javax.annotation.Nullable;
 
+import io.reactivex.Scheduler;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.functions.Consumer;
+import io.reactivex.schedulers.Schedulers;
+import startup.carvaan.Constructor.CashFreeToken;
 import startup.carvaan.Constructor.credits;
 import startup.carvaan.Main_Fragments.AllShareFragment;
 import startup.carvaan.Main_Fragments.EarnMoneyFragment;
 import startup.carvaan.Main_Fragments.MyShareFragment;
 import startup.carvaan.Main_Activities.R;
+import startup.carvaan.remote.ICloudFunctions;
+import startup.carvaan.remote.RetrofitClient;
 
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+    private static final String TAG = "carvaan";
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
     DrawerLayout drawerLayout;
@@ -61,9 +76,11 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     private RelativeLayout mlinId;
     PathModel outline;
 
+
     private ActionBar actionBar;
     TextView coins;
     credits credits=new credits();
+
     @SuppressLint("WrongConstant")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,16 +140,17 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
-               ff.collection("Users").document(firebaseUser.getUid()).collection("Credits")
-                .document("Credits").addSnapshotListener(new EventListener<DocumentSnapshot>() {
-                    @Override
-                    public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
-                       DocumentSnapshot snapshot=documentSnapshot;
-                        credits.setCredits(snapshot.getString("credits"));
-                        coins.setText(credits.getCredits());
-                    }
-               });
-
+        if(firebaseUser!=null) {
+            ff.collection("Users").document(firebaseUser.getUid()).collection("Credits")
+                    .document("Credits").addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                @Override
+                public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+                    DocumentSnapshot snapshot = documentSnapshot;
+                    credits.setCredits(snapshot.getString("credits"));
+                    coins.setText(credits.getCredits());
+                }
+            });
+        }
 
     }
 
@@ -164,11 +182,12 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                         finish();
                     }
                 });
-
                 break;
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 
     private void gotoLoginActivity() {
         firebaseAuth.signOut();

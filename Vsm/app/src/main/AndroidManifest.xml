@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="startup.carvaan.Main_Activities">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -11,10 +14,10 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/vsm_logo"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".AboutShare">
-
-        </activity>
+        android:theme="@style/AppTheme"
+        tools:node="merge">
+        <activity android:name="startup.carvaan.Main_Fragments.PaymentActivity"></activity>
+        <activity android:name=".AboutShare"></activity>
         <activity
             android:name=".SplashScreen"
             android:configChanges="orientation|keyboardHidden"
@@ -25,21 +28,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".RegisterActivity" />
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/FullScreen"></activity>
-        <activity android:name=".MainActivity">
-
-
-        </activity>
+            android:theme="@style/FullScreen" />
+        <activity android:name=".MainActivity"></activity>
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-1372656325166770~1018059934"/>
+            android:value="ca-app-pub-1372656325166770~1018059934" />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>
