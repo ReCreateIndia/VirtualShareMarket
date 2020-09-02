@@ -1,6 +1,8 @@
 package startup.carvaan.Main_Activities;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
+import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -23,6 +25,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.AxisBase;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.formatter.IAxisValueFormatter;
+import com.github.mikephil.charting.formatter.ValueFormatter;
+import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -60,9 +71,11 @@ public class AboutShare extends AppCompatActivity  {
     private TextView textView;
     private int a;
     private  FirebaseFirestore ff;
+    private ImageView stonksimage;
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
     FirestoreRecyclerAdapter adapter;
+    private LineChart stonkschart;
     private List<PostModal> tech_list;
     private RecyclerView shareRecyclerView;
     private BottomNavigationView bottomNavigationView;
@@ -172,6 +185,45 @@ public class AboutShare extends AppCompatActivity  {
 
         View bottomsheet = findViewById(R.id.bottomsheet);
         bottomSheetBehavior = BottomSheetBehavior.from(bottomsheet);
+        bottomSheetBehavior.setHideable(false);
+        stonksimage = bottomsheet.findViewById(R.id.stonksimage);
+        bottomSheetBehavior.addBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
+            @Override
+            public void onStateChanged(@NonNull View bottomSheet, int newState) {
+                if(newState==BottomSheetBehavior.STATE_EXPANDED)
+                    stonksimage.setRotation(180f);
+                else
+                    stonksimage.setRotation(0f);
+            }
+
+            @Override
+            public void onSlide(@NonNull View bottomSheet, float slideOffset) {
+
+            }
+        });
+
+        stonkschart = bottomsheet.findViewById(R.id.stonkschart);
+        ArrayList<Entry> yvalues = new ArrayList<>();
+        yvalues.add(new Entry(1,25));
+        yvalues.add(new Entry(2,50));
+        yvalues.add(new Entry(3,75));
+        yvalues.add(new Entry(4,60));
+        yvalues.add(new Entry(5,35));
+        yvalues.add(new Entry(6,80));
+        yvalues.add(new Entry(7,40));
+        LineDataSet set1 = new LineDataSet(yvalues,"Share Prices");
+        set1.setColor(Color.GREEN);
+        set1.setLineWidth(3f);
+        set1.setFillAlpha(110);
+        ArrayList<ILineDataSet> dataSets = new ArrayList<>();
+        dataSets.add(set1);
+        LineData data = new LineData(dataSets);
+        stonkschart.setData(data);
+        stonkschart.getAxisRight().setEnabled(false);
+        String[] values = new String[] {"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
+        XAxis xAxis = stonkschart.getXAxis();
+        xAxis.setValueFormatter(new myformatter(values));
+        xAxis.setGranularity(1);
 
     }
     public class PostViewHolder extends RecyclerView.ViewHolder {
@@ -267,5 +319,17 @@ public class AboutShare extends AppCompatActivity  {
     public void onBackPressed() {
         adapter.notifyDataSetChanged();
         super.onBackPressed();
+    }
+    public class myformatter extends ValueFormatter implements IAxisValueFormatter {
+        private String[] myvalues;
+        public myformatter(String[] myvalues)
+        {
+            this.myvalues = myvalues;
+        }
+
+        @Override
+        public String getFormattedValue(float value, AxisBase axis) {
+            return myvalues[(int)value];
+        }
     }
 }

@@ -2514,6 +2514,8 @@ id startVertical
 id start_layout
 id startadd
 id status_bar_latest_event_content
+id stonkschart
+id stonksimage
 id stretch
 id submenuarrow
 id submit_area

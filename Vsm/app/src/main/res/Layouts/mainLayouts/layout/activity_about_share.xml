@@ -10,7 +10,8 @@
     <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:id="@+id/recyclerScrool"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="0dp"
+            android:layout_weight="1">
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/shareRecyclerView"
                 android:layout_width="match_parent"
@@ -42,17 +43,20 @@
             android:gravity="center_horizontal|center_vertical"/>
             <ImageView
                 android:layout_width="20dp"
+                android:id="@+id/stonksimage"
                 android:layout_height="30dp"
                 android:layout_marginTop="15dp"
-                android:scaleType="fitXY"
+                android:scaleType="fitCenter"
                 android:layout_marginLeft="10dp"
+
                 android:src="@drawable/greentriangle"/>
         </LinearLayout>
         <com.github.mikephil.charting.charts.LineChart
             android:layout_width="match_parent"
             android:layout_height="300dp"
+
             android:layout_marginLeft="10dp"
-            android:id="@+id/chart"
+            android:id="@+id/stonkschart"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"/>
     </LinearLayout>
@@ -61,14 +65,12 @@
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/aboutsharebottomnavview"
+        android:paddingBottom="15dp"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:background="#FF533D78"
         app:itemTextColor="#ffffff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+
         app:menu="@menu/sharemenu">
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 

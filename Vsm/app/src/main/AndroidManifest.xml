@@ -11,6 +11,8 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/vsm_logo"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
         android:label="@string/app_name"
         android:roundIcon="@drawable/vsm_logo"
         android:supportsRtl="true"
