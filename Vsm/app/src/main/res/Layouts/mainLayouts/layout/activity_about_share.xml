@@ -63,6 +63,7 @@
 
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/aboutsharebottomnavview"
         android:paddingBottom="15dp"
@@ -70,7 +71,6 @@
         android:layout_height="wrap_content"
         android:background="#FF533D78"
         app:itemTextColor="#ffffff"
-
         app:menu="@menu/sharemenu">
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 

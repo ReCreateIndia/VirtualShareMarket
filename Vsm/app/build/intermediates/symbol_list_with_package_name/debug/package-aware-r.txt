@@ -2236,10 +2236,6 @@ id flip
 id forever
 id fragment_container
 id fullscreen
-id fundedleft
-id fundedlinearlayout
-id fundedrecyclerview
-id fundedright
 id ghost_view
 id ghost_view_holder
 id glide_custom_view_target_tag
@@ -2533,10 +2529,6 @@ id tag_screen_reader_focusable
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
-id techleft
-id techlinearlayout
-id techrecyclerview
-id techright
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id text
@@ -2560,10 +2552,6 @@ id text_input_start_icon
 id textinput_counter
 id textinput_error
 id textinput_helper_text
-id thirdleft
-id thirdlinearlayout
-id thirdrecyclerview
-id thirdright
 id thumb
 id time
 id title

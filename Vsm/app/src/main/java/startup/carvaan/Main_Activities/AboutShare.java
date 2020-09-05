@@ -110,8 +110,8 @@ public class AboutShare extends AppCompatActivity  {
         shareRecyclerView=findViewById(R.id.shareRecyclerView);
         final Bundle bundle = getIntent().getExtras();
         shareid = bundle.getString("shareid");
-//        bottomNavigationView=findViewById(R.id.aboutsharebottomnavview);
-//        bottomNavigationView.setOnNavigationItemSelectedListener(navlistner);
+        bottomNavigationView=findViewById(R.id.aboutsharebottomnavview);
+        bottomNavigationView.setOnNavigationItemSelectedListener(navlistner);
         ff = FirebaseFirestore.getInstance();
         tech_list=new ArrayList<>();
         Query query = ff.collection("Shares").document(shareid).collection("Bloging");
