@@ -50,11 +50,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/vsm_logo" />
 
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="left" />
+    <!--    <androidx.constraintlayout.widget.Barrier-->
+    <!--        android:id="@+id/barrier2"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:barrierDirection="left" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

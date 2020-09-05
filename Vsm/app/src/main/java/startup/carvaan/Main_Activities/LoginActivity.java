@@ -52,20 +52,28 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        movetoregister=findViewById(R.id.gotoregister);
-        ff=FirebaseFirestore.getInstance();
-        firebaseAuth=FirebaseAuth.getInstance();
-        user_name=findViewById(R.id.username);
-        pass_word=findViewById(R.id.password);
-        lo_gin=findViewById(R.id.loginbutton);
+        movetoregister = findViewById(R.id.gotoregister);
+        ff = FirebaseFirestore.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
+        user_name = findViewById(R.id.username);
+        pass_word = findViewById(R.id.password);
+        lo_gin = findViewById(R.id.loginbutton);
+        TextView forgotPass = findViewById(R.id.forgotPass);
         googlesign = findViewById(R.id.googlelogin);
+        forgotPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class));
+
+            }
+        });
         lo_gin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                firebaseAuth.signInWithEmailAndPassword(user_name.getText().toString()+"@gmail.com",pass_word.getText().toString()).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                firebaseAuth.signInWithEmailAndPassword(user_name.getText().toString() + "@gmail.com", pass_word.getText().toString()).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                     @Override
                     public void onSuccess(AuthResult authResult) {
-                        startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override

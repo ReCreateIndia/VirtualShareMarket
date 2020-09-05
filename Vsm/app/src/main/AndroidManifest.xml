@@ -20,6 +20,9 @@
         tools:node="merge">
         <activity android:name="startup.carvaan.Main_Fragments.PaymentActivity"></activity>
         <activity android:name=".AboutShare"></activity>
+        <activity android:name=".ForgotPasswordActivity">
+
+        </activity>
         <activity
             android:name=".SplashScreen"
             android:configChanges="orientation|keyboardHidden"

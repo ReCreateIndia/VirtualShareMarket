@@ -2115,6 +2115,7 @@ id anchored
 id anticipate
 id api_progress
 id appName
+id appbar_page
 id applogo
 id appmotto
 id appname
@@ -2124,7 +2125,6 @@ id auto
 id back
 id back_tiny
 id barrier
-id barrier2
 id battery_level
 id battery_time_layout
 id beginning
@@ -2213,6 +2213,7 @@ id easeIn
 id easeInOut
 id easeOut
 id edit_query
+id email_link
 id end
 id end_padder
 id enterAlways
@@ -2234,6 +2235,7 @@ id fitToContents
 id fixed
 id flip
 id forever
+id forgotPass
 id fragment_container
 id fullscreen
 id ghost_view
@@ -2476,6 +2478,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id sellsuccess
+id send_reset_link
 id shareRecyclerView
 id sharebuy
 id sharename
@@ -2677,11 +2680,13 @@ layout activity_about_share
 layout activity_cashfree_payment
 layout activity_cf_amazon_pay
 layout activity_cfupipayment
+layout activity_forgot_password
 layout activity_login
 layout activity_main
 layout activity_payment
 layout activity_register
 layout activity_splash_screen
+layout appbar
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout cf_bottomsheet_layout
