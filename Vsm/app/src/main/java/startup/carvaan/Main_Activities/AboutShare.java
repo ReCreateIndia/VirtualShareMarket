@@ -190,10 +190,14 @@ public class AboutShare extends AppCompatActivity  {
         bottomSheetBehavior.addBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
             @Override
             public void onStateChanged(@NonNull View bottomSheet, int newState) {
-                if(newState==BottomSheetBehavior.STATE_EXPANDED)
+                if(newState==BottomSheetBehavior.STATE_EXPANDED) {
                     stonksimage.setRotation(180f);
-                else
+                    bottomNavigationView.setVisibility(View.GONE);
+                }
+                else {
                     stonksimage.setRotation(0f);
+                    bottomNavigationView.setVisibility(View.VISIBLE);
+                }
             }
 
             @Override
