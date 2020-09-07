@@ -49,12 +49,13 @@ import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.functions.Consumer;
-import io.reactivex.schedulers.Schedulers;
 import startup.carvaan.Constructor.CashFreeToken;
 import startup.carvaan.Constructor.credits;
 import startup.carvaan.Main_Fragments.AllShareFragment;
 import startup.carvaan.Main_Fragments.EarnMoneyFragment;
 import startup.carvaan.Main_Fragments.MyShareFragment;
+import io.reactivex.schedulers.Schedulers;
+
 import startup.carvaan.Main_Activities.R;
 import startup.carvaan.remote.ICloudFunctions;
 import startup.carvaan.remote.RetrofitClient;
@@ -202,37 +203,46 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         Fragment selectedFragment = null;
         switch (item.getItemId()) {
             case R.id.MyShares:
+                selectedFragment = new MyShareFragment();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
+
+
                 tet(6);
                 // find the correct path using name
                 mlinId.setX(mView.mFirstCurveControlPoint1.x );
                 heartVector.setVisibility(View.VISIBLE);
                 heartVector1.setVisibility(View.GONE);
                 heartVector2.setVisibility(View.GONE);
-                selectedFragment = new MyShareFragment();
+
                 selectAnimation(heartVector);
                 break;
             case R.id.AllShares:
+                selectedFragment = new AllShareFragment();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
+
                 tet(2);
                 mlinId.setX(mView.mFirstCurveControlPoint1.x );
                 heartVector.setVisibility(View.GONE);
                 heartVector1.setVisibility(View.VISIBLE);
                 heartVector2.setVisibility(View.GONE);
-                selectedFragment = new AllShareFragment();
+
 
                 selectAnimation(heartVector1);
                 break;
             case R.id.EarnCredits:
+                selectedFragment = new EarnMoneyFragment();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
+
                 tet();
                 mlinId.setX(mView.mFirstCurveControlPoint1.x ) ;
                 heartVector.setVisibility(View.GONE);
                 heartVector1.setVisibility(View.GONE);
                 heartVector2.setVisibility(View.VISIBLE);
-                selectedFragment = new EarnMoneyFragment();
+
 
                 selectAnimation(heartVector2);
                 break;
         }
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
 
         return true;
     }
@@ -243,7 +253,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         outline.setTrimPathEnd(0.0f);
         // initialise valueAnimator and pass start and end float values
         ValueAnimator valueAnimator = ValueAnimator.ofFloat(0.0f, 1.0f);
-        valueAnimator.setDuration(1000);
+        valueAnimator.setDuration(500);
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator valueAnimator) {

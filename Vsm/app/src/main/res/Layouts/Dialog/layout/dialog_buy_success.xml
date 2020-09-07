@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:background="@drawable/roundbackground_green">
+    app:cardCornerRadius="20dp"
+    android:layout_margin="15dp"
+    app:cardElevation="10dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#188F84"
+        >
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -12,6 +22,7 @@
         android:layout_gravity="center_horizontal"
         android:textSize="35sp"
         android:lines="1"
+        android:layout_marginTop="10dp"
         android:textColor="#0b4926"
         tools:autoSizeTextType="uniform"
         android:fontFamily="@font/abril_fatface"/>
@@ -48,8 +59,9 @@
         android:text="You have successfully invested your credits in Random Bullshit Pvt. Ltd."
         android:textSize="20sp"
         android:textAlignment="center"
-        android:textColor="#0b4926"
+        android:textColor="#FFFFFF"
         android:fontFamily="@font/abril_fatface"
         android:gravity="center_horizontal"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="20dp"/>
 </LinearLayout>
+</androidx.cardview.widget.CardView>
