@@ -45,7 +45,7 @@ import startup.carvaan.Main_Activities.R;
 
 public class AllShareFragment extends Fragment implements GestureDetector.OnGestureListener{
 
-    private RecyclerView tech_recycler_view, funded_recycler_view, third_recycler_view;
+    private RecyclerView share_recycler_view, funded_recycler_view, third_recycler_view;
     private List<sharemodel> tech_list, funded_list, third_list;
     private FirebaseFirestore ff;
     private LinearLayout techll, fundll, thirdll;
@@ -61,72 +61,9 @@ public class AllShareFragment extends Fragment implements GestureDetector.OnGest
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_all_share, container, false);
-        techll = view.findViewById(R.id.techlinearlayout);
-        fundll = view.findViewById(R.id.fundedlinearlayout);
-        thirdll = view.findViewById(R.id.thirdlinearlayout);
-        techl = view.findViewById(R.id.techleft);
-        techr = view.findViewById(R.id.techright);
-        fundl = view.findViewById(R.id.fundedleft);
-        fundr = view.findViewById(R.id.fundedright);
-        thirdl = view.findViewById(R.id.thirdleft);
-        thirdr = view.findViewById(R.id.thirdright);
-        techll.setVisibility(View.VISIBLE);
-        fundll.setVisibility(View.GONE);
-        thirdll.setVisibility(View.GONE);
-        tech_recycler_view=view.findViewById(R.id.techrecyclerview);
-        funded_recycler_view=view.findViewById(R.id.fundedrecyclerview);
-        techl.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                techll.setVisibility(View.GONE);
-                fundll.setVisibility(View.GONE);
-                thirdll.setVisibility(View.VISIBLE);
-            }
-        });
-        techr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                techll.setVisibility(View.GONE);
-                fundll.setVisibility(View.VISIBLE);
-                thirdll.setVisibility(View.GONE);
-            }
-        });
-        fundl.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                techll.setVisibility(View.VISIBLE);
-                fundll.setVisibility(View.GONE);
-                thirdll.setVisibility(View.GONE);
-            }
-        });
-        fundr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                techll.setVisibility(View.GONE);
-                fundll.setVisibility(View.GONE);
-                thirdll.setVisibility(View.VISIBLE);
-            }
-        });
-        thirdl.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                techll.setVisibility(View.GONE);
-                fundll.setVisibility(View.VISIBLE);
-                thirdll.setVisibility(View.GONE);
-            }
-        });
-        thirdr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                techll.setVisibility(View.VISIBLE);
-                fundll.setVisibility(View.GONE);
-                thirdll.setVisibility(View.GONE);
-            }
-        });
         ff = FirebaseFirestore.getInstance();
-        funded_recycler_view=view.findViewById(R.id.fundedrecyclerview);
-        tech_recycler_view = view.findViewById(R.id.techrecyclerview);
-        Query query = ff.collection("TechStartups");
+        share_recycler_view = view.findViewById(R.id.shareRecyclerView);
+        Query query = ff.collection("Shares");
         FirestoreRecyclerOptions<sharemodel> options = new FirestoreRecyclerOptions.Builder<sharemodel>().setQuery(query, sharemodel.class).build();
         adapter = new FirestoreRecyclerAdapter<sharemodel, AllShareFragment.PostViewHolder>(options) {
 
@@ -171,32 +108,8 @@ public class AllShareFragment extends Fragment implements GestureDetector.OnGest
                 //postViewHolder.chart.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             }
         };
-        Query query2 = ff.collection("FundedStartups");
-        FirestoreRecyclerOptions<sharemodel> options2 = new FirestoreRecyclerOptions.Builder<sharemodel>().setQuery(query2, sharemodel.class).build();
-        adapter2 = new FirestoreRecyclerAdapter<sharemodel, AllShareFragment.PostViewHolder>(options2) {
-
-            @NonNull
-            @Override
-            public AllShareFragment.PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_single, parent, false);
-                return new AllShareFragment.PostViewHolder(view);
-            }
-
-            @Override
-            protected void onBindViewHolder(@NonNull AllShareFragment.PostViewHolder postViewHolder, int i, @NonNull final sharemodel sharemodel) {
-                postViewHolder.name.setText(sharemodel.getName());
-                postViewHolder.aboutshare.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        getContext().startActivity(new Intent(getContext(),AboutShare.class).putExtra("shareid",sharemodel.getId()));
-                    }
-                });
-            }
-        };
-        funded_recycler_view.setAdapter(adapter2);
-        funded_recycler_view.setLayoutManager(new LinearLayoutManager(getContext()));
-        tech_recycler_view.setAdapter(adapter);
-        tech_recycler_view.setLayoutManager(new LinearLayoutManager(getContext()));
+        share_recycler_view.setAdapter(adapter);
+        share_recycler_view.setLayoutManager(new LinearLayoutManager(getContext()));
         return view;
     }
 
@@ -258,14 +171,14 @@ public class AllShareFragment extends Fragment implements GestureDetector.OnGest
     public void onStart() {
         super.onStart();
         adapter.startListening();
-        adapter2.startListening();
+
     }
 
     @Override
     public void onStop() {
         super.onStop();
         adapter.stopListening();
-        adapter2.stopListening();
+
     }
     public class myformatter extends ValueFormatter implements IAxisValueFormatter {
         private String[] myvalues;

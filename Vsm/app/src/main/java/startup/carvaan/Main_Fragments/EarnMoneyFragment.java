@@ -22,6 +22,9 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.google.android.gms.ads.reward.RewardedVideoAdListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -47,6 +50,9 @@ public class EarnMoneyFragment extends Fragment implements RewardedVideoAdListen
     private Button showadd;
     private RecyclerView ad_recycler_view;
     private Button payment;
+    private FirebaseFirestore firebaseFirestore;
+    private FirebaseAuth firebaseAuth;
+    private FirebaseUser firebaseUser;
 
     public EarnMoneyFragment() {
         // Required empty public constructor
@@ -63,6 +69,9 @@ public class EarnMoneyFragment extends Fragment implements RewardedVideoAdListen
                              Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_earn_money, container, false);
         MobileAds.initialize(getContext(),"ca-app-pub-1372656325166770~1018059934");
+        firebaseAuth = FirebaseAuth.getInstance();
+        firebaseUser = firebaseAuth.getCurrentUser();
+        firebaseFirestore=FirebaseFirestore.getInstance();
         rewardedVideoAd=MobileAds.getRewardedVideoAdInstance(getContext());
         rewardedVideoAd.setRewardedVideoAdListener(this);
 
@@ -164,7 +173,7 @@ public class EarnMoneyFragment extends Fragment implements RewardedVideoAdListen
 
     @Override
     public void onRewarded(RewardItem rewardItem) {
-
+        firebaseFirestore.collection("Users").document(firebaseUser.getUid()).collection("Credits").document("Credits").update("credits","100");
     }
 
     @Override
