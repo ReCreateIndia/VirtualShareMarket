@@ -1921,6 +1921,11 @@ drawable jc_volume_icon
 drawable jc_volume_progress_bg
 drawable lefttriangle
 drawable like_black
+drawable loack
+drawable loc
+drawable lock
+drawable lockt
+drawable locky
 drawable loginbuttonbg
 drawable mr_button_connected_dark
 drawable mr_button_connected_light
@@ -2012,6 +2017,7 @@ drawable redtriangle
 drawable righttriangle
 drawable round_backgroundred
 drawable roundbackground_green
+drawable rst
 drawable send
 drawable splash_screen_bg
 drawable test_custom_background
@@ -2289,6 +2295,8 @@ id linear
 id listMode
 id listViewBtmSheet
 id list_item
+id ll1
+id ll2
 id loader
 id loading
 id loading_text
@@ -2433,11 +2441,13 @@ id path
 id pathRelative
 id payment
 id peekHeight
+id peopleinvested
 id percent
 id pin
 id position
 id post_comment
 id price_of_shares
+id progress_bar
 id progress_circular
 id progress_horizontal
 id progress_layout
@@ -2447,6 +2457,7 @@ id radio
 id rectangles
 id recyclerScrool
 id register1
+id relativeLayout
 id remember_cb
 id retry_text
 id reverseSawtooth
@@ -2512,6 +2523,8 @@ id startHorizontal
 id startVertical
 id start_layout
 id startadd
+id startupVideo
+id starupgrowth
 id status_bar_latest_event_content
 id stonkschart
 id stonksimage
@@ -2552,6 +2565,7 @@ id textView5
 id textView6
 id text_input_end_icon
 id text_input_start_icon
+id text_view_progress
 id textinput_counter
 id textinput_error
 id textinput_helper_text

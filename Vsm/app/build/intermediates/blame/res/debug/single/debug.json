@@ -76,12 +76,12 @@
         "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_attach_money_24.png"
     },
     {
-        "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_back1.xml.flat",
-        "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\back1.xml"
-    },
-    {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_home_24.png.flat",
         "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_home_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_back1.xml.flat",
+        "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\back1.xml"
     },
     {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_comment_black.png.flat",
@@ -172,6 +172,10 @@
         "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\font\\coolvetica_compressed_rg.ttf"
     },
     {
+        "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_lock.jpg.flat",
+        "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\lock.jpg"
+    },
+    {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_greentriangle.png.flat",
         "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\greentriangle.png"
     },
@@ -182,6 +186,10 @@
     {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_home_24.png.flat",
         "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_home_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rst.xml.flat",
+        "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\rst.xml"
     },
     {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bcak2.xml.flat",
@@ -218,6 +226,10 @@
     {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_buy_success.xml.flat",
         "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Dialog\\layout\\dialog_buy_success.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_loc.jpg.flat",
+        "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\loc.jpg"
     },
     {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
@@ -276,6 +288,10 @@
         "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\send.png"
     },
     {
+        "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_loack.jpg.flat",
+        "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\loack.jpg"
+    },
+    {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_header.xml.flat",
         "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\extra\\layout\\header.xml"
     },
@@ -322,6 +338,10 @@
     {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_comment_green.png.flat",
         "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\comment_green.png"
+    },
+    {
+        "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_send.png.flat",
+        "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\send.png"
     },
     {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_splash_screen_bg.xml.flat",
@@ -386,6 +406,10 @@
     {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_sell_shares.xml.flat",
         "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Dialog\\layout\\dialog_sell_shares.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_locky.png.flat",
+        "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\locky.png"
     },
     {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_inputtype.xml.flat",
@@ -518,6 +542,10 @@
     {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_play_arrow_24.xml.flat",
         "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_play_arrow_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_lockt.png.flat",
+        "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\lockt.png"
     },
     {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_sell_success.xml.flat",
