@@ -5,7 +5,8 @@
     android:background="#FFFFFF"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="20dp"
+    app:cardCornerRadiusTopLeft="20dp"
+    app:cardCornerRadiusBottomRight="20dp"
     android:layout_margin="16dp"
 
 
