@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh\\values-zh.xml",
+            "outputFile": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh\\values-zh.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Prachi Singhal\\.gradle\\caches\\transforms-2\\files-2.1\\1a20bcec6fb1f2e4937bb70878bc9f95\\jetified-xvideoplayer-1.2.1\\res\\values-zh\\values-zh.xml",
+                    "source": "C:\\Users\\LAKSHAY\\.gradle\\caches\\transforms-2\\files-2.1\\591c1d702b194b7c2e135920125c986b\\jetified-xvideoplayer-1.2.1\\res\\values-zh\\values-zh.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Prachi Singhal\\.gradle\\caches\\transforms-2\\files-2.1\\2db7eb599987e54664ee241d0e75f14f\\jetified-jiecaovideoplayer-5.7\\res\\values-zh\\values-zh.xml",
+                    "source": "C:\\Users\\LAKSHAY\\.gradle\\caches\\transforms-2\\files-2.1\\20d02fc145086a63d2750ddf107eff48\\jetified-jiecaovideoplayer-5.7\\res\\values-zh\\values-zh.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "4",
