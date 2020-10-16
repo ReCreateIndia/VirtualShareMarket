@@ -40,17 +40,18 @@
             android:name="startup.carvaan.Main_Activities.SplashScreen"
             android:configChanges="orientation|keyboardHidden"
             android:theme="@style/FullScreen" >
+        </activity>
+        <activity android:name="startup.carvaan.Main_Activities.RegisterActivity" />
+        <activity
+            android:name="startup.carvaan.Main_Activities.LoginActivity"
+            android:theme="@style/FullScreen" />
+        <activity android:name="startup.carvaan.Main_Activities.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="startup.carvaan.Main_Activities.RegisterActivity" />
-        <activity
-            android:name="startup.carvaan.Main_Activities.LoginActivity"
-            android:theme="@style/FullScreen" />
-        <activity android:name="startup.carvaan.Main_Activities.MainActivity" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"

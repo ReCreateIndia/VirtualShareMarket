@@ -1622,7 +1622,6 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable above_shadow
-drawable add
 drawable avd_hide_password
 drawable avd_show_password
 drawable back1
@@ -2028,7 +2027,6 @@ drawable round_backgroundred
 drawable roundbackground_green
 drawable rst
 drawable send
-drawable sendto
 drawable splash_screen_bg
 drawable test_custom_background
 drawable text_background

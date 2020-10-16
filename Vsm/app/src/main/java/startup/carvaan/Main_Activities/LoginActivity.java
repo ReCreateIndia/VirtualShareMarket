@@ -35,8 +35,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
-import startup.carvaan.Main_Activities.R;
-
 
 public class LoginActivity extends AppCompatActivity {
     private EditText user_name;
@@ -73,7 +71,9 @@ public class LoginActivity extends AppCompatActivity {
                 firebaseAuth.signInWithEmailAndPassword(user_name.getText().toString() + "@gmail.com", pass_word.getText().toString()).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                     @Override
                     public void onSuccess(AuthResult authResult) {
-                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                        Intent newIntent = new Intent(LoginActivity.this, MainActivity.class);
+                        newIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(newIntent);
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
@@ -143,17 +143,18 @@ public class LoginActivity extends AppCompatActivity {
                                                 .document("Credits").set(credits).addOnCompleteListener(new OnCompleteListener<Void>() {
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {
-                                                if(task.isSuccessful()){
-                                                    Toast.makeText(LoginActivity.this,"signin successful",Toast.LENGTH_LONG).show();
-                                                }
-                                                else{
-                                                    Toast.makeText(LoginActivity.this,"signin unsuccessful",Toast.LENGTH_LONG).show();
+                                                if (task.isSuccessful()) {
+                                                    Toast.makeText(LoginActivity.this, "signin successful", Toast.LENGTH_LONG).show();
+                                                } else {
+                                                    Toast.makeText(LoginActivity.this, "signin unsuccessful", Toast.LENGTH_LONG).show();
                                                 }
                                             }
                                         });
 
                                     }
-                                    startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                                    Intent mainIntent = new Intent(LoginActivity.this, MainActivity.class);
+                                    mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                    startActivity(mainIntent);
                                     progressDialog.dismiss();
                                 }
                             });

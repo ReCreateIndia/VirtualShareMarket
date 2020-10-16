@@ -63,19 +63,46 @@
             android:inputType="textPassword"
 
             />
-        <Button
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/confirmLayout"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="Register"
             android:layout_marginLeft="60dp"
-            android:layout_marginRight="60dp"
             android:layout_marginTop="30dp"
-            android:fontFamily="@font/aclonica"
-            android:background="@drawable/button"
+            android:layout_marginRight="60dp"
+            app:errorEnabled="true"
+            app:hintTextColor="#000000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/confirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+
+                android:background="@drawable/inputtype"
+                android:hint="Confirm Password"
+
+                android:inputType="textPassword"
+                android:textColorHint="#000000"
+                android:textSize="18sp"
+
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
             android:id="@+id/register1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/button"
+            android:fontFamily="@font/aclonica"
+            android:text="Register"
+            android:textColor="#FFFFFF"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"/>
+            android:textStyle="bold" />
 
 
     </LinearLayout>

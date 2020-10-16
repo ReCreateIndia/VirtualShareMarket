@@ -1,394 +1,382 @@
 [
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_comment_black.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\extra\\drawable\\comment_black.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bottom.png.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\bottom.png"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_inputtype.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\inputtype.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_play_arrow_24.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\extra\\drawable\\ic_baseline_play_arrow_24.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_locky.png.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\locky.png"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_loack.jpg.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\loack.jpg"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\mainLayouts\\layout\\activity_main.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\anim_bottom.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\anim\\bottom.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\mainLayouts\\layout\\activity_register.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_splash_screen_bg.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\splash_screen_bg.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\mainLayouts\\layout\\activity_login.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\button.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tictactoe.png.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\tictactoe.png"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash_screen.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\layout\\activity_splash_screen.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_earncredut3.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\earncredut3.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_oval.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\oval.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ourhelpers.png.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\ourhelpers.png"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_vsm_logo.png.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\vsm_logo.png"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_credits_by_ads_item.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\layout\\credits_by_ads_item.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_back1.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\back1.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_primary_btn_bg.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\primary_btn_bg.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\font_coolvetica_rg.ttf.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\font\\coolvetica_rg.ttf"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_text_input_bg.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\text_input_bg.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_top.png.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\top.png"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_thumb_up_24.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\ic_baseline_thumb_up_24.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_top.png.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\top.png"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rst.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\rst.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_righttriangle.png.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\righttriangle.png"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_redtriangle.png.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\redtriangle.png"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_vsm_coin.jpg.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\vsm_coin.jpg"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_abs_layout.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\extra\\layout\\abs_layout.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_earncredut3.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\earncredut3.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_payment.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\layout\\activity_payment.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_attach_money_24.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\extra\\drawable\\ic_baseline_attach_money_24.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_home_24.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\extra\\drawable\\ic_baseline_home_24.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_about_share.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\mainLayouts\\layout\\activity_about_share.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_account_circle_24.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\extra\\drawable\\ic_baseline_account_circle_24.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_oneforall.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Singleitem\\layout\\oneforall.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bottom.png.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\bottom.png"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\font_coolvetica_rg.ttf.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\font\\coolvetica_rg.ttf"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_buy_success.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Dialog\\layout\\dialog_buy_success.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\button.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_earncrdits.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\earncrdits.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_earncrdits.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\earncrdits.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_comment_green.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\extra\\drawable\\comment_green.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_greentriangle.png.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\greentriangle.png"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button2.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\button2.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_top_background.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\top_background.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_add.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\extra\\drawable\\add.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_lefttriangle.png.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable-v24\\lefttriangle.png"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottommeny.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\menu\\bottommeny.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_roundbackground_green.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\roundbackground_green.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_splash_screen_bg.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\splash_screen_bg.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_google.png.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\google.png"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_payment.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\layout\\activity_payment.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_credits_by_ads_item.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\layout\\credits_by_ads_item.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_text_background.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\text_background.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\font_abril_fatface.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\font\\abril_fatface.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_earncredit2.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\earncredit2.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_lockt.png.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\lockt.png"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ow.png.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\ow.png"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\font_coolvetica_compressed_rg.ttf.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\font\\coolvetica_compressed_rg.ttf"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_primary_btn_bg.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\primary_btn_bg.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\font_coolvetica_condensed_rg.ttf.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\font\\coolvetica_condensed_rg.ttf"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash_screen.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\layout\\activity_splash_screen.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_all_share.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Fragments\\layout\\fragment_all_share.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_back1.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\back1.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_likes_item.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\layout\\likes_item.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_oval.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\oval.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_loc.jpg.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\loc.jpg"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_loginbuttonbg.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\loginbuttonbg.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_text_background.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\text_background.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_my_share.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Fragments\\layout\\fragment_my_share.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border_sell.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\border_sell.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_top_background.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\top_background.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\menu_drawer_menu.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\menu\\drawer_menu.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_buy_shares.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Dialog\\layout\\dialog_buy_shares.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_buy_success.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Dialog\\layout\\dialog_buy_success.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_send.png.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\send.png"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_roundbackground_green.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\roundbackground_green.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_sell_shares.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Dialog\\layout\\dialog_sell_shares.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_oneforall.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Singleitem\\layout\\oneforall.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_account_circle_24.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\extra\\drawable\\ic_baseline_account_circle_24.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bcak2.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\bcak2.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_single_myshare_item.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Singleitem\\layout\\single_myshare_item.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_sendto.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\sendto.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_sell_shares.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Dialog\\layout\\dialog_sell_shares.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_comments_item.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\layout\\comments_item.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_sell_success.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Dialog\\layout\\dialog_sell_success.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_abs_layout.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\extra\\layout\\abs_layout.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_single.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Singleitem\\layout\\list_item_single.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\menu_sharemenu.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\menu\\sharemenu.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bcak2.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\bcak2.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_loginbuttonbg.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\loginbuttonbg.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rst.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\rst.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\mainLayouts\\layout\\activity_login.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_about_share.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\mainLayouts\\layout\\activity_about_share.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\xml_file_provider.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\xml\\file_provider.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_appbar.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Dialog\\layout\\appbar.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_lockt.png.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\lockt.png"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\border.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\menu_sharemenu.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\menu\\sharemenu.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_greentriangle.png.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\greentriangle.png"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottommeny.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\menu\\bottommeny.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_single_myshare_item.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Singleitem\\layout\\single_myshare_item.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_loack.jpg.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\loack.jpg"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_like_comment_dialog.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\layout\\like_comment_dialog.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_thumb_up_24.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\ic_baseline_thumb_up_24.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\font_abril_fatface.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\font\\abril_fatface.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_vsm_logo.png.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\vsm_logo.png"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_appbar.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Dialog\\layout\\appbar.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_like_black.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\extra\\drawable\\like_black.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border_sell.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\border_sell.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_attach_money_24.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\extra\\drawable\\ic_baseline_attach_money_24.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_redtriangle.png.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\redtriangle.png"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ourhelpers.png.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\ourhelpers.png"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_forgot_password.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Dialog\\layout\\activity_forgot_password.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_righttriangle.png.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\righttriangle.png"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_like_comment_dialog.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\layout\\like_comment_dialog.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_forgot_password.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Dialog\\layout\\activity_forgot_password.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_all_share.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Fragments\\layout\\fragment_all_share.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_vsm_coin.jpg.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\vsm_coin.jpg"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_header.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\extra\\layout\\header.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_buy_shares.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Dialog\\layout\\dialog_buy_shares.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_comments_item.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\layout\\comments_item.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_earn_money.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Fragments\\layout\\fragment_earn_money.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_likes_item.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\layout\\likes_item.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_lock.jpg.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\lock.jpg"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\anim_top.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\anim\\top.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\font_coolvetica_condensed_rg.ttf.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\font\\coolvetica_condensed_rg.ttf"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_lock.jpg.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\lock.jpg"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\menu_drawer_menu.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\menu\\drawer_menu.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\font_aclonica.ttf.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\font\\aclonica.ttf"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\anim_top.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\anim\\top.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_locky.png.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\locky.png"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_text_input_bg.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\text_input_bg.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_my_share.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Fragments\\layout\\fragment_my_share.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\font_coolvetica_compressed_rg.ttf.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\font\\coolvetica_compressed_rg.ttf"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\anim_bottom.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\anim\\bottom.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\border.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_loc.jpg.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\loc.jpg"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\menu_coin_menu.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\menu\\coin_menu.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_home_24.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\extra\\drawable\\ic_baseline_home_24.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button2.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\button2.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tictactoe.png.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\tictactoe.png"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_comment_green.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\extra\\drawable\\comment_green.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_google.png.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\google.png"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\menu_coin_menu.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\menu\\coin_menu.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_like_black.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\extra\\drawable\\like_black.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ow.png.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\ow.png"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_sell_success.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Dialog\\layout\\dialog_sell_success.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_header.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\extra\\layout\\header.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_send.png.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\send.png"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_play_arrow_24.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\extra\\drawable\\ic_baseline_play_arrow_24.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_inputtype.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\inputtype.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_lefttriangle.png.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable-v24\\lefttriangle.png"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_earn_money.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Fragments\\layout\\fragment_earn_money.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\font_aclonica.ttf.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\font\\aclonica.ttf"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\mainLayouts\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_earncredit2.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\earncredit2.xml"
     },
     {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_register.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\mainLayouts\\layout\\activity_register.xml"
-    },
-    {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_backgroundred.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\round_backgroundred.xml"
-    },
-    {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_single.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\Singleitem\\layout\\list_item_single.xml"
-    },
-    {
-        "merged": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_comment_black.xml.flat",
-        "source": "G:\\Carvan\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\extra\\drawable\\comment_black.xml"
+        "merged": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_backgroundred.xml.flat",
+        "source": "C:\\Users\\VISH31\\Desktop\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\round_backgroundred.xml"
     }
 ]

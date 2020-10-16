@@ -2,19 +2,16 @@ package startup.carvaan.Main_Activities;
 
 
 import android.animation.ValueAnimator;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -23,7 +20,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
-import com.gocashfree.cashfreesdk.CFPaymentService;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -40,26 +36,12 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.sdsmdg.harjot.vectormaster.VectorMasterView;
 import com.sdsmdg.harjot.vectormaster.models.PathModel;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
-
 import javax.annotation.Nullable;
 
-import io.reactivex.Scheduler;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.functions.Consumer;
-import startup.carvaan.Constructor.CashFreeToken;
 import startup.carvaan.Constructor.credits;
 import startup.carvaan.Main_Fragments.AllShareFragment;
 import startup.carvaan.Main_Fragments.EarnMoneyFragment;
 import startup.carvaan.Main_Fragments.MyShareFragment;
-import io.reactivex.schedulers.Schedulers;
-
-import startup.carvaan.Main_Activities.R;
-import startup.carvaan.remote.ICloudFunctions;
-import startup.carvaan.remote.RetrofitClient;
 
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -179,9 +161,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(intent);
-                        finish();
+
                     }
                 });
                 break;
