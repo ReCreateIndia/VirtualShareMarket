@@ -1,6 +1,7 @@
 package startup.carvaan.Main_Activities;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.net.Uri;
@@ -45,6 +46,9 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
+import com.mirza.attachmentmanager.managers.AttachmentManager;
+import com.mirza.attachmentmanager.managers.HideOption;
+import com.mirza.attachmentmanager.models.AttachmentDetail;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -83,6 +87,7 @@ public class AboutShare extends AppCompatActivity  {
     String shareid;
     private TextView coins;
     public static JCVideoPlayerStandard current_vv;
+    private AttachmentManager attachmentManager = null;
 
     @SuppressLint("WrongConstant")
     @Override
@@ -169,7 +174,22 @@ public class AboutShare extends AppCompatActivity  {
                 if (Integer.parseInt(postModal.getType())==2){
                     postViewHolder.videoview.setVisibility(View.VISIBLE);
                 }
-                }
+
+                postViewHolder.addAttatchment.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        attachmentManager = new AttachmentManager.AttachmentBuilder(AboutShare.this) // must pass Context
+                                .activity(AboutShare.this) // container activity
+                                .fragment(null) // pass fragment reference if you are in fragment
+                                .setUiTitle("Choose Attatchment") // title of dialog or bottom sheet
+                                .allowMultiple(false) // set true if you want make multiple selection, default is false
+                                .asBottomSheet(true) // set true if you need to show selection as bottom sheet, default is as Dialog
+                                .build();
+                        attachmentManager.openSelection();
+                    }
+                });
+            }
 
 
             @NonNull
@@ -185,7 +205,7 @@ public class AboutShare extends AppCompatActivity  {
 
         View bottomsheet = findViewById(R.id.bottomsheet);
         bottomSheetBehavior = BottomSheetBehavior.from(bottomsheet);
-        bottomSheetBehavior.setHideable(false);
+        //bottomSheetBehavior.setHideable(false);
         stonksimage = bottomsheet.findViewById(R.id.stonksimage);
         bottomSheetBehavior.addBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
             @Override
@@ -241,14 +261,15 @@ public class AboutShare extends AppCompatActivity  {
        EditText write_comment;
        ImageButton post_comment;
        JCVideoPlayerStandard videoview;
-       ImageView userpostimage, like_icon, comment_icon;
+       ImageView userpostimage, like_icon, comment_icon,addAttatchment;
+
 
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);
 
             companyname=itemView.findViewById(R.id.companyName);
             username=itemView.findViewById(R.id.username);
-
+            addAttatchment = itemView.findViewById(R.id.addAttatchment);
             description=itemView.findViewById(R.id.description);
             nooflikes=itemView.findViewById(R.id.number_of_likes);
             noofcomments=itemView.findViewById(R.id.number_of_comments);
@@ -336,4 +357,12 @@ public class AboutShare extends AppCompatActivity  {
             return myvalues[(int)value];
         }
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        ArrayList<AttachmentDetail> list = attachmentManager.manipulateAttachments(requestCode, resultCode, data); // gives you neccessary detail about attachment like uri,name,size,path and mimtype
+        Toast.makeText(this, list.size()+"", Toast.LENGTH_LONG).show();
+    }
+
 }

@@ -65,6 +65,7 @@
             android:inputType="textPassword"
 
             />
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -75,24 +76,30 @@
             android:background="@drawable/inputtype"
             android:layout_marginRight="60dp"
             android:layout_marginTop="30dp"
-            android:id="@+id/confirmpassword"
+            android:id="@+id/confirmPassword"
             android:hint="Confirm Password"
             android:inputType="textPassword"
 
             />
+
+
+
+
+
+
         <Button
+            android:id="@+id/register1"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="Register"
             android:layout_marginLeft="60dp"
-            android:layout_marginRight="60dp"
             android:layout_marginTop="30dp"
-            android:fontFamily="@font/aclonica"
+            android:layout_marginRight="60dp"
             android:background="@drawable/button"
-            android:id="@+id/register1"
+            android:fontFamily="@font/aclonica"
+            android:text="Register"
+            android:textColor="#FFFFFF"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"/>
+            android:textStyle="bold" />
 
 
     </LinearLayout>

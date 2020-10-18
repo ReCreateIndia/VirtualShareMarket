@@ -9,9 +9,10 @@ startup/carvaan/Recycler_View_Adapters/Ads_Adapter.java
 startup/carvaan/Main_Activities/RegisterActivity.java
  startup.carvaan.Main_Activities.RegisterActivity
  startup.carvaan.Main_Activities.RegisterActivity$1
- startup.carvaan.Main_Activities.RegisterActivity$1$1
- startup.carvaan.Main_Activities.RegisterActivity$1$2
  startup.carvaan.Main_Activities.RegisterActivity$2
+ startup.carvaan.Main_Activities.RegisterActivity$2$1
+ startup.carvaan.Main_Activities.RegisterActivity$2$2
+ startup.carvaan.Main_Activities.RegisterActivity$3
 startup/carvaan/Constructor/sharemodel.java
  startup.carvaan.Constructor.sharemodel
 startup/carvaan/Main_Activities/BuildConfig.java
@@ -28,6 +29,7 @@ startup/carvaan/Main_Activities/AboutShare.java
  startup.carvaan.Main_Activities.AboutShare$2
  startup.carvaan.Main_Activities.AboutShare$2$1
  startup.carvaan.Main_Activities.AboutShare$2$2
+ startup.carvaan.Main_Activities.AboutShare$2$3
  startup.carvaan.Main_Activities.AboutShare$3
  startup.carvaan.Main_Activities.AboutShare$4
  startup.carvaan.Main_Activities.AboutShare$4$1

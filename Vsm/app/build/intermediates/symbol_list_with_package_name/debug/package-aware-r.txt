@@ -11,7 +11,6 @@ anim abc_slide_out_bottom
 anim abc_slide_out_top
 anim abc_tooltip_enter
 anim abc_tooltip_exit
-anim bottom
 anim btn_checkbox_to_checked_box_inner_merged_animation
 anim btn_checkbox_to_checked_box_outer_merged_animation
 anim btn_checkbox_to_checked_icon_null_animation
@@ -33,7 +32,6 @@ anim mtrl_bottom_sheet_slide_out
 anim mtrl_card_lowers_interpolator
 anim quit_fullscreen
 anim start_fullscreen
-anim top
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -1126,6 +1124,7 @@ color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
 color tooltip_background_dark
 color tooltip_background_light
+color white
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -1289,6 +1288,8 @@ dimen material_emphasis_high_type
 dimen material_emphasis_medium
 dimen material_text_view_test_line_height
 dimen material_text_view_test_line_height_override
+dimen medium_margin
+dimen medium_padding
 dimen mobile_dialog_image_marginTop
 dimen mobile_dialog_image_tip_height
 dimen mobile_dialog_image_tip_width
@@ -1511,6 +1512,8 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen small_margin
+dimen small_padding
 dimen subtitle_corner_radius
 dimen subtitle_outline_width
 dimen subtitle_shadow_offset
@@ -1671,6 +1674,7 @@ drawable google
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable greentriangle
+drawable ic_attach_file_black_24dp
 drawable ic_audiotrack_dark
 drawable ic_audiotrack_light
 drawable ic_baseline_account_circle_24
@@ -1679,6 +1683,7 @@ drawable ic_baseline_home_24
 drawable ic_baseline_play_arrow_24
 drawable ic_baseline_thumb_up_24
 drawable ic_calendar_black_24dp
+drawable ic_camera_alt_black_24dp
 drawable ic_checked_checkbox
 drawable ic_clear_black_24dp
 drawable ic_close
@@ -1864,6 +1869,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_photo_album_black_24dp
 drawable ic_unchecked_checkbox
 drawable ic_vol_mute
 drawable ic_vol_type_speaker_dark
@@ -2014,7 +2020,10 @@ drawable notify_panel_notification_icon_bg
 drawable ourhelpers
 drawable oval
 drawable ow
+drawable pauy
+drawable pauyt
 drawable pay
+drawable payu
 drawable primary_btn_bg
 drawable redtriangle
 drawable righttriangle
@@ -2022,7 +2031,6 @@ drawable round_backgroundred
 drawable roundbackground_green
 drawable rst
 drawable send
-drawable splash_screen_bg
 drawable test_custom_background
 drawable text_background
 drawable text_input_bg
@@ -2030,7 +2038,6 @@ drawable tictactoe
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable top
-drawable top_background
 drawable ty
 drawable vsm_coin
 drawable vsm_logo
@@ -2114,6 +2121,7 @@ id activity_chooser_view_content
 id actualcomment
 id ad_layout
 id add
+id addAttatchment
 id adjust_height
 id adjust_width
 id ads_recycler_view
@@ -2155,8 +2163,14 @@ id browser_actions_menu_view
 id btn_buy
 id btn_sell
 id buttonPanel
+id buttons_holder
+id camera_imageView
+id camera_linearLayout
+id camera_textView
 id cancel_action
 id cancel_button
+id cancel_imageView
+id card
 id center
 id center_horizontal
 id center_vertical
@@ -2183,8 +2197,8 @@ id commenting_user_image
 id comments
 id comments_recycler_view
 id companyName
+id confirmPassword
 id confirm_button
-id confirmpassword
 id container
 id content
 id contentPanel
@@ -2238,6 +2252,9 @@ id fab
 id fab1
 id fab2
 id fade
+id file_imageView
+id file_linearLayout
+id file_textView
 id fill
 id fill_horizontal
 id fill_vertical
@@ -2250,6 +2267,8 @@ id forever
 id forgotPass
 id fragment_container
 id fullscreen
+id gallary_imageView
+id gallery_textView
 id ghost_view
 id ghost_view_holder
 id glide_custom_view_target_tag
@@ -2275,6 +2294,7 @@ id image
 id imageView3
 id imageView4
 id imageView5
+id image_linearLayout
 id info
 id invisible
 id italic
@@ -2580,6 +2600,7 @@ id title
 id titleDividerNoCustom
 id titleText
 id title_template
+id title_textView
 id toggle
 id top
 id topLabel
@@ -2735,6 +2756,7 @@ layout dialog_buy_success
 layout dialog_sell_shares
 layout dialog_sell_success
 layout fragment_all_share
+layout fragment_attachment
 layout fragment_cf_customer_id
 layout fragment_cf_otp
 layout fragment_earn_money
@@ -2745,6 +2767,8 @@ layout jc_dialog_progress
 layout jc_dialog_volume
 layout jc_layout_base
 layout jc_layout_standard
+layout layout_attachment_dialog
+layout layout_attachment_sheet
 layout like_comment_dialog
 layout likes_item
 layout list_item_single
@@ -2935,6 +2959,14 @@ string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string ijkplayer_dummy
+string loading
+string m_camera
+string m_choose
+string m_close_dialog_txt
+string m_document
+string m_gallery
+string m_image
+string m_selectFile_txt
 string mr_button_content_description
 string mr_cast_button_connected
 string mr_cast_button_connecting
@@ -3843,6 +3875,7 @@ styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
+xml file_provider
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start
