@@ -1,42 +1,63 @@
 {
   "project_info": {
-    "project_number": "128045272026",
-    "firebase_url": "https://vitual-share-market.firebaseio.com",
-    "project_id": "vitual-share-market",
-    "storage_bucket": "vitual-share-market.appspot.com"
+    "project_number": "844859435167",
+    "firebase_url": "https://startupcarvaan.firebaseio.com",
+    "project_id": "startupcarvaan",
+    "storage_bucket": "startupcarvaan.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:128045272026:android:85e0fe963242deb3790ee3",
+        "mobilesdk_app_id": "1:844859435167:android:48d8d94c9a0f637dc89aaa",
         "android_client_info": {
           "package_name": "startup.carvaan"
         }
       },
       "oauth_client": [
         {
-          "client_id": "128045272026-akj3h8bio35g3660j5dk65dttug38egd.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "startup.carvaan",
-            "certificate_hash": "894ea858a077083167049cce4d23a0421a47f3f2"
-          }
-        },
-        {
-          "client_id": "128045272026-9iu4l7im8a1e73unktb1ppmrc7v875ao.apps.googleusercontent.com",
+          "client_id": "844859435167-10nndeqloi79dlns1f8fqgqpont2g80k.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAPKx-HaRpyJwhCVNwvEgbRCEgrzabCzFY"
+          "current_key": "AIzaSyA14nivDkoa_ifWdMngq21oSW9OZD5xkBo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "128045272026-9iu4l7im8a1e73unktb1ppmrc7v875ao.apps.googleusercontent.com",
+              "client_id": "844859435167-10nndeqloi79dlns1f8fqgqpont2g80k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844859435167:android:e2e5a6d73b6da43dc89aaa",
+        "android_client_info": {
+          "package_name": "startup.carvaan.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844859435167-10nndeqloi79dlns1f8fqgqpont2g80k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA14nivDkoa_ifWdMngq21oSW9OZD5xkBo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "844859435167-10nndeqloi79dlns1f8fqgqpont2g80k.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
