@@ -1,4 +1,4 @@
-startup.carvaan
+startup.carvaan.Main_Activities
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -1635,6 +1635,7 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable button
 drawable button2
+drawable color2
 drawable comment_black
 drawable comment_green
 drawable common_full_open_on_phone
@@ -1665,6 +1666,7 @@ drawable design_snackbar_background
 drawable earncrdits
 drawable earncredit2
 drawable earncredut3
+drawable fhrf
 drawable google
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
@@ -2012,6 +2014,7 @@ drawable notify_panel_notification_icon_bg
 drawable ourhelpers
 drawable oval
 drawable ow
+drawable pay
 drawable primary_btn_bg
 drawable redtriangle
 drawable righttriangle
@@ -2028,8 +2031,10 @@ drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable top
 drawable top_background
+drawable ty
 drawable vsm_coin
 drawable vsm_logo
+drawable yhs
 font abril_fatface
 font aclonica
 font coolvetica_compressed_rg
@@ -2179,6 +2184,7 @@ id comments
 id comments_recycler_view
 id companyName
 id confirm_button
+id confirmpassword
 id container
 id content
 id contentPanel
@@ -2524,7 +2530,6 @@ id startVertical
 id start_layout
 id startadd
 id startupVideo
-id starupgrowth
 id status_bar_latest_event_content
 id stonkschart
 id stonksimage

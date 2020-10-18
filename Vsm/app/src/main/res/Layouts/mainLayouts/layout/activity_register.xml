@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3.7"
+        android:layout_weight="3.5"
         android:addStatesFromChildren="true"
         android:background="@drawable/back1"
         android:orientation="vertical"
@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
 
-        android:layout_weight="4.3"
+        android:layout_weight="4.55"
         android:orientation="vertical"
         android:gravity="center">
         <EditText
@@ -44,6 +44,7 @@
             android:textSize="18sp"
             android:layout_marginRight="60dp"
             android:textColorHint="#000000"
+            android:textColor="#000000"
             android:id="@+id/username"
             android:background="@drawable/inputtype"
             android:hint="Username"
@@ -54,12 +55,28 @@
             android:layout_height="40dp"
             android:textSize="18sp"
             android:layout_marginLeft="60dp"
+            android:textColor="#000000"
             android:textColorHint="#000000"
             android:background="@drawable/inputtype"
             android:layout_marginRight="60dp"
             android:layout_marginTop="30dp"
             android:id="@+id/password"
             android:hint="Password"
+            android:inputType="textPassword"
+
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textSize="18sp"
+            android:layout_marginLeft="60dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:background="@drawable/inputtype"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/confirmpassword"
+            android:hint="Confirm Password"
             android:inputType="textPassword"
 
             />
@@ -82,7 +99,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="1.95"
         android:background="@drawable/bcak2"
         android:gravity="center|right">
         <LinearLayout

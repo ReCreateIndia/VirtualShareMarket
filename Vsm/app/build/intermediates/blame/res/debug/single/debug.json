@@ -24,6 +24,10 @@
         "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\text_input_bg.xml"
     },
     {
+        "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fhrf.png.flat",
+        "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\fhrf.png"
+    },
+    {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_primary_btn_bg.xml.flat",
         "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\primary_btn_bg.xml"
     },
@@ -46,6 +50,10 @@
     {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_account_circle_24.png.flat",
         "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_account_circle_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_color2.png.flat",
+        "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\color2.png"
     },
     {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_vsm_coin.jpg.flat",
@@ -488,6 +496,10 @@
         "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_thumb_up_24.png"
     },
     {
+        "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pay.png.flat",
+        "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\pay.png"
+    },
+    {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_thumb_up_24.png.flat",
         "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_thumb_up_24.png"
     },
@@ -522,6 +534,10 @@
     {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_comment_black.png.flat",
         "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\comment_black.png"
+    },
+    {
+        "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_yhs.png.flat",
+        "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\yhs.png"
     },
     {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_play_arrow_24.png.flat",
@@ -606,6 +622,10 @@
     {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_register.xml.flat",
         "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\Layouts\\mainLayouts\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ty.png.flat",
+        "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\src\\main\\res\\drawable\\ty.png"
     },
     {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\VirtualShareMarket\\Vsm\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_comment_green.xml.flat",
